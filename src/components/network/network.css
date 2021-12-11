@@ -1,0 +1,36 @@
+.graph-title-container{
+    position: relative;
+    height: 0;
+    bottom: 60vh;
+}
+
+.graph-title{
+    color: #b3c4f9;
+    text-shadow: -1px -1px 5px #16161877,
+        1px -1px 5px #16161877,
+        -1px 1px 5px #16161877, 
+        1px 1px 5px #16161877;
+    font-weight: bold;
+    font-size: 4vw;
+}
+
+.graph-text{
+    color: #b3c4f9;
+    text-shadow: -0.5px -0.5px 3px #14141677, 
+        0.5px -0.5px 3px #16161877,
+        -0.5px 0.5px 3px #16161877, 
+        0.5px 0.5px 3px #16161877;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.graph-text > a{
+    color: white;
+    text-shadow: -0.5px -0.5px 3px #14141677, 
+        0.5px -0.5px 3px #16161877,
+        -0.5px 0.5px 3px #16161877, 
+        0.5px 0.5px 3px #16161877;
+    text-decoration: underline;
+    font-weight: bold;
+    font-size: 1.1rem;
+}

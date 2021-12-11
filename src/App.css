@@ -1,0 +1,103 @@
+@import '~antd/dist/antd.css';
+
+:root{
+  --header-height: 3rem;
+}
+
+.App {
+  text-align: center;
+}
+
+
+
+body {
+  min-height: 100vh;
+  width: 100%;
+  background: #212534;
+  display: flex;
+  align-items: stretch;
+  flex-direction: column;
+  /* padding-top: 2rem; */
+  /* padding-bottom: 2rem; */
+  box-sizing: border-box;
+}
+
+.App-header{
+  height: var(--header-height);
+  border-bottom: 1px #37487b solid;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 1rem;
+  padding-right: 2rem;
+  position: fixed;
+  width: 100vw;
+  z-index: 50;
+  background-color: #212534;
+}
+
+.App-menu{
+  display: flex;
+  flex-direction: row;
+}
+
+.App-menu-item{
+  background-color: transparent;
+  border: none;
+  color: white !important;
+  font-size: 1.1rem;
+  font-weight: 400;
+  transition: all 1s;
+  height: var(--header-height);
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-bottom: #688cf700 2px solid;
+}
+
+.App-menu-item:hover, .App-menu-item__selected{
+  background-color: #688cf722;
+  border: none;
+  color: white !important;
+  font-size: 1.1rem;
+  font-weight: 400;
+  border-bottom: #688cf755 2px solid;
+}
+
+.App-menu-item__selected{
+  border-bottom: #688cf7 2px solid;
+}
+
+.App-header-logo{
+  height: 60%;
+}
+
+.App-contact-card-positioner{
+  position: relative;
+  width: 100%;
+  height: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.App-contact-card{
+  position: absolute;
+  bottom: 10vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 50px 0px 50px;
+  border: #688cf7 1px solid;
+  border-radius: 7px;
+  background-color: #1a1d28;
+}
+
+.App-contact-card > h2{
+  font-weight: normal;
+  font-size: 1rem;
+  line-height: 1rem;
+  color: var(--contact-color);
+  padding-bottom: 5px;
+}

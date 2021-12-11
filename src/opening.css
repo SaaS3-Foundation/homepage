@@ -1,0 +1,254 @@
+:root {
+    --card-height: 50vh;
+    --card-width: calc(var(--card-height) / 1.2);
+    --card-margin-bottom: 30px;
+    --card-border: 7px;
+  }
+
+.App-opening, .App-opening__clicked {
+    /* background-color: #282c34; */
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    font-size: calc(10px + 2vmin);
+    color: white;
+    background: #212534;
+    z-index: 100;
+}
+
+.App-opening__clicked{
+    pointer-events: none;
+}
+
+.App-opening-center{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+@property --rotate {
+    syntax: "<angle>";
+    initial-value: 132deg;
+    inherits: false;
+}
+
+.card, .card__clicked {
+    background-color: #191c29;
+    width: var(--card-width);
+    height: var(--card-height);
+    /* padding: 3px; */
+    position: relative;
+    border-radius: 6px;
+    /* justify-content: center;
+    align-items: center; */
+    text-align: center;
+    display: flex;
+    font-size: 1.5em;
+    /* color: rgb(88 199 250 / 0%); */
+    cursor: pointer;
+    font-family: cursive;
+    margin-bottom: var(--card-margin-bottom);
+}
+
+.card-content {
+    opacity: 0.8;
+    transition: color 1s;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    padding: calc(20% + 0.3 * var(--card-width));
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.card:hover, .card-content {
+    opacity: 1;
+    transition: color 1s;
+}
+
+.card:hover:before, .card:hover:after, .card__clicked::before, .card__clicked::after {
+    animation: none;
+    transition: all 1s;
+    opacity: 0.8;
+}
+
+
+.card::before{
+    content: "";
+    width: calc(100% + 2 * var(--card-border));
+    height: calc(100% + 2 * var(--card-border));
+    border-radius: 8px;
+    background-image: linear-gradient(var(--rotate), #5ddcff, #3c67e3 43%, #4e00c2);
+    position: absolute;
+    z-index: -1;
+    top: calc(0px - var(--card-border));
+    left: calc(0px - var(--card-border));
+    animation: spin 2.5s linear infinite;
+}
+
+.card::after{
+    position: absolute;
+    content: "";
+    top: calc(var(--card-height) / 6);
+    left: 0;
+    right: 0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    transform: scale(0.8);
+    filter: blur(calc(var(--card-height) / 6));
+    background-image: linear-gradient(var(--rotate), #5ddcff, #3c67e3 43%, #4e00c2);
+    opacity: 1;
+    transition: opacity .5s;
+    animation: spin 2.5s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+    --rotate: 0deg;
+    }
+    100% {
+    --rotate: 360deg;
+    }
+}
+
+
+.card__clicked {
+    pointer-events: none;
+    border: var(--card-border) solid #688cf7;
+    border-radius: 8px;
+    border-image-slice: 1;
+    box-shadow: 0px 5px 40px #3c67e3;
+    position: fixed;
+}
+
+@keyframes zoomin {
+    0% {
+        width: calc(var(--card-width) + 2 * var(--card-border));
+        height: calc(var(--card-height) + 2 * var(--card-border));
+        top: calc(50vh - (24px + var(--card-height) + var(--card-margin-bottom)) / 2 - var(--card-border));
+        left: calc(50vw - var(--card-width) / 2 - var(--card-border));
+        opacity: 1;
+        box-shadow: 0px 5px 40px #3c67e3;
+    }
+    30%, 63% {
+        width: calc(var(--card-width) + 2 * var(--card-border));
+        height: calc(var(--card-height) + 2 * var(--card-border));
+        top: calc(50vh - (1.5rem + var(--card-height) + var(--card-margin-bottom)) / 2 - var(--card-border));
+        left: calc(50vw - var(--card-width) / 2 - var(--card-border));
+        opacity: 1;
+        box-shadow: 0px 0px 200px #3c67e311;
+        border-width: var(--card-border);
+    }
+    90% {
+        width: calc(100vw + var(--card-border));
+        height: calc(100vh + var(--card-border));
+        top: calc(0px - var(--card-border));
+        left: calc(0px - var(--card-border));
+        opacity: 0.8;
+        box-shadow: 0px 0px 5000px #3c67e300;
+        border-width: 1px;
+    }
+    100% {
+        width: calc(100vw + 2 * var(--card-border));
+        height: calc(100vh + 2 * var(--card-border));
+        top: calc(0px - var(--card-border));
+        left: calc(0px - var(--card-border));
+        opacity: 0;
+        box-shadow: 0px 0px 5000px #3c67e300;
+    }
+}
+
+@keyframes moveout{
+    0%, 63% {
+        transform: translateY(0px);
+    }
+    100% {
+        transform: translateY(100%);
+    }
+}
+
+@keyframes fadeout{
+    0%, 60% {
+        background: #212534;
+    }
+    90%, 100% {
+        background: #21253400;
+    }
+}
+
+@keyframes move_to_top{
+    0%, 60% {
+        left: calc(50vw - var(--card-width) * 0.3);
+        top: calc(50vh - (1.5rem + var(--card-height) + var(--card-margin-bottom)) / 2 - 2 *  var(--card-border) + 0.2 * var(--card-height));
+        width: calc(var(--card-width) * 0.6);
+    }
+    90%, 100%{
+        left: 1rem;
+        top: calc(0.2 * var(--header-height));
+        width: calc(1.5 * var(--header-height));
+    }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .card__clicked {
+        animation: zoomin 1.3s forwards ease-in-out;
+    }
+    .contact_clicked {
+        animation: moveout 1.3s forwards;
+    }
+    .App-opening__clicked {
+        animation: fadeout 1.3s forwards;
+    }
+    .App-logo__clicked {
+        animation: move_to_top 1.3s forwards ease-in-out;
+    }
+}
+
+.App-link {
+    color: #212534;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+}
+
+.App-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.App-pip-clock{
+    margin-top: 40px;
+}
+
+.App-logo, .App-logo__clicked{
+    width: calc(var(--card-width) * 0.6);
+    position: fixed;
+    left: calc(50vw - var(--card-width) * 0.3);
+    top: calc(50vh - (1.55rem + var(--card-height) + var(--card-margin-bottom)) / 2 - 2 *  var(--card-border) + 0.2 * var(--card-height));
+}
+
+
+
+.App-contact-positioner{
+    position: relative;
+    max-height: 0px;
+    width: 100%;
+}
+
+.App-contact{
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+}
