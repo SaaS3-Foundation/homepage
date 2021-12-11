@@ -11,12 +11,18 @@ import { message, Space } from 'antd';
 import NetworkGraph from './components/network/network';
 
 import image2 from './static/img-2021-10-20-12-45-57-884617.png'
+import problemimg1 from './static/intro1.png'
+import problemimg2 from './static/intro2.png'
+import problemimg3 from './static/intro3.png'
+import team from './static/team.png'
+import roles from './static/roles.png'
 
 
 
 export const white_paper_link = "https://www.deainet.io/file/Whitepaper.pdf"
 
-const dev_mode = true; 
+const dev_mode = true;
+// const dev_mode = false;
 // controls whether the opening screen should show.
 
 
@@ -62,7 +68,7 @@ function App() {
                     </div>
 
                     <div hidden={clicked} className="App-link" href="https://mythrillfiction.com/" target="_blank" >
-                        Real Decentralized AI
+                        DeAI Delivers a Web3.0 SaaS Solution
                     </div>
                 </div>
 
@@ -122,20 +128,11 @@ function App() {
                 <h1 id='overview'>Overview</h1>
 
                 <p>
-                    From Issi, he marched a single
-                    stage—five parasangs—to the gates
-                    of Cilicia and Syria. 
-                    This was a double fortress: 
-                    the inner and nearer one, which 
-                    protects Cilicia, 
-                    was held by Syennesis and a 
-                    garrison of Cilicians; the outer
-                    and further one, protecting 
-                    Syria, was reported to be 
-                    garrisoned by a body of the 
-                    king's troops.
+                    Artificial Intelligence (AI) is blooming recent
+years and achieve milestone techniques eg,
+Identity Recognition, Driverless Car, Robotics.
+                    Howerer, almost everthing is powered by centralized institutes bad things may happen!
                 </p>
-
                 <Space
                     direction='horizontal'
                     style={{paddingTop: 20}}
@@ -143,117 +140,95 @@ function App() {
                     <img
                         width='100%'
                         className="article-img"
-                        src="https://cd-1302933783.cos.ap-guangzhou.myqcloud.com/img-2021-12-04-17-33-09-055393.jpg"
+                        src={problemimg1}
                     />
                     <img
                         className="article-img"
-                        src="https://cd-1302933783.cos.ap-guangzhou.myqcloud.com/img-2021-12-04-17-33-09-055393.jpg"
+                        src={problemimg2}
+                    />
+                    <img
+                        className="article-img"
+                        src={problemimg3}
                     />
                 </Space>
+                <div style={{height:"5rem"}} />
 
-                <div style={{height:20}} />
-
-                <h2>Section 1</h2>
-
-                <p>
-                    From Issi, he marched a single
-                    stage—five parasangs—to the gates
-                    of Cilicia and Syria. 
-                    This was a double fortress: 
-                    the inner and nearer one, which 
-                    protects Cilicia, 
-                    was held by Syennesis and a 
-                    garrison of Cilicians; the outer
-                    and further one, protecting 
-                    Syria, was reported to be 
-                    garrisoned by a body of the 
-                    king's troops.
-                </p>
-
-
-                <h2>Section 2</h2>
-
-                <h3>Section 2.1</h3>
+                <h1>DeAI Passion & Goal</h1>
 
                 <p>
-                    From Issi, he marched a single
-                    stage—five parasangs—to the gates
-                    of Cilicia and Syria. 
-                    This was <span style={{color:'#92b9fd'}}>a double fortress: </span>
-                    the inner and nearer one, which 
-                    protects Cilicia, 
-                    was held by Syennesis and a 
-                    garrison of Cilicians; the outer
-                    and further one, protecting 
-                    Syria, was reported to be 
-                    garrisoned by a body of the 
-                    king's troops.
+                   Using blockchain technology to construct a decentralized network to provide AaaS
+                    (AI as a Service) for App/Dapp developers to replace centralized API providers such as
+                    <a href="https://docs.microsoft.com/en-us/rest/api/azureml/" target='_blank'> Microsoft Azure</a> and
+                    <a href="https://cloud.google.com/products/ai" target='_blank'>Google AI</a> and further
+                    deliver a fully decentralized SaaS solution for Web3.0.
                 </p>
-
-                <h3>Section 2.2</h3>
-
+                <div style={{height:"5rem"}} />
+                <h1>Who is DeAI User</h1>
                 <p>
-                    From Issi, he marched a single
-                    stage—five parasangs—to the gates
-                    of Cilicia and Syria. 
-                    This was a double fortress: 
-                    the inner and nearer one, which 
-                    protects Cilicia, 
-                    was held by Syennesis and a 
-                    garrison of Cilicians; the outer
-                    and further one, protecting 
-                    Syria, was reported to be 
-                    garrisoned by a body of <a href="www.tea-break.cn">this link</a>.
+                DeAI users are the developers who require AI services for their products such as Meterverse Developers
+,Enterprise Developers
+,Personal Developers
+De/Centralized App Developers
+.
+                    In DeAI, we define decentralized API (DeAPI) to replace centralized API. All DeAPIs are deployed on DeAINet in a distributed way to provide decentralized AI services. AI user can send a decentralized request (DeRequest) to a DeAPI to get a decentralized response (DeResponse). The reliable miners in DeAINet execute all DeAPIs in 7x24 with DPoS consensus.
                 </p>
 
-                <h2>Section 3</h2>
-
-                <p>
-                    If you want to use bullet points, 
-                    you should use ul and li labels
-                </p>
-
-                <ul >
-                    <li>Hahahaha</li>
-                    <ul >
-                        <li>Hahahaha</li>
-                        <li>Hahahaha</li>
-                    </ul>
-                    <li>Hahahaha</li>
-                    <li>Hahahaha</li>
-                    <li>Hahahaha</li>
+                <div style={{height:"5rem"}} />
+                <h1>DeAINet has Following Rich Properties</h1>
+                <ul>
+                    <li>Protect the privacy for AI users by executing encryption protocol transparently</li>
+                    <li>Improve the security for AI system by miners consensus.</li>
+                    <li>Strengthen robustness for AI service by DeAPI runtime redundancy of miners.</li>
+                    <li>Save energy and reduce the service cost by making use of spare resource to mine.</li>
+                    <li>Protect AI intellectual properties by algorithm NFTs which will be detailed latter.</li>
                 </ul>
-
-                <h2>Section 4</h2>
-
                 <p>
-                    By the way,
-                    a line break<br/>
-                    is a br lable
                 </p>
 
-                <div>
-                    <img className="article-img" src={image2}></img>
-                </div>
 
-                <div style={{height:20}}></div>
+                <div style={{height:"5rem"}} />
+                <h1>DeAI Protocol</h1>
+                <p>
+                  DeAINet is Constructed by DeAI Protocol with ERC-20 Token $DEAI for Governance. The Protocol is Applied on Four Roles:
+                </p>
+                <img
+                    className="article-img"
+                    src={roles}
+                />
+{/*                <p>*/}
+{/*                Users pay ETH to access DeAPI. DeAINet will periodically generate certain amount of new $DEAI tokens and half of them will reward to the most active users. Another half tokens distrbute to a random Ethereum address as an airdrop to maximize the token distribution. After 4 years, no more DEAI is generated.*/}
+{/*                </p><p>*/}
+{/*        Miners earn 95% users’ paid ETH to execute DeAPI on their hardwares. Each miner can run all kinds of DeAPIs to satisfy any kind of DeRequest. The redundancy exactly achieves the decentralization and reliability of DeAINet.*/}
+{/*            </p><p>*/}
+{/*Inventors earn 5% users’ paid $ETH as patent fee aside with miners, since they are AI researchers or developers who invent and create new DeAPIs.*/}
+{/*            </p><p>*/}
+{/*DEAI Stakers earn a proportion of $ETH from miners’ profit by staking DEAI to miners for DPoS (Delegation PoS) consensus*/}
+{/*            </p>*/}
 
-                <p>You can smallen the image:</p>
-
-                <div className='col'>
-                    <img className="article-img" style={{width: 100}} src={image2}></img>
-                </div>
-
-                <div style={{height:20}}></div>
-
-                <p>You can center the image:</p>
-
-                <div className='col' style={{alignItems:'center'}}>
-                    <img className="article-img" style={{width: 100}} src={image2}></img>
-                </div>
-
-
+            <div style={{height:"5rem"}} />
+            <h1>Our Team</h1>
             </div>
+            <div>
+                <img width="60%" src={team}></img>
+            </div>
+
+                {/*<div style={{height:20}}></div>*/}
+
+                {/*<p>You can smallen the image:</p>*/}
+
+                {/*<div className='col'>*/}
+                {/*    <img className="article-img" style={{width: 100}} src={image2}></img>*/}
+                {/*</div>*/}
+
+                {/*<div style={{height:20}}></div>*/}
+
+                {/*<p>You can center the image:</p>*/}
+
+                {/*<div className='col' style={{alignItems:'center'}}>*/}
+                {/*    <img className="article-img" style={{width: 100}} src={image2}></img>*/}
+                {/*</div>*/}
+
+
 
             <footer>
                 <ContactBar/>
