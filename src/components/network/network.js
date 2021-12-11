@@ -127,7 +127,7 @@ const NetworkGraph = ({style, className, height}) => {
                     <h1 className="graph-title-shadow"> {title} </h1>
                     <h1 className="graph-title" style={{zIndex:2}}> {title} </h1>
                 </div>
-                <p className="graph-text">DeAI is Decentralized AI as a Service. Read <a onClick={goToOverview}> Whitepaper </a>to Learn More</p>
+                <p className="graph-text">DeAI is Decentralized AI as a Service. Read <a onClick={()=>{window.open(white_paper_link)}}> Whitepaper </a>to Learn More</p>
             </div>
         </div>
     )
