@@ -7,15 +7,15 @@ import './network.css'
 import { white_paper_link } from "../../App";
 
 
-const NetworkGraph = () => {
+const NetworkGraph = ({style, className, height}) => {
 
-
+    const _height = height ? height : window.innerHeight
     
     const deg2rad = deg => { return deg * Math.PI / 180; }
     const rad2deg = rad => { return rad * 180 / Math.PI; }
     
 
-    const distance = 1000;
+    const distance = 800;
 
     // const graphElem = document.getElementById("3d-graph");
 
@@ -24,7 +24,7 @@ const NetworkGraph = () => {
     const [ gData, setGData ] = React.useState({nodes:[],links:[]})
 
     React.useEffect(()=>{
-        const N = 300;
+        const N = 200;
         const nodes = [...Array(N).keys()].map(i => {
             return { 
                 id: i,
@@ -50,20 +50,14 @@ const NetworkGraph = () => {
         setGData({nodes, links});
     },[])
 
-
-    // Graph.linkWidth(5);
-
     React.useEffect(()=>{
         if(graph.current){
             const bloomPass = new UnrealBloomPass();
-            bloomPass.strength = 1.2;
+            bloomPass.strength = 3;
             bloomPass.radius = 0.3;
-            bloomPass.threshold = 0.5;
+            bloomPass.threshold = 0.3;
             graph.current.postProcessingComposer().addPass(bloomPass)
         }
-
-        
-
     },[graph])
 
     const [ angle, setAngle ] = React.useState(0)
@@ -84,18 +78,6 @@ const NetworkGraph = () => {
         },100)
     },[angle])
 
-    
-
-    // let currentAngle = 0;
-    // setInterval(() => {
-    //     // Graph.cameraPosition({
-    //     //     x: distance * Math.sin(deg2rad(currentAngle)),
-    //     //     z: distance * Math.cos(deg2rad(currentAngle))
-    //     // });
-        
-    //     currentAngle += 0.5;
-    // }, 10);
-
     // window.addEventListener('resize', e => {
     //     let width = window.innerWidth;
     //     let height = window.innerHeight;
@@ -107,13 +89,21 @@ const NetworkGraph = () => {
 
 
     return (
-        <div id="3d-graph" style={{zIndex:1}}>
-            <div style={{opacity:0.6}}>
+        <div
+            id="3d-graph"
+            style={{
+                zIndex:1,
+                height:_height,
+                ...style
+            }}
+            className={className}
+        >
+            <div style={{opacity:0.8}}>
                 <ForceGraph3D
-                    height={window.innerHeight}
+                    height={_height}
                     ref={graph}
                     graphData={gData}
-                    nodeRelSize={4}
+                    nodeRelSize={2}
                     nodeOpacity={1}
                     linkWidth={2}
                     nodeAutoColorBy={"#161922"}

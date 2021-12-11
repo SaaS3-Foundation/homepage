@@ -6,7 +6,6 @@
   }
 
 .App-opening, .App-opening__clicked {
-    /* background-color: #282c34; */
     position: fixed;
     left: 0;
     top: 0;
@@ -14,7 +13,7 @@
     width: 100vw;
     font-size: calc(10px + 2vmin);
     color: white;
-    background: #212534;
+    background-color: var(--app-background-dark);
     z-index: 100;
 }
 

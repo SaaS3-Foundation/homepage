@@ -2,10 +2,20 @@
 
 :root{
   --header-height: 3rem;
+  --app-background: #212534;
+  --app-background-dark: #161922;
 }
 
 .App {
   text-align: center;
+  color: white;
+}
+
+.App > footer {
+  padding: 1em;
+  padding-top: 2em;
+  background-color: var(--app-background);
+  border-top: 1px #37487b solid;
 }
 
 
@@ -13,7 +23,7 @@
 body {
   min-height: 100vh;
   width: 100%;
-  background: #212534;
+  background: var(--app-background-dark);
   display: flex;
   align-items: stretch;
   flex-direction: column;
@@ -34,7 +44,7 @@ body {
   position: fixed;
   width: 100vw;
   z-index: 50;
-  background-color: #212534;
+  background-color: var(--app-background);
 }
 
 .App-menu{
@@ -82,6 +92,7 @@ body {
 }
 
 .App-contact-card{
+  z-index: 100;
   position: absolute;
   bottom: 10vh;
   display: flex;
@@ -92,6 +103,7 @@ body {
   border: #688cf7 1px solid;
   border-radius: 7px;
   background-color: #1a1d28;
+  transition: all 1s;
 }
 
 .App-contact-card > h2{
