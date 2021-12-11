@@ -4,7 +4,9 @@ import { UnrealBloomPass } from 'three/examples/jsm/postprocessing/UnrealBloomPa
 import ForceGraph3D from 'react-force-graph-3d';
 
 import './network.css'
-import { white_paper_link } from "../../App";
+import { goToOverview, white_paper_link } from "../../App";
+
+
 
 
 const NetworkGraph = ({style, className, height}) => {
@@ -87,12 +89,7 @@ const NetworkGraph = ({style, className, height}) => {
     //     Graph.refresh();
     // });
 
-    const goToOverview = () => {
-        let el = document.getElementById('overview');
-        if(el){
-            el.scrollIntoView({ behavior: 'smooth', block:'center'})
-        }
-    }
+    const title = "DeAI Delivers a Web3.0 SaaS Solution"
 
 
     return (
@@ -125,8 +122,11 @@ const NetworkGraph = ({style, className, height}) => {
                 />
             </div>
             <div className="graph-title-container">
-                <h1 className="graph-title">
-                    DeAI Delivers a Web3.0 SaaS Solution</h1>
+
+                <div className="relative-container" style={{marginBottom: 'calc(4vw + 20px)'}}>
+                    <h1 className="graph-title-shadow"> {title} </h1>
+                    <h1 className="graph-title" style={{zIndex:2}}> {title} </h1>
+                </div>
                 <p className="graph-text">DeAI is Decentralized AI as a Service. Read <a onClick={goToOverview}> Whitepaper </a>to Learn More</p>
             </div>
         </div>
