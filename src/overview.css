@@ -70,14 +70,14 @@
 }
 
 .article > p {
-    width: 600px;
+    width: 900px;
     max-width: calc(100vw - 20px);
     text-align: justify;
     font-size: 1rem;
 }
 
 .article > div {
-    width: 600px;
+    width: 900px;
     max-width: calc(100vw - 20px);
 }
 
@@ -89,9 +89,10 @@
 
 .article-img{
     flex: 1;
-    width: 600px;
+    width: 900px;
     max-width: calc(100vw - 20px);
 }
+
 
 img {
     object-fit: cover;
@@ -106,14 +107,23 @@ img {
 }
 
 .article > h2, .article > h3 {
-    text-align: left;
-    width: 600px;
+    text-align: center;
+    width: 900px;
     max-width: calc(100vw - 20px);
     color: white;
 }
-
-.article > ul {
-    width: 600px;
+.article > h1{
+    font-size:2vw;
+}
+.article > h2{
+    font-size:1vw;
+}
+.article > p{
+    font-size:1vw;
+}
+.article > ul{
+    font-size:1vw;
+    width: 900px;
     max-width: calc(100% - 20px);
     text-align: left;
 }

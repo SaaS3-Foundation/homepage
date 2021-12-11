@@ -125,8 +125,9 @@ const NetworkGraph = ({style, className, height}) => {
                 />
             </div>
             <div className="graph-title-container">
-                <h1 className="graph-title">Real Decentralized AI as a Service.</h1>
-                <p className="graph-text">Scroll down to <a onClick={goToOverview}>Learn More 👇</a></p>
+                <h1 className="graph-title">
+                    DeAI Delivers a Web3.0 SaaS Solution</h1>
+                <p className="graph-text">DeAI is Decentralized AI as a Service. Read <a onClick={goToOverview}> Whitepaper </a>to Learn More</p>
             </div>
         </div>
     )
