@@ -1,13 +1,11 @@
 # DeAI Homepage
 
-@All
+
 官方邮箱：deaichainteam@gmail.com
 github：
     账号：deaichainteam@gmail.com
 twitter：@deaichain
 telegram：deaichain team
-大家都加一下GitHub合作者，telegram Twitter也follow一下
-———————————————————
 
 
 ## Local Develop
@@ -31,3 +29,5 @@ yarn start 启动开发预览服务，会自动打开浏览器浏览 localhost:3
 使用 SCP 指令进行代码上传
 
 scp -r ./build deai:/home/ubuntu/homepage/
+
+deai 是本地配置好的服务器 xxx@xxx.xxx.xxx.xxx
