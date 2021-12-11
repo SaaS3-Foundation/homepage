@@ -87,6 +87,13 @@ const NetworkGraph = ({style, className, height}) => {
     //     Graph.refresh();
     // });
 
+    const goToOverview = () => {
+        let el = document.getElementById('overview');
+        if(el){
+            el.scrollIntoView({ behavior: 'smooth', block:'center'})
+        }
+    }
+
 
     return (
         <div
@@ -119,7 +126,7 @@ const NetworkGraph = ({style, className, height}) => {
             </div>
             <div className="graph-title-container">
                 <h1 className="graph-title">Real Decentralized AI as a Service.</h1>
-                <p className="graph-text">More of the website is under construction. See <a href={white_paper_link} target="_blank">White Paper</a> to lean more.</p>
+                <p className="graph-text">Scroll down to <a onClick={goToOverview}>Learn More 👇</a></p>
             </div>
         </div>
     )

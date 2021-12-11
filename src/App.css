@@ -80,6 +80,7 @@ body {
 
 .App-header-logo{
   height: 60%;
+  cursor: pointer;
 }
 
 .App-contact-card-positioner{
@@ -92,7 +93,7 @@ body {
 }
 
 .App-contact-card{
-  z-index: 100;
+  z-index: 99;
   position: absolute;
   bottom: 10vh;
   display: flex;

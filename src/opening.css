@@ -199,16 +199,16 @@
 
 @media (prefers-reduced-motion: no-preference) {
     .card__clicked {
-        animation: zoomin 1.3s forwards ease-in-out;
+        animation: zoomin 0.8s forwards ease-in-out;
     }
     .contact_clicked {
-        animation: moveout 1.3s forwards;
+        animation: moveout 0.8s forwards;
     }
     .App-opening__clicked {
-        animation: fadeout 1.3s forwards;
+        animation: fadeout 0.8s forwards;
     }
     .App-logo__clicked {
-        animation: move_to_top 1.3s forwards ease-in-out;
+        animation: move_to_top 0.8s forwards ease-in-out;
     }
 }
 
@@ -249,5 +249,5 @@
 .App-contact{
     position: absolute;
     width: 100%;
-    bottom: 0px;
+    bottom: 30px;
 }
