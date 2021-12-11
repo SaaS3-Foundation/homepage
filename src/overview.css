@@ -113,17 +113,18 @@ img {
     color: white;
 }
 .article > h1{
-    font-size:2vw;
+    font-size: calc(1.5vw + 1rem);
 }
 .article > h2{
-    font-size:1vw;
+    font-size: calc(1rem + 1vw);
 }
 .article > p{
-    font-size:1vw;
+    font-size:1rem;
 }
 .article > ul{
-    font-size:1vw;
-    width: 900px;
-    max-width: calc(100% - 20px);
+    font-size:1rem;
+    /* width: 900px;
+    max-width: calc(100% - 20px); */
+    align-self: center;
     text-align: left;
 }

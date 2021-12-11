@@ -5,13 +5,33 @@
 }
 
 .graph-title{
+    z-index: 2;
     color: #b3c4f9;
-    text-shadow: -1px -1px 5px #16161877,
-        1px -1px 5px #16161877,
-        -1px 1px 5px #16161877, 
-        1px 1px 5px #16161877;
+    background: linear-gradient(var(--rotate), #5ddcff, #3c67e3 43%, #4e00c2);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: rgba(0, 0, 0, 0);
+    
     font-weight: bold;
     font-size: 4vw;
+    margin-bottom: 0px;
+    line-height: 1;
+}
+
+.graph-title-shadow{
+    
+    text-shadow: -1px -1px 10px #161618aa,
+        1px -1px 10px #161618aa,
+        -1px 1px 10px #161618aa, 
+        1px 1px 10px #161618aa;
+
+    font-weight: bold;
+    font-size: 4vw;
+    margin-bottom: 0px;
+    line-height: 1;
+
+    position: absolute;
+    bottom: -4vw;
 }
 
 .graph-text{

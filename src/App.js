@@ -21,9 +21,16 @@ import roles from './static/roles.png'
 
 export const white_paper_link = "https://www.deainet.io/file/Whitepaper.pdf"
 
-const dev_mode = true;
+const dev_mode = false;
 // const dev_mode = false;
 // controls whether the opening screen should show.
+
+export const goToOverview = () => {
+    let el = document.getElementById('overview');
+    if(el){
+        el.scrollIntoView({ behavior: 'smooth', block:'center'})
+    }
+}
 
 
 function App() {
@@ -87,7 +94,7 @@ function App() {
                     
                     <button
                         className={`App-menu-item${tab==="overview"?"__selected":""}`}
-                        onClick={()=>{alert("SUccess")}}
+                        onClick={goToOverview}
                     >Overview</button>
 
                     <button className="App-menu-item" onClick={()=>{window.open(white_paper_link)}}>White Paper</button>
@@ -165,12 +172,21 @@ Identity Recognition, Driverless Car, Robotics.
                 <div style={{height:"5rem"}} />
                 <h1>Who is DeAI User</h1>
                 <p>
-                DeAI users are the developers who require AI services for their products such as Meterverse Developers
-,Enterprise Developers
-,Personal Developers
-De/Centralized App Developers
-.
-                    In DeAI, we define decentralized API (DeAPI) to replace centralized API. All DeAPIs are deployed on DeAINet in a distributed way to provide decentralized AI services. AI user can send a decentralized request (DeRequest) to a DeAPI to get a decentralized response (DeResponse). The reliable miners in DeAINet execute all DeAPIs in 7x24 with DPoS consensus.
+                    DeAI users are the developers 
+                    who require AI services for their 
+                    products such as Meterverse Developers
+                    ,Enterprise Developers
+                    ,Personal Developers
+                    De/Centralized App Developers.
+                    In DeAI, we define decentralized API (DeAPI) 
+                    to replace centralized API. All DeAPIs are 
+                    deployed on DeAINet in a distributed 
+                    way to provide decentralized AI services. 
+                    AI user can send a decentralized request 
+                    (DeRequest) to a DeAPI to get a decentralized 
+                    response (DeResponse). The reliable miners in 
+                    DeAINet execute all DeAPIs in 7x24 with 
+                    DPoS consensus.
                 </p>
 
                 <div style={{height:"5rem"}} />
@@ -209,7 +225,7 @@ De/Centralized App Developers
             <h1>Our Team</h1>
             </div>
             <div>
-                <img width="60%" src={team}></img>
+                <img style={{width:900,maxWidth:'calc(100vw - 20px)'}} src={team}></img>
             </div>
 
                 {/*<div style={{height:20}}></div>*/}

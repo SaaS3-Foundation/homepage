@@ -6,9 +6,21 @@
   --app-background-dark: #161922;
 }
 
+@font-face {
+  font-family: 'thicccboi';
+  src: local('thicccboi'), url(./static/fonts/Webfont/THICCCBOI-Regular.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'thicccboi';
+  font-weight: bold;
+  src: local('thicccboi'), url(./static/fonts/Webfont/THICCCBOI-Bold.woff2) format('woff2');
+}
+
 .App {
   text-align: center;
   color: white;
+  font-family: 'thicccboi', sans-serif;
 }
 
 .App > footer {
@@ -113,4 +125,13 @@ body {
   line-height: 1rem;
   color: var(--contact-color);
   padding-bottom: 5px;
+}
+
+.relative-container{
+  height: 0px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
 }

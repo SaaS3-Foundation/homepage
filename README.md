@@ -1,33 +1,33 @@
 # DeAI Homepage
 
 
-官方邮箱：deaichainteam@gmail.com
-github：
-    账号：deaichainteam@gmail.com
-twitter：@deaichain
-telegram：deaichain team
+Official email: deaichainteam@gmail.com
+github:
+    Account: deaichainteam@gmail.com
+twitter: @deaichain
+telegram: deaichain team
 
 
 ## Local Develop
 
-下载最新的稳定版 Node.js
+Download the latest stable version of Node.js
 
-命令行输入 npm 查看是否安装成功
+Enter npm on the command line to see if the installation is successful
 
-命令行输入 npm install -g yarn
+Enter npm install -g yarn from the command line
 
-cd 到本项目 （ 本目录下包含 package.json ）
+cd to this project (include package.json in this directory)
 
-命令行输入 yarn install 下载并安装依赖
+Enter yarn install on the command line to download and install dependencies
 
-yarn start 启动开发预览服务，会自动打开浏览器浏览 localhost:3000
+yarn start starts the development preview service, it will automatically open the browser to browse localhost:3000
 
 ## Publish Updates
 
-命令行输入 yarn build （较为费内存）
+Enter yarn build from the command line (more memory cost)
 
-使用 SCP 指令进行代码上传
+Use SCP command to upload code
 
 scp -r ./build deai:/home/ubuntu/homepage/
 
-deai 是本地配置好的服务器 xxx@xxx.xxx.xxx.xxx
+deai is a locally configured server xxx@xxx.xxx.xxx.xxx
