@@ -13,8 +13,14 @@
 
 @font-face {
   font-family: 'thicccboi';
-  font-weight: bold;
+  font-weight: 500;
   src: local('thicccboi'), url(./static/fonts/Webfont/THICCCBOI-Bold.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'thicccboi';
+  font-weight: 400;
+  src: local('thicccboi'), url(./static/fonts/Webfont/THICCCBOI-SemiBold.woff2) format('woff2');
 }
 
 .App {

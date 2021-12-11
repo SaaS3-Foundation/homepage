@@ -164,9 +164,10 @@ Identity Recognition, Driverless Car, Robotics.
 
                 <p>
                    Using blockchain technology to construct a decentralized network to provide AaaS
-                    (AI as a Service) for App/Dapp developers to replace centralized API providers such as
-                    <a href="https://docs.microsoft.com/en-us/rest/api/azureml/" target='_blank'> Microsoft Azure</a> and
-                    <a href="https://cloud.google.com/products/ai" target='_blank'>Google AI</a> and further
+                    (AI as a Service) for App/Dapp developers to replace centralized API providers such
+                    as <a href="https://docs.microsoft.com/en-us/rest/api/azureml/" target='_blank'>
+                    Microsoft Azure</a> and <a href="https://cloud.google.com/products/ai" target='_blank'>
+                    Google AI</a> and further
                     deliver a fully decentralized SaaS solution for Web3.0.
                 </p>
                 <div style={{height:"5rem"}} />
