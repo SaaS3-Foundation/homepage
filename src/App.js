@@ -3,14 +3,12 @@ import './App.css';
 import PipClock from './components/pip_clock/pip_clock';
 import ContactBar from './components/contact/contact';
 import React from 'react';
-import Particles from "react-tsparticles";
 
 import './opening.css'
 import './overview.css'
 import { message, Space } from 'antd';
 import NetworkGraph from './components/network/network';
 
-import image2 from './static/img-2021-10-20-12-45-57-884617.png'
 import problemimg1 from './static/intro1.png'
 import problemimg2 from './static/intro2.png'
 import problemimg3 from './static/intro3.png'
@@ -74,8 +72,9 @@ function App() {
                         </div>
                     </div>
 
-                    <div hidden={clicked} className="App-link" href="https://mythrillfiction.com/" target="_blank" >
-                        DeAI Delivers a Web3.0 SaaS Solution
+                    <div hidden={clicked} className="App-link" href="https://mythrillfiction.com/" target="_blank">
+                        <h1 className="graph-title-shadow"> Delivers a Web3.0 SaaS Solution </h1>
+                        <h1 className="graph-title" style={{zIndex:2}}> Delivers a Web3.0 SaaS Solution </h1>
                     </div>
                 </div>
 
@@ -135,10 +134,8 @@ function App() {
                 <h1 id='overview'>Overview</h1>
 
                 <p>
-                    Artificial Intelligence (AI) is blooming recent
-years and achieve milestone techniques eg,
-Identity Recognition, Driverless Car, Robotics.
-                    Howerer, almost everthing is powered by centralized institutes bad things may happen!
+                    Artificial Intelligence (AI) is blooming recent years and achieve milestone techniques eg, identity recognition, driverless car, robotics. So, artificial intelligence APIs are essential for those products.
+                    However, almost everything is powered by centralized institutes, BAD THINGS HAPPEN!
                 </p>
                 <Space
                     direction='horizontal'
@@ -173,21 +170,7 @@ Identity Recognition, Driverless Car, Robotics.
                 <div style={{height:"5rem"}} />
                 <h1>Who is DeAI User</h1>
                 <p>
-                    DeAI users are the developers 
-                    who require AI services for their 
-                    products such as Meterverse Developers
-                    ,Enterprise Developers
-                    ,Personal Developers
-                    De/Centralized App Developers.
-                    In DeAI, we define decentralized API (DeAPI) 
-                    to replace centralized API. All DeAPIs are 
-                    deployed on DeAINet in a distributed 
-                    way to provide decentralized AI services. 
-                    AI user can send a decentralized request 
-                    (DeRequest) to a DeAPI to get a decentralized 
-                    response (DeResponse). The reliable miners in 
-                    DeAINet execute all DeAPIs in 7x24 with 
-                    DPoS consensus.
+                DeAI users are the developers who require AI services for their products. In DeAI, we define decentralized API (DeAPI) to replace centralized API. All DeAPIs are deployed on DeAINet in a distributed way to provide decentralized AI services. AI user can send a decentralized request (DeRequest) to a DeAPI to get a decentralized response (DeResponse). The reliable miners in DeAINet execute all DeAPIs in 7x24 with DPoS consensus.
                 </p>
 
                 <div style={{height:"5rem"}} />
