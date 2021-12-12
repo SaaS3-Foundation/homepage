@@ -98,7 +98,7 @@ function App() {
                     >Overview</button>
 
                     <button className="App-menu-item" onClick={()=>{window.open(white_paper_link)}}>White Paper</button>
-                    <button className="App-menu-item" onClick={()=>{window.open(pichdeck_link)}}>Pich Deck</button>
+                    <button className="App-menu-item" onClick={()=>{window.open(pichdeck_link)}}>Pitch Deck</button>
                     <button className="App-menu-item" onClick={()=>{message.info("Comming Soon")}}>AI Miners</button>
                     <button className="App-menu-item" onClick={()=>{message.info("Comming Soon")}}>AI Inventors</button>
                     <button className="App-menu-item" onClick={()=>{message.info("Comming Soon")}}>AI Users</button>
@@ -139,24 +139,22 @@ function App() {
                     Artificial Intelligence (AI) is blooming recent years and achieve milestone techniques eg, identity recognition, driverless car, robotics. So, artificial intelligence APIs are essential for those products.
                     However, almost everything is powered by centralized institutes, BAD THINGS HAPPEN!
                 </p>
-                <Space
-                    direction='horizontal'
-                    style={{paddingTop: 20}}
-                >
+                <div className='images'>
                     <img
-                        width='100%'
                         className="article-img"
                         src={problemimg1}
                     />
+                    <div></div>
                     <img
                         className="article-img"
                         src={problemimg2}
                     />
+                    <div></div>
                     <img
                         className="article-img"
                         src={problemimg3}
                     />
-                </Space>
+                </div>
                 <div style={{height:"5rem"}} />
 
                 <h1>DeAI Passion & Goal</h1>
@@ -197,22 +195,23 @@ function App() {
                     className="article-img"
                     src={roles}
                 />
-{/*                <p>*/}
-{/*                Users pay ETH to access DeAPI. DeAINet will periodically generate certain amount of new $DEAI tokens and half of them will reward to the most active users. Another half tokens distrbute to a random Ethereum address as an airdrop to maximize the token distribution. After 4 years, no more DEAI is generated.*/}
-{/*                </p><p>*/}
-{/*        Miners earn 95% users’ paid ETH to execute DeAPI on their hardwares. Each miner can run all kinds of DeAPIs to satisfy any kind of DeRequest. The redundancy exactly achieves the decentralization and reliability of DeAINet.*/}
-{/*            </p><p>*/}
-{/*Inventors earn 5% users’ paid $ETH as patent fee aside with miners, since they are AI researchers or developers who invent and create new DeAPIs.*/}
-{/*            </p><p>*/}
-{/*DEAI Stakers earn a proportion of $ETH from miners’ profit by staking DEAI to miners for DPoS (Delegation PoS) consensus*/}
-{/*            </p>*/}
+                {/*                <p>*/}
+                {/*                Users pay ETH to access DeAPI. DeAINet will periodically generate certain amount of new $DEAI tokens and half of them will reward to the most active users. Another half tokens distrbute to a random Ethereum address as an airdrop to maximize the token distribution. After 4 years, no more DEAI is generated.*/}
+                {/*                </p><p>*/}
+                {/*        Miners earn 95% users’ paid ETH to execute DeAPI on their hardwares. Each miner can run all kinds of DeAPIs to satisfy any kind of DeRequest. The redundancy exactly achieves the decentralization and reliability of DeAINet.*/}
+                {/*            </p><p>*/}
+                {/*Inventors earn 5% users’ paid $ETH as patent fee aside with miners, since they are AI researchers or developers who invent and create new DeAPIs.*/}
+                {/*            </p><p>*/}
+                {/*DEAI Stakers earn a proportion of $ETH from miners’ profit by staking DEAI to miners for DPoS (Delegation PoS) consensus*/}
+                {/*            </p>*/}
 
-            <div style={{height:"5rem"}} />
-            <h1>Our Team</h1>
+                <div style={{height:"5rem"}} />
+                <h1>Our Team</h1>
+                <div>
+                    <img style={{width:900,maxWidth:'calc(100vw - 20px)'}} src={team}></img>
+                </div>
             </div>
-            <div>
-                <img style={{width:900,maxWidth:'calc(100vw - 20px)'}} src={team}></img>
-            </div>
+            
 
                 {/*<div style={{height:20}}></div>*/}
 
