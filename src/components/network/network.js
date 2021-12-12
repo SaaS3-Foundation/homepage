@@ -105,6 +105,7 @@ const NetworkGraph = ({style, className, height}) => {
             <div style={{opacity:0.8}}>
                 <ForceGraph3D
                     height={_height}
+                    width={window.innerWidth}
                     ref={graph}
                     graphData={gData}
                     nodeRelSize={2}
