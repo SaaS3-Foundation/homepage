@@ -20,6 +20,7 @@ import roles from './static/roles.png'
 
 
 export const white_paper_link = "https://www.deainet.io/file/Whitepaper.pdf"
+export const pichdeck_link = "https://www.deainet.io/file/PitchDeck_DeAI.pdf"
 
 const dev_mode = false;
 // const dev_mode = false;
@@ -98,6 +99,7 @@ function App() {
                     >Overview</button>
 
                     <button className="App-menu-item" onClick={()=>{window.open(white_paper_link)}}>White Paper</button>
+                    <button className="App-menu-item" onClick={()=>{window.open(pichdeck_link)}}>Pich Deck</button>
                     <button className="App-menu-item" onClick={()=>{message.info("Comming Soon")}}>AI Miners</button>
                     <button className="App-menu-item" onClick={()=>{message.info("Comming Soon")}}>AI Inventors</button>
                     <button className="App-menu-item" onClick={()=>{message.info("Comming Soon")}}>AI Users</button>
