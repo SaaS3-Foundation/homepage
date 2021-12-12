@@ -141,3 +141,27 @@ body {
   align-items: center;
   position: relative;
 }
+
+.images {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: stretch;
+  width: 800px;
+  max-width: calc(100% - 20px);
+  overflow: hidden;
+  margin-top: 2rem;
+}
+
+.images > img{
+  flex: 1;
+  height: 30vh;
+  width: calc(33% - 20px);
+  border: 2px solid ;
+  border-image: linear-gradient(var(--rotate), #5ddcff, #3c67e3 43%, #4e00c2) 1;
+  /* filter: sepia(40%) ;  */
+}
+
+.images > div{
+  width: 20px;
+}
