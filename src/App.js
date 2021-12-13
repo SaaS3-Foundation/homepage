@@ -206,7 +206,7 @@ function App() {
                 {/*DEAI Stakers earn a proportion of $ETH from miners’ profit by staking DEAI to miners for DPoS (Delegation PoS) consensus*/}
                 {/*            </p>*/}
                 <div style={{height:"5rem"}} />
-                <h1>DeAI Partners</h1>
+                <h1>Partners</h1>
                 <div>
                     <img style={{width:900,maxWidth:'calc(100vw - 20px)'}} src={partner}></img>
                 </div>
