@@ -20,6 +20,7 @@ import roles from './static/roles.png'
 
 export const white_paper_link = "https://www.deainet.io/file/Whitepaper.pdf"
 export const pichdeck_link = "https://www.deainet.io/file/PitchDeck_DeAI.pdf"
+const interval_height = '15rem'
 
 const dev_mode = false;
 // const dev_mode = false;
@@ -156,7 +157,7 @@ function App() {
                         src={problemimg3}
                     />
                 </div>
-                <div style={{height:"5rem"}} />
+                <div style={{height:interval_height}} />
 
                 <h1>DeAI Passion & Goal</h1>
 
@@ -168,13 +169,13 @@ function App() {
                     Google AI</a> and further
                     deliver a fully decentralized SaaS solution for Web3.0.
                 </p>
-                <div style={{height:"5rem"}} />
+                <div style={{height:interval_height}} />
                 <h1>Who is DeAI User</h1>
                 <p>
                 DeAI users are the developers who require AI services for their products. In DeAI, we define decentralized API (DeAPI) to replace centralized API. All DeAPIs are deployed on DeAINet in a distributed way to provide decentralized AI services. AI user can send a decentralized request (DeRequest) to a DeAPI to get a decentralized response (DeResponse). The reliable miners in DeAINet execute all DeAPIs in 7x24 with DPoS consensus.
                 </p>
 
-                <div style={{height:"5rem"}} />
+                <div style={{height:interval_height}} />
                 <h1>DeAINet has Following Rich Properties</h1>
                 <ul>
                     <li>Protect the privacy for AI users by executing encryption protocol transparently</li>
@@ -187,7 +188,7 @@ function App() {
                 </p>
 
 
-                <div style={{height:"5rem"}} />
+                <div style={{height:interval_height}} />
                 <h1>DeAI Protocol</h1>
                 <p>
                   DeAINet is Constructed by DeAI Protocol with ERC-20 Token $DEAI for Governance. The Protocol is Applied on Four Roles:
@@ -205,13 +206,13 @@ function App() {
                 {/*            </p><p>*/}
                 {/*DEAI Stakers earn a proportion of $ETH from miners’ profit by staking DEAI to miners for DPoS (Delegation PoS) consensus*/}
                 {/*            </p>*/}
-                <div style={{height:"5rem"}} />
+                <div style={{height:interval_height}} />
                 <h1>Partners</h1>
                 <div>
                     <img style={{width:900,maxWidth:'calc(100vw - 20px)'}} src={partner}></img>
                 </div>
 
-                <div style={{height:"5rem"}} />
+                <div style={{height:interval_height}} />
                 <h1>Our Team</h1>
                 <div>
                     <img style={{width:900,maxWidth:'calc(100vw - 20px)'}} src={team}></img>
