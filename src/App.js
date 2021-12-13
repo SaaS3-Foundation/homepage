@@ -12,6 +12,7 @@ import NetworkGraph from './components/network/network';
 import problemimg1 from './static/intro1.png'
 import problemimg2 from './static/intro2.png'
 import problemimg3 from './static/intro3.png'
+import partner from './static/partner.png'
 import team from './static/team.png'
 import roles from './static/roles.png'
 
@@ -97,8 +98,8 @@ function App() {
                         onClick={goToOverview}
                     >Overview</button>
 
-                    <button className="App-menu-item" onClick={()=>{window.open(white_paper_link)}}>White Paper</button>
                     <button className="App-menu-item" onClick={()=>{window.open(pichdeck_link)}}>Pitch Deck</button>
+                    <button className="App-menu-item" onClick={()=>{window.open(white_paper_link)}}>White Paper</button>
                     <button className="App-menu-item" onClick={()=>{message.info("Comming Soon")}}>AI Miners</button>
                     <button className="App-menu-item" onClick={()=>{message.info("Comming Soon")}}>AI Inventors</button>
                     <button className="App-menu-item" onClick={()=>{message.info("Comming Soon")}}>AI Users</button>
@@ -204,6 +205,11 @@ function App() {
                 {/*            </p><p>*/}
                 {/*DEAI Stakers earn a proportion of $ETH from miners’ profit by staking DEAI to miners for DPoS (Delegation PoS) consensus*/}
                 {/*            </p>*/}
+                <div style={{height:"5rem"}} />
+                <h1>DeAI Partners</h1>
+                <div>
+                    <img style={{width:900,maxWidth:'calc(100vw - 20px)'}} src={partner}></img>
+                </div>
 
                 <div style={{height:"5rem"}} />
                 <h1>Our Team</h1>
@@ -228,9 +234,6 @@ function App() {
                 {/*<div className='col' style={{alignItems:'center'}}>*/}
                 {/*    <img className="article-img" style={{width: 100}} src={image2}></img>*/}
                 {/*</div>*/}
-
-
-
             <footer>
                 <ContactBar/>
             </footer>
