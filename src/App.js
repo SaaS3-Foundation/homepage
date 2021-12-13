@@ -20,7 +20,7 @@ import roles from './static/roles.png'
 
 export const white_paper_link = "https://www.deainet.io/file/Whitepaper.pdf"
 export const pichdeck_link = "https://www.deainet.io/file/PitchDeck_DeAI.pdf"
-const interval_height = '15rem'
+const interval_height = '12rem'
 
 const dev_mode = false;
 // const dev_mode = false;
@@ -101,6 +101,7 @@ function App() {
 
                     <button className="App-menu-item" onClick={()=>{window.open(pichdeck_link)}}>Pitch Deck</button>
                     <button className="App-menu-item" onClick={()=>{window.open(white_paper_link)}}>White Paper</button>
+                    <button className="App-menu-item" onClick={()=>{message.info("Comming Soon")}}>Document</button>
                     <button className="App-menu-item" onClick={()=>{message.info("Comming Soon")}}>AI Miners</button>
                     <button className="App-menu-item" onClick={()=>{message.info("Comming Soon")}}>AI Inventors</button>
                     <button className="App-menu-item" onClick={()=>{message.info("Comming Soon")}}>AI Users</button>
@@ -178,25 +179,28 @@ function App() {
                 <div style={{height:interval_height}} />
                 <h1>DeAINet has Following Rich Properties</h1>
                 <ul>
-                    <li>Protect the privacy for AI users by executing encryption protocol transparently</li>
+                    <li>Protect the privacy for AI users by executing encryption protocol transparently.</li>
                     <li>Improve the security for AI system by miners consensus.</li>
                     <li>Strengthen robustness for AI service by DeAPI runtime redundancy of miners.</li>
                     <li>Save energy and reduce the service cost by making use of spare resource to mine.</li>
-                    <li>Protect AI intellectual properties by algorithm NFTs which will be detailed latter.</li>
+                    <li>Protect AI intellectual properties by algorithm NFTs.</li>
                 </ul>
                 <p>
                 </p>
-
-
                 <div style={{height:interval_height}} />
                 <h1>DeAI Protocol</h1>
                 <p>
-                  DeAINet is Constructed by DeAI Protocol with ERC-20 Token $DEAI for Governance. The Protocol is Applied on Four Roles:
+                  DeAINet is Constructed by DeAI Protocol with ERC-20 Token DEAI for Governance. The Protocol is Applied on Four Roles:
                 </p>
                 <img
                     className="article-img"
                     src={roles}
                 />
+                <div style={{height:interval_height}} />
+                <h1>Algorithm NFT & Marketplace</h1>
+                <p>
+                Once a DeAPI is accepted to deploy, an unique tradeable algorithm NFT is minted and sent to inventor address as a digital patent. Whenever users pay ETH to access this DeAPI, 5% ETH is paid as patent fee to the algorithm NFT holder aside with 95% to miners. So inventors earn patent fee in ETH by holding the NFT or selling it on the marketplace to earn DEAI.
+                </p>
                 {/*                <p>*/}
                 {/*                Users pay ETH to access DeAPI. DeAINet will periodically generate certain amount of new $DEAI tokens and half of them will reward to the most active users. Another half tokens distrbute to a random Ethereum address as an airdrop to maximize the token distribution. After 4 years, no more DEAI is generated.*/}
                 {/*                </p><p>*/}
