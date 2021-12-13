@@ -127,4 +127,5 @@ img {
     max-width: calc(100% - 20px); */
     align-self: center;
     text-align: left;
+    list-style: upper-roman;
 }
