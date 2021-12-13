@@ -139,7 +139,7 @@ function App() {
                 <h1 id='overview'>Overview</h1>
 
                 <p>
-                    Artificial Intelligence (AI) is blooming recent years and achieve milestone techniques eg, identity recognition, driverless car, robotics. So, artificial intelligence APIs are essential for those products.
+                    Artificial Intelligence (AI) blooms in recent years and has achieved milestone techniques eg, identity recognition, driverless car, robotics. So artificial intelligence APIs are essential for those products.
                     However, almost everything is powered by centralized institutes, BAD THINGS HAPPEN!
                 </p>
                 <div className='images'>
@@ -199,7 +199,7 @@ function App() {
                 <div style={{height:interval_height}} />
                 <h1>Algorithm NFT & Marketplace</h1>
                 <p>
-                Once a DeAPI is accepted to deploy, an unique tradeable algorithm NFT is minted and sent to inventor address as a digital patent. Whenever users pay ETH to access this DeAPI, 5% ETH is paid as patent fee to the algorithm NFT holder aside with 95% to miners. So inventors earn patent fee in ETH by holding the NFT or selling it on the marketplace to earn DEAI.
+                Once a DeAPI is accepted to deploy, a unique tradeable algorithm NFT is minted and sent to the inventor address as a digital patent. Whenever users pay ETH to access this DeAPI, 5% ETH is paid as patent fee to the algorithm NFT holder while another 95% to miners. So inventors earn patent fee by holding the NFT or selling it on the marketplace to earn DEAI.
                 </p>
                 {/*                <p>*/}
                 {/*                Users pay ETH to access DeAPI. DeAINet will periodically generate certain amount of new $DEAI tokens and half of them will reward to the most active users. Another half tokens distrbute to a random Ethereum address as an airdrop to maximize the token distribution. After 4 years, no more DEAI is generated.*/}
