@@ -8,6 +8,7 @@ import './opening.css'
 import './overview.css'
 import { message, Space } from 'antd';
 import NetworkGraph from './components/network/network';
+import {  } from '@ant-design/icons'
 
 import problemimg1 from './static/intro1.png'
 import problemimg2 from './static/intro2.png'
@@ -15,6 +16,7 @@ import problemimg3 from './static/intro3.png'
 import partner from './static/partner.png'
 import team from './static/team.png'
 import roles from './static/roles.png'
+import icon_location from './static/icon_location.png'
 
 
 
@@ -241,6 +243,10 @@ function App() {
                 {/*</div>*/}
             <footer>
                 <ContactBar/>
+                <a href="https://goo.gl/maps/L4vicaLurYULHQ8Z6" target={'_blank'}>
+                    <img style={{width:'1rem', marginLeft:'1em'}} src={icon_location}/>
+                    71 Nanyang Dr, NTU Innovation Center, Singapore 638075
+                </a>
             </footer>
            
         </div>
