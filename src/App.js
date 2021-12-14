@@ -219,10 +219,10 @@ function App() {
                 </div>
 
                 <div style={{height:interval_height}} />
-                <h1>Our Team</h1>
-                <div>
-                    <img style={{width:900,maxWidth:'calc(100vw - 20px)'}} src={team}></img>
-                </div>
+                {/*<h1>Our Team</h1>*/}
+                {/*<div>*/}
+                {/*    <img style={{width:900,maxWidth:'calc(100vw - 20px)'}} src={team}></img>*/}
+                {/*</div>*/}
             </div>
             
 
