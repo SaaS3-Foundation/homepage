@@ -4,6 +4,7 @@ import {
     TwitterOutlined,
     SendOutlined,
     GithubOutlined,
+    HomeOutlined
 } from '@ant-design/icons'
 
 import './contact.css'
@@ -12,6 +13,7 @@ import {white_paper_link} from "../../App";
 export const twitter_link = "https://twitter.com/DeAINetOfficial"
 export const telegram_link = "https://t.me/deainet"
 export const github_link = "https://github.com/DeAINet"
+export const map_link = "https://goo.gl/maps/L4vicaLurYULHQ8Z6"
 
 const ContactBar = ({className}) => {
     return (
@@ -37,7 +39,10 @@ const ContactBar = ({className}) => {
                 <GithubOutlined className="contact-icon" style={{fontSize:24,paddingTop:2}}/>
                 <div className="contact-unfold-text" onClick={()=>{window.open(github_link)}}>https://github.com/DeAINet</div>
             </div>
-
+            <div className="contact-unfold">
+                <HomeOutlined className="contact-icon" style={{fontSize:24,paddingTop:2}}/>
+                <div className="contact-unfold-text" onClick={()=>{window.open(map_link)}}>Singapore</div>
+            </div>
             
 
         </Space>
