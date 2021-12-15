@@ -143,6 +143,7 @@ function App() {
                 <p>
                     Artificial Intelligence (AI) blooms in recent years and has achieved milestone techniques eg, identity recognition, driverless car, robotics. So artificial intelligence APIs are essential for those products.
                     However, almost everything is powered by centralized institutes, BAD THINGS HAPPEN!
+                    Several issues are raised such as malicious single node, AI security and privacy leakage.
                 </p>
                 <div className='images'>
                     <img
