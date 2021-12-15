@@ -89,7 +89,7 @@ const NetworkGraph = ({style, className, height}) => {
     //     Graph.refresh();
     // });
 
-    const title = "DeAI Delivers a Web3.0 SaaS Solution for Public AI"
+    const title = "DeAI Delivers a Web3.0 SaaS Solution"
 
 
     return (
