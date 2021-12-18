@@ -51,57 +51,7 @@ body {
   box-sizing: border-box;
 }
 
-.App-header{
-  height: var(--header-height);
-  border-bottom: 1px #37487b solid;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  padding-left: 1rem;
-  padding-right: 2rem;
-  position: fixed;
-  width: 100vw;
-  z-index: 50;
-  background-color: var(--app-background);
-}
 
-.App-menu{
-  display: flex;
-  flex-direction: row;
-}
-
-.App-menu-item{
-  background-color: transparent;
-  border: none;
-  color: white !important;
-  /*font-size: 1.1rem;*/
-  font-weight: 400;
-  transition: all 1s;
-  height: var(--header-height);
-  padding-left: 1rem;
-  padding-right: 1rem;
-  border-bottom: #688cf700 2px solid;
-}
-
-.App-menu-item:hover, .App-menu-item__selected{
-  background-color: #688cf722;
-  border: none;
-  color: white !important;
-  font-size: 1.1rem;
-  font-weight: 400;
-  border-bottom: #688cf755 2px solid;
-}
-
-.App-menu-item__selected{
-  border-bottom: 2px solid;
-  border-image: linear-gradient(var(--rotate), #5ddcff, #3c67e3 43%, #4e00c2) 1;
-}
-
-.App-header-logo{
-  height: 60%;
-  cursor: pointer;
-}
 
 .App-contact-card-positioner{
   position: relative;

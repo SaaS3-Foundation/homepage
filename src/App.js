@@ -6,7 +6,7 @@ import React from 'react';
 
 import './opening.css'
 import './overview.css'
-import { message, Space } from 'antd';
+import { message, Steps } from 'antd';
 import NetworkGraph from './components/network/network';
 import {  } from '@ant-design/icons'
 
@@ -17,6 +17,7 @@ import partner from './static/partner.png'
 import team from './static/team.png'
 import roles from './static/roles.png'
 import icon_location from './static/icon_location.png'
+import AppHeader from './components/app_header/AppHeader';
 
 
 
@@ -88,27 +89,11 @@ function App() {
                 </div>
             </div>
 
-            <header className="App-header">
-                <img
-                    src={logo}
-                    className="App-header-logo"
-                    onClick={()=>{setClicled(false)}}
-                />
-                <div className="App-menu">
-                    
-                    <button
-                        className={`App-menu-item${tab==="overview"?"__selected":""}`}
-                        onClick={goToOverview}
-                    >Overview</button>
-
-                    <button className="App-menu-item" onClick={()=>{window.open(pichdeck_link)}}>Pitch Deck</button>
-                    <button className="App-menu-item" onClick={()=>{window.open(white_paper_link)}}>White Paper</button>
-                    <button className="App-menu-item" onClick={()=>{message.info("Comming Soon")}}>Document</button>
-                    <button className="App-menu-item" onClick={()=>{message.info("Comming Soon")}}>AI Miners</button>
-                    <button className="App-menu-item" onClick={()=>{message.info("Comming Soon")}}>AI Inventors</button>
-                    <button className="App-menu-item" onClick={()=>{message.info("Comming Soon")}}>AI Users</button>
-                </div>
-            </header>
+            <AppHeader
+                setClicled={setClicled}
+                tab={tab}
+                setTab={setTab}
+            />
 
             <div id="banner" style={{
                 zIndex: 1,
