@@ -118,3 +118,10 @@ body {
 .images > div{
   width: 20px;
 }
+
+.code{
+  padding:1em;
+  background: #ffffff22;
+  color: cornflowerblue;
+  margin-top: 1em;
+}
