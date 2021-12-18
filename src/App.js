@@ -128,6 +128,7 @@ function App() {
                 <p>
                     Artificial Intelligence (AI) blooms in recent years and has achieved milestone techniques eg, identity recognition, driverless car, robotics. So artificial intelligence APIs are essential for those products.
                     However, almost everything is powered by centralized institutes, BAD THINGS HAPPEN!
+                    Several issues are raised such as malicious single node, AI security and privacy leakage.
                 </p>
                 <div className='images'>
                     <img
@@ -187,6 +188,10 @@ function App() {
                 <h1>Algorithm NFT & Marketplace</h1>
                 <p>
                 Once a DeAPI is accepted to deploy, a unique tradeable algorithm NFT is minted and sent to the inventor address as a digital patent. Whenever users pay ETH to access this DeAPI, 5% ETH is paid as patent fee to the algorithm NFT holder while another 95% to miners. So inventors earn patent fee by holding the NFT or selling it on the marketplace to earn DEAI.
+                    Algorithm NFT can be either a practical DeAPI or a famous piece of code e.g.,
+                    <div className="code">
+                        >> print ("Hello World")
+                    </div>
                 </p>
                 {/*                <p>*/}
                 {/*                Users pay ETH to access DeAPI. DeAINet will periodically generate certain amount of new $DEAI tokens and half of them will reward to the most active users. Another half tokens distrbute to a random Ethereum address as an airdrop to maximize the token distribution. After 4 years, no more DEAI is generated.*/}
@@ -202,7 +207,6 @@ function App() {
                 <div>
                     <img style={{width:900,maxWidth:'calc(100vw - 20px)'}} src={partner}></img>
                 </div>
-
                 <div style={{height:interval_height}} />
                 <h1>Our Team</h1>
                 <div>
