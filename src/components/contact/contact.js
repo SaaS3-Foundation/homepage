@@ -10,7 +10,7 @@ import {
 import './contact.css'
 import { Space } from 'antd'
 import {white_paper_link} from "../../App";
-export const twitter_link = "https://twitter.com/DeAINetOfficial"
+export const twitter_link = "https://twitter.com/DeAIOfficial"
 export const telegram_link = "https://t.me/deainet"
 export const github_link = "https://github.com/DeAINet"
 export const map_link = "https://goo.gl/maps/L4vicaLurYULHQ8Z6"
@@ -27,7 +27,7 @@ const ContactBar = ({className}) => {
             
             <div className="contact-unfold contact-unfold-short">
                 <TwitterOutlined className="contact-icon"/>
-                <div className="contact-unfold-text" onClick={()=>{window.open(twitter_link)}}>@DeAINet</div>
+                <div className="contact-unfold-text" onClick={()=>{window.open(twitter_link)}}>@DeAIOfficial</div>
             </div>
 
             <div className="contact-unfold contact-unfold-short">
