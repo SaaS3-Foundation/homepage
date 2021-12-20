@@ -79,7 +79,7 @@ function App() {
                     </div>
 
                     <div hidden={clicked} className="App-link" href="https://mythrillfiction.com/" target="_blank">
-                        <h1 className="graph-title-shadow"> Delivers a Web3.0 SaaS Solution </h1>
+                        <h1 className="graph-title-shadow"style={{zIndex:-1,bottom:'auto'}}> Delivers a Web3.0 SaaS Solution </h1>
                         <h1 className="graph-title" style={{zIndex:2}}> Delivers a Web3.0 SaaS Solution </h1>
                     </div>
                 </div>
