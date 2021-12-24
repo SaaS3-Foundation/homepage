@@ -131,13 +131,14 @@ function App() {
             <div className='Overview article'  style={{zIndex:3}} >
                 
                 {/* id is used only for jummping, do not use on next <h1> if not needed */}
-                <h1 id='overview'>Overview</h1>
-
+                <div className='article_child'>
+                <h1 id='overview'>Background</h1>
+                <div>
                 <p>
                     Artificial Intelligence (AI) blooms in recent years and has achieved milestone techniques eg, identity recognition, driverless car, robotics. So artificial intelligence APIs are essential for those products.
                     However, almost everything is powered by centralized institutes, BAD THINGS HAPPEN!
                     Several issues are raised such as malicious single node, AI security and privacy leakage.
-                </p>
+                </p></div>
                 <div className='images'>
                     <img
                         className="article-img"
@@ -154,30 +155,42 @@ function App() {
                         src={problemimg3}
                     />
                 </div>
+                </div>
                 {/*<div style={{height:interval_height}} />*/}
             </div>
 
             <div className='Overview article'  style={{zIndex:3}} >
+                <div className='article_child'>
                 <h1>DeAI Passion & Goal</h1>
-
                 <p>
                    Using blockchain technology to construct a decentralized network to provide AaaS
                     (AI as a Service) for App/Dapp developers to replace centralized API providers such
                     as <a href="https://docs.microsoft.com/en-us/rest/api/azureml/" target='_blank'>
                     Microsoft Azure</a> and <a href="https://cloud.google.com/products/ai" target='_blank'>
-                    Google AI</a> and further
-                    deliver a fully decentralized SaaS solution for Web3.0.
+                    Google AI</a>.
+                    The core team members are top Ph.Ds in computer science who are technical and
+                    experienced. We devote to build a decentralized SaaS platform to combine millions
+                    of users, computational power providers with API inventors in such a harmony way for
+                    offering extremely low costing and privacy preserving services in Web3.0 era. DeAI aims to
+                    become the world largest decentralized SaaS platform to provide high-quality API
+                    services with extremely cheap prices.
                 </p>
                 {/*<div style={{height:interval_height}} />*/}
+                </div>
             </div>
             <div className='Overview article'  style={{zIndex:3}} >
-                <h1>Who is DeAI User</h1>
+                <div className='article_child'>
+                <h1>Who are DeAI Users</h1>
                 <p>
                 DeAI users are the developers who require AI services for their products. In DeAI, we define decentralized API (DeAPI) to replace centralized API. All DeAPIs are deployed on DeAINet in a distributed way to provide decentralized AI services. AI user can send a decentralized request (DeRequest) to a DeAPI to get a decentralized response (DeResponse). The reliable miners in DeAINet execute all DeAPIs in 7x24 with DPoS consensus.
                 </p>
-
-                <div style={{height:interval_height}} />
+                </div>
+            </div>
+                {/*<div style={{height:interval_height}} />*/}
+            <div className='Overview article'  style={{zIndex:3}} >
+                <div className='article_child'>
                 <h1>DeAINet has Following Rich Properties</h1>
+                    {/*<div style={{'display'}}>*/}
                 <ul>
                     <li>Protect the privacy for AI users by executing encryption protocol transparently.</li>
                     <li>Improve the security for AI system by miners consensus.</li>
@@ -185,22 +198,25 @@ function App() {
                     <li>Save energy and reduce the service cost by making use of spare resource to mine.</li>
                     <li>Protect AI intellectual properties by algorithm NFTs.</li>
                 </ul>
-                <p>
-                </p>
                 {/*<div style={{height:interval_height}} />*/}
+                </div>
             </div>
             <div className='Overview article'  style={{zIndex:3}} >
+                <div className='article_child'>
                 <h1>DeAI Protocol</h1>
                 <p>
                   DeAINet is Constructed by DeAI Protocol with ERC-20 Token DEAI for Governance. The Protocol is Applied on Four Roles:
                 </p>
+                <div>
                 <img
                     className="article-img"
                     src={roles}
-                />
+                /></div>
                 {/*<div style={{height:interval_height}} />*/}
+                </div>
             </div>
             <div className='Overview article'  style={{zIndex:3}} >
+                <div className='article_child'>
                 <h1>Algorithm NFT & Marketplace</h1>
                 <p>
                 Once a DeAPI is accepted to deploy, a unique tradeable algorithm NFT is minted and sent to the inventor address as a digital patent. Whenever users pay ETH to access this DeAPI, 5% ETH is paid as patent fee to the algorithm NFT holder while another 95% to miners. So inventors earn patent fee by holding the NFT or selling it on the marketplace to earn DEAI.
@@ -208,6 +224,7 @@ function App() {
                     <div className="code">
                         >> print ("Hello World")
                     </div>
+                    Based on such an ecosystem, algorithm NFT store is expected to be the largest marketplace to trade digital patents in the world.
                 </p>
                 {/*                <p>*/}
                 {/*                Users pay ETH to access DeAPI. DeAINet will periodically generate certain amount of new $DEAI tokens and half of them will reward to the most active users. Another half tokens distrbute to a random Ethereum address as an airdrop to maximize the token distribution. After 4 years, no more DEAI is generated.*/}
@@ -219,22 +236,20 @@ function App() {
                 {/*DEAI Stakers earn a proportion of $ETH from miners’ profit by staking DEAI to miners for DPoS (Delegation PoS) consensus*/}
                 {/*            </p>*/}
                 {/*<div style={{height:interval_height}} />*/}
+                </div>
             </div>
             <div className='Overview article'  style={{zIndex:3}} >
+                <div className='article_child'>
                 <h1>Partners</h1>
-                <div>
-                    <img style={{width:900,maxWidth:'calc(100vw - 20px)'}} src={partner}></img>
-                </div>
+                    <img className={'article-image'} src={partner}></img>
                 {/*<div style={{height:interval_height}} />*/}
+                </div>
             </div>
 
             <div className='Overview article'  style={{zIndex:3}} >
+                <div className='article_child'>
                 <h1>Our Team</h1>
-                <div>
-                    <img style={{width:900,maxWidth:'calc(100vw - 20px)'}} src={team}></img>
-                </div>
-
-
+                    <img className='article-image' src={team}></img>
 
            {/*<footer>*/}
                 <div style={{marginTop:'5vh'}}>
@@ -243,7 +258,9 @@ function App() {
                     <img style={{width:'1rem', marginLeft:'1em'}} src={icon_location}/>
                     71 Nanyang Dr, NTU Innovation Center, Singapore 638075
                 </a>
-            </div>
+                </div>
+
+                </div>
             {/*</footer>*/}
             </div>
 
