@@ -125,3 +125,42 @@ body {
   color: cornflowerblue;
   margin-top: 1em;
 }
+
+
+.container {
+  display: flex;
+  overflow: auto;
+  outline: 1px dashed lightgray;
+  flex: none;
+}
+
+.container.y {
+  width: 100vw;
+  height: 100vh;
+  flex-flow: column nowrap;
+}
+/* scroll-snap */
+
+.y.mandatory-scroll-snapping {
+  scroll-snap-type: y mandatory;
+}
+
+.y.proximity-scroll-snapping {
+  scroll-snap-type: y proximity;
+}
+
+.container > div {
+  text-align: center;
+  scroll-snap-align: center;
+  flex: none;
+}
+
+.y.container > div {
+  width: 100%;
+  height: 100%;
+}
+/* appearance fixes */
+.y.container > div:first-child {
+  line-height: 1.3;
+  font-size: 64px;
+}
