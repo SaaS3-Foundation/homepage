@@ -48,40 +48,41 @@
     padding: 3rem;
     z-index: 999;
 
-    display: flex;
+    /*display: flex;*/
     flex-direction: column;
     align-items: center;
-
+    display: table;
 }
 
-.article > h1 {
+.article h1 {
     color: white;
 }
 
-.article > p > a {
+.article p a {
     color: #92b9fd;
     text-decoration: underline;
     font-weight: normal;
     transition: all 0.5s;
 }
 
-.article > p > a:hover {
+.article p a:hover {
     color: #dfedff;
 }
 
-.article > p {
+.article p {
     width: 900px;
+    display: inline-table;
     max-width: calc(100vw - 20px);
     text-align: justify;
     font-size: 1rem;
 }
 
-.article > div {
+.article>div {
     width: 900px;
     max-width: calc(100vw - 20px);
 }
 
-.article > .col {
+.article .col {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -92,7 +93,15 @@
     width: 900px;
     max-width: calc(100vw - 20px);
 }
+.article_child{
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
 
+.article_child ul{
+    display: inline-block;
+}
 
 img {
     object-fit: cover;
@@ -106,22 +115,22 @@ img {
     height: 100%;
 }
 
-.article > h2, .article > h3 {
+.article h2, .article h3 {
     text-align: center;
     width: 900px;
     max-width: calc(100vw - 20px);
     color: white;
 }
-.article > h1{
-    font-size: calc(1.5vw + 1rem);
+.article h1{
+    font-size: calc(3vw + 1rem);
 }
-.article > h2{
+.article h2{
     font-size: calc(1rem + 1vw);
 }
-.article > p{
+.article p{
     font-size:1rem;
 }
-.article > ul{
+.article ul{
     font-size:1rem;
     /* width: 900px;
     max-width: calc(100% - 20px); */
