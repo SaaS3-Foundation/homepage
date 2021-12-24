@@ -19,14 +19,12 @@ import roles from './static/roles.png'
 import icon_location from './static/icon_location.png'
 import AppHeader from './components/app_header/AppHeader';
 
-
-
 export const white_paper_link = "https://www.deainet.io/file/Whitepaper.pdf"
 export const pichdeck_link = "https://www.deainet.io/file/PitchDeck_DeAI.pdf"
 const interval_height = '12rem'
 
-// const dev_mode = false;
-const dev_mode = true;
+const dev_mode = false;
+// const dev_mode = true;
 // controls whether the opening screen should show.
 
 export const goToOverview = () => {
