@@ -27,6 +27,7 @@
   text-align: center;
   color: white;
   font-family: 'thicccboi', sans-serif;
+  width: 100%;
 }
 
 .App > footer {
@@ -130,7 +131,8 @@ body {
 
 .container {
   display: flex;
-  overflow: auto;
+  overflow-y: auto;
+  /* overflow-x: hidden; */
   outline: 1px dashed lightgray;
   flex: none;
 }
@@ -164,4 +166,8 @@ body {
 .y.container > div:first-child {
   line-height: 1.3;
   font-size: 64px;
+}
+
+.article-image {
+  max-width: calc(100% - 10vw);
 }
