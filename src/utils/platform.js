@@ -7,3 +7,5 @@ export const isMobile = () => {
     }
     return false;
 }
+
+export const isSafari = () => /Safari/.test(navigator.userAgent) && !/Chrome/.test(navigator.userAgent);

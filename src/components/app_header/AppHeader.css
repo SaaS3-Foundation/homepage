@@ -45,6 +45,11 @@
     border-image: linear-gradient(var(--rotate), #5ddcff, #3c67e3 43%, #4e00c2) 1;
 }
 
+.safari .App-menu-item__selected {
+    border-width: 0px;
+    border-bottom: 2px solid #3c67e3;
+}
+
 .App-header-logo{
     height: 60%;
     cursor: pointer;
