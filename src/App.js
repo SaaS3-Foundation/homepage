@@ -192,13 +192,16 @@ function App() {
                 <div className='article_child'>
                 <h1>DeAINet has Following Rich Properties</h1>
                     {/*<div style={{'display'}}>*/}
-                <ul>
-                    <li>Protect the privacy for AI users by executing encryption protocol transparently.</li>
-                    <li>Improve the security for AI system by miners consensus.</li>
-                    <li>Strengthen robustness for AI service by DeAPI runtime redundancy of miners.</li>
-                    <li>Save energy and reduce the service cost by making use of spare resource to mine.</li>
-                    <li>Protect AI intellectual properties by algorithm NFTs.</li>
-                </ul>
+                <div className='list_positioner'>
+                    <div className='list'>
+                        
+                        <div><div>1</div>Protect the privacy for AI users by executing encryption protocol transparently.</div>
+                        <div><div>2</div>Improve the security for AI system by miners consensus.</div>
+                        <div><div>3</div>Strengthen robustness for AI service by DeAPI runtime redundancy of miners.</div>
+                        <div><div>4</div>Save energy and reduce the service cost by making use of spare resource to mine.</div>
+                        <div><div>5</div>Protect AI intellectual properties by algorithm NFTs.</div>
+                    </div>
+                </div>
                 {/*<div style={{height:interval_height}} />*/}
                 </div>
             </div>
