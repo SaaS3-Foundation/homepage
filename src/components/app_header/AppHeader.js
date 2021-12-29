@@ -23,7 +23,7 @@ const AppHeader = ({setClicled, tab, setTab}) => {
                 overlay={
                     <div className="App-menu-dropdown">
                         <button className="App-menu-item" onClick={()=>{message.info("Comming Soon")}}>API NFT</button>
-                        <button className="App-menu-item" onClick={()=>{window.location.href='/non-api-nft/'}}>non-API NFT</button>
+                        <button className="App-menu-item" onClick={()=>{window.location.href='/non-api-nft/'}}>non-API NFT (Demo)</button>
                     </div>
                 }
                 
@@ -45,7 +45,7 @@ const AppHeader = ({setClicled, tab, setTab}) => {
             <Menu.Item onClick={()=>{window.open(white_paper_link)}}>White Paper</Menu.Item>
             <SubMenu title="API NFT">
                 <Menu.Item onClick={()=>{message.info("Comming Soon")}}>API NFT</Menu.Item>
-                <Menu.Item onClick={()=>{window.location.href='/non-api-nft/'}}>non-API NFT</Menu.Item>
+                <Menu.Item onClick={()=>{window.location.href='/non-api-nft/'}}>non-API NFT (Demo)</Menu.Item>
             </SubMenu>
             <Menu.Item onClick={()=>{message.info("Comming Soon")}}>Document</Menu.Item>
             <Menu.Item onClick={()=>{message.info("Comming Soon")}}>AI Miners</Menu.Item>

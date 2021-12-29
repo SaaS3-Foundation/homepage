@@ -5,7 +5,9 @@ import ForceGraph3D from 'react-force-graph-3d';
 
 import './network.css'
 import { goToOverview, white_paper_link } from "../../App";
+import { isSafari } from "../../utils/platform";
 
+import safari_bg from '../../static/safari_bg.jpg'
 
 
 
@@ -17,7 +19,7 @@ const NetworkGraph = ({style, className, height}) => {
     const rad2deg = rad => { return rad * 180 / Math.PI; }
     
 
-    const distance = 800;
+    const distance = 300;
 
     // const graphElem = document.getElementById("3d-graph");
 
@@ -26,7 +28,7 @@ const NetworkGraph = ({style, className, height}) => {
     const [ gData, setGData ] = React.useState({nodes:[],links:[]})
 
     React.useEffect(()=>{
-        const N = 200;
+        const N = 50;
         const nodes = [...Array(N).keys()].map(i => {
             return { 
                 id: i,
@@ -66,18 +68,18 @@ const NetworkGraph = ({style, className, height}) => {
 
     
     React.useEffect(()=>{
-        setTimeout(()=>{
-            setAngle(angle + 0.5);
+        // setTimeout(()=>{
+            // setAngle(angle + 180);
             if(graph.current){
                 // console.log("try to rotate")
                 graph.current.cameraPosition({
                     x: distance * Math.sin(deg2rad(angle)),
                     z: distance * Math.cos(deg2rad(angle)),
-                },{x:0,y:0,z:0},100)
+                },{x:0,y:0,z:0},1000)
                 // dconsole.log(angle, distance * Math.sin(deg2rad(angle)), distance * Math.cos(deg2rad(angle)),)
                 // console.log(graph.current.cameraPosition() )
             }
-        },100)
+        // },100)
     },[angle])
 
     // window.addEventListener('resize', e => {
@@ -102,8 +104,8 @@ const NetworkGraph = ({style, className, height}) => {
             }}
             className={className}
         >
-            <div style={{opacity:0.8}}>
-                <ForceGraph3D
+            <div style={{opacity:0.6, height:_height}}>
+                {isSafari()?<img className="safari_bg" src={safari_bg}/>:<ForceGraph3D
                     height={_height}
                     width={document.scrollingElement.clientWidth - 30}
                     ref={graph}
@@ -120,7 +122,7 @@ const NetworkGraph = ({style, className, height}) => {
                     enableNavigationControls={false}
                     enablePointerInteraction={false}
                     showNavInfo={false}
-                />
+                />}
             </div>
             <div className="graph-title-container">
 

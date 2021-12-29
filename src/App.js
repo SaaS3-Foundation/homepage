@@ -18,6 +18,7 @@ import team from './static/team.png'
 import roles from './static/roles.png'
 import icon_location from './static/icon_location.png'
 import AppHeader from './components/app_header/AppHeader';
+import { isSafari } from './utils/platform';
 
 export const white_paper_link = "https://www.deainet.io/file/Whitepaper.pdf"
 export const pichdeck_link = "https://www.deainet.io/file/PitchDeck_DeAI.pdf"
@@ -36,6 +37,8 @@ export const goToOverview = () => {
 
 
 function App() {
+
+    const is_safari = isSafari();
 
     const [ clicked, setClicled ] = React.useState(dev_mode);
 
@@ -70,7 +73,7 @@ function App() {
     },[clicked])
 
     return (
-        <div className="App container y mandatory-scroll-snapping">
+        <div className={`App container y mandatory-scroll-snapping ${is_safari?'safari':''}`}>
             <div hidden={welcome_hidden} className={clicked?"App-opening__clicked":"App-opening"}>
                 <div className="App-opening-center">
                     <div class={`${clicked?"card__clicked":"card"}`} onClick={()=>setClicled(true)}>

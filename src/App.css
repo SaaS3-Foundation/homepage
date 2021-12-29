@@ -38,6 +38,9 @@
   border-image: linear-gradient(var(--rotate), #5ddcff, #3c67e3 43%, #4e00c2) 1;
 }
 
+.safari .App footer {
+  border-image: linear-gradient( #5ddcff, #3c67e3 43%, #4e00c2) 1;
+}
 
 
 body {
@@ -79,6 +82,10 @@ body {
   transition: all 1s;
 }
 
+.safari .App-contact-card {
+  border-image: linear-gradient(#5ddcff, #3c67e3 43%, #4e00c2 ) 1;
+}
+
 .App-contact-card > h2{
   font-weight: normal;
   font-size: 1rem;
@@ -115,6 +122,10 @@ body {
   border-image: linear-gradient(var(--rotate), #5ddcff, #3c67e3 43%, #4e00c2) 1;
   /* filter: sepia(40%) ;  */
   display: inline-flex;
+}
+
+.safari .images > img {
+  border-image: linear-gradient( #5ddcff, #3c67e3 43%, #4e00c2) 1;
 }
 
 .images > div{
@@ -170,4 +181,12 @@ body {
 
 .article-image {
   max-width: calc(100% - 10vw);
+}
+
+.article h1 {
+  font-size: calc(2vw + 0.7rem) !important;
+}
+
+.article ul {
+  list-style: square outside none;
 }
