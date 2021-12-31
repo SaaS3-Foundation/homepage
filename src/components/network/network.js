@@ -5,7 +5,7 @@ import ForceGraph3D from 'react-force-graph-3d';
 
 import './network.css'
 import { goToOverview, white_paper_link } from "../../App";
-import { isSafari } from "../../utils/platform";
+import { isChrome } from "../../utils/platform";
 
 import safari_bg from '../../static/safari_bg.jpg'
 
@@ -105,7 +105,7 @@ const NetworkGraph = ({style, className, height}) => {
             className={className}
         >
             <div style={{opacity:0.6, height:_height}}>
-                {isSafari()?<img className="safari_bg" src={safari_bg}/>:<ForceGraph3D
+                {!isChrome()?<img className="safari_bg" src={safari_bg}/>:<ForceGraph3D
                     height={_height}
                     width={document.scrollingElement.clientWidth - 30}
                     ref={graph}
