@@ -8,4 +8,5 @@ export const isMobile = () => {
     return false;
 }
 
-export const isChrome = () => /Chrome/.test(navigator.userAgent);
+// export const isChrome = () => /Chrome/.test(navigator.userAgent);
+export const isChrome = () => false;

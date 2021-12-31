@@ -217,6 +217,7 @@ body {
 
 .list > div > div {
   width: 5vh;
+  min-width: 5vh;
   height: 5vh;
   /* border-radius: 4vh; */
   background-color: #3c67e377;
