@@ -91,7 +91,7 @@ const NetworkGraph = ({style, className, height}) => {
     //     Graph.refresh();
     // });
 
-    const title = "DeAI Delivers a Web3.0 SaaS Solution"
+    const title = "Patent and Monetize Web2 Projects to Web3 Services"
 
 
     return (
@@ -130,7 +130,7 @@ const NetworkGraph = ({style, className, height}) => {
                     <h1 className="graph-title-shadow"> {title} </h1>
                     <h1 className="graph-title" style={{zIndex:2}}> {title} </h1>
                 </div>
-                <p className="graph-text">DeAI is Decentralized AI as a Service. Click <a onClick={goToOverview}> Overview </a>to Learn More</p>
+                <p className="graph-text">SaaS3 is Decentralized Software as a Service. Click <a onClick={goToOverview}> Overview </a>to Learn More</p>
             </div>
         </div>
     )

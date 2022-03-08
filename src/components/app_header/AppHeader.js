@@ -28,12 +28,12 @@ const AppHeader = ({setClicled, tab, setTab}) => {
                 }
                 
             >
-                <button className="App-menu-item">Alg. NFT</button>
+                <button className="App-menu-item">pNFT</button>
             </Dropdown>
             <button className="App-menu-item" onClick={()=>{message.info("Comming Soon")}}>Document</button>
             
-            <button className="App-menu-item" onClick={()=>{message.info("Comming Soon")}}>AI Miners</button>
-            <button className="App-menu-item" onClick={()=>{message.info("Comming Soon")}}>AI Inventors</button>
+            <button className="App-menu-item" onClick={()=>{message.info("Comming Soon")}}>Miners</button>
+            <button className="App-menu-item" onClick={()=>{message.info("Comming Soon")}}>Creators</button>
             <button className="App-menu-item" onClick={()=>{message.info("Comming Soon")}}>AI Users</button>
         </>
     )
@@ -48,9 +48,9 @@ const AppHeader = ({setClicled, tab, setTab}) => {
                 <Menu.Item onClick={()=>{window.location.href='/non-api-nft/'}}>non-API NFT (Demo)</Menu.Item>
             </SubMenu>
             <Menu.Item onClick={()=>{message.info("Comming Soon")}}>Document</Menu.Item>
-            <Menu.Item onClick={()=>{message.info("Comming Soon")}}>AI Miners</Menu.Item>
-            <Menu.Item onClick={()=>{message.info("Comming Soon")}}>AI Inventors</Menu.Item>
-            <Menu.Item onClick={()=>{message.info("Comming Soon")}}>AI Users</Menu.Item>
+            <Menu.Item onClick={()=>{message.info("Comming Soon")}}>Miners</Menu.Item>
+            <Menu.Item onClick={()=>{message.info("Comming Soon")}}>Creators</Menu.Item>
+            <Menu.Item onClick={()=>{message.info("Comming Soon")}}>Users</Menu.Item>
         </Menu>
     )
 

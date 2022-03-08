@@ -216,9 +216,9 @@
     .App-opening__clicked {
         animation: fadeout 0.8s forwards;
     }
-    .App-logo__clicked {
-        animation: move_to_top 0.8s forwards ease-in-out;
-    }
+    /*.App-logo__clicked {*/
+    /*    animation: move_to_top 0.8s forwards ease-in-out;*/
+    /*}*/
 }
 
 .App-link {
@@ -241,10 +241,10 @@
 }
 
 .App-logo, .App-logo__clicked{
-    width: calc(var(--card-width) * 0.6);
+    width: calc(var(--card-width) * 0.4);
     position: fixed;
-    left: calc(50vw - var(--card-width) * 0.3);
-    top: calc(50vh - (1.55rem + var(--card-height) + var(--card-margin-bottom)) / 2 - 2 *  var(--card-border) + 0.2 * var(--card-height));
+    left: calc(50vw - var(--card-width) * 0.2);
+    top: calc(50vh - (5rem + var(--card-height) + var(--card-margin-bottom)) / 2 - 2 *  var(--card-border) + 0.2 * var(--card-height));
 }
 
 
