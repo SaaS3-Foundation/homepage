@@ -55,6 +55,11 @@
     cursor: pointer;
 }
 
+.App-header h1{
+    height: 60%;
+    cursor: pointer;
+}
+
 .App-menu-dropdown {
     display: flex;
     flex-direction: column;

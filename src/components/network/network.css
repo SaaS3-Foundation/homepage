@@ -13,7 +13,7 @@
     -webkit-text-fill-color: rgba(0, 0, 0, 0);
     
     font-weight: bold;
-    font-size: 4vw;
+    font-size: 3vw;
     margin-bottom: 0px;
     line-height: 1;
 }
@@ -32,12 +32,12 @@
         1px 1px 10px #161618aa;
 
     font-weight: bold;
-    font-size: 4vw;
+    font-size: 3vw;
     margin-bottom: 0px;
     line-height: 1;
 
     position: absolute;
-    bottom: -4vw;
+    bottom: -3vw;
 }
 
 .graph-text{

@@ -20,8 +20,8 @@ import icon_location from './static/icon_location.png'
 import AppHeader from './components/app_header/AppHeader';
 import { isChrome } from './utils/platform';
 
-export const white_paper_link = "https://www.deainet.io/file/Whitepaper.pdf"
-export const pichdeck_link = "https://www.deainet.io/file/PitchDeck_DeAI.pdf"
+export const white_paper_link = "https://www.saas3.io/file/Whitepaper.pdf"
+export const pichdeck_link = "https://www.saas3.io/file/PitchDeck_SaaS3.pdf"
 const interval_height = '12rem'
 
 const dev_mode = false;
@@ -162,7 +162,7 @@ function App() {
 
             <div className='Overview article'  style={{zIndex:3}} >
                 <div className='article_child'>
-                <h1>DeAI Passion & Goal</h1>
+                <h1>SaaS3 Passion & Goal</h1>
                 <p>
                    Using blockchain technology to construct a decentralized network to provide AaaS
                     (AI as a Service) for App/Dapp developers to replace centralized API providers such
@@ -172,7 +172,7 @@ function App() {
                     The core team members are top Ph.Ds in computer science who are technical and
                     experienced. We devote to build a decentralized SaaS platform to combine millions
                     of users, computational power providers with API inventors in such a harmony way for
-                    offering extremely low costing and privacy preserving services in Web3.0 era. DeAI aims to
+                    offering extremely low costing and privacy preserving services in Web3.0 era. SaaS3 aims to
                     become the world largest decentralized SaaS platform to provide high-quality API
                     services with extremely cheap prices.
                 </p>
@@ -181,25 +181,25 @@ function App() {
             </div>
             <div className='Overview article'  style={{zIndex:3}} >
                 <div className='article_child'>
-                <h1>Who are DeAI Users</h1>
+                <h1>Who are SaaS3 Users</h1>
                 <p>
-                DeAI users are the developers who require AI services for their products. In DeAI, we define decentralized API (DeAPI) to replace centralized API. All DeAPIs are deployed on DeAINet in a distributed way to provide decentralized AI services. AI user can send a decentralized request (DeRequest) to a DeAPI to get a decentralized response (DeResponse). The reliable miners in DeAINet execute all DeAPIs in 7x24 with DPoS consensus.
+                SaaS3 users are the developers who require AI services for their products. In SaaS3, we define decentralized API (DeAPI) to replace centralized API. All DeAPIs are deployed on dRuntime in a distributed way to provide decentralized AI services. user can send a decentralized request (DeRequest) to a DeAPI to get a decentralized response (DeResponse). The reliable miners in dRuntime execute all DeAPIs in 7x24 with DPoS consensus.
                 </p>
                 </div>
             </div>
                 {/*<div style={{height:interval_height}} />*/}
             <div className='Overview article'  style={{zIndex:3}} >
                 <div className='article_child'>
-                <h1>DeAINet has Following Rich Properties</h1>
+                <h1>dRuntime has Following Rich Properties</h1>
                     {/*<div style={{'display'}}>*/}
                 <div className='list_positioner'>
                     <div className='list'>
                         
-                        <div><div>1</div>Protect the privacy for AI users by executing encryption protocol transparently.</div>
-                        <div><div>2</div>Improve the security for AI system by miners consensus.</div>
-                        <div><div>3</div>Strengthen robustness for AI service by DeAPI runtime redundancy of miners.</div>
+                        <div><div>1</div>Protect the privacy for users by executing encryption protocol transparently.</div>
+                        <div><div>2</div>Improve the security for system by miners consensus.</div>
+                        <div><div>3</div>Strengthen robustness for services by DeAPI runtime redundancy of miners.</div>
                         <div><div>4</div>Save energy and reduce the service cost by making use of spare resource to mine.</div>
-                        <div><div>5</div>Protect AI intellectual properties by algorithm NFTs.</div>
+                        <div><div>5</div>Protect intellectual properties by patent-NFTs.</div>
                     </div>
                 </div>
                 {/*<div style={{height:interval_height}} />*/}
@@ -207,9 +207,9 @@ function App() {
             </div>
             <div className='Overview article'  style={{zIndex:3}} >
                 <div className='article_child'>
-                <h1>DeAI Protocol</h1>
+                <h1>SaaS3 Protocol</h1>
                 <p>
-                  DeAINet is Constructed by DeAI Protocol with ERC-20 Token DEAI for Governance. The Protocol is Applied on Four Roles:
+                  dRuntime is Constructed by SaaS3 Protocol with  Token SAAS for Governance. The Protocol is Applied on Four Roles:
                 </p>
                 <div>
                 <img
@@ -223,21 +223,21 @@ function App() {
                 <div className='article_child'>
                 <h1>Algorithm NFT & Marketplace</h1>
                 <p>
-                Once a DeAPI is accepted to deploy, a unique tradeable algorithm NFT is minted and sent to the inventor address as a digital patent. Whenever users pay ETH to access this DeAPI, 5% ETH is paid as patent fee to the algorithm NFT holder while another 95% to miners. So inventors earn patent fee by holding the NFT or selling it on the marketplace to earn DEAI.
+                Once a DeAPI is accepted to deploy, a unique tradeable patent-NFT is minted and sent to the inventor address as a digital patent. Whenever users pay SAAS to access this DeAPI, 5% SAAS is paid as patent fee to the patent-NFT holder while another 95% to miners. So inventors earn patent fee by holding the NFT or selling it on the marketplace to earn SAAS.
                     Algorithm NFT can be either a practical DeAPI or a famous piece of code e.g.,
                     <div className="code">
                         >> print ("Hello World")
                     </div>
-                    Based on such an ecosystem, algorithm NFT store is expected to be the largest marketplace to trade digital patents in the world.
+                    Based on such an ecosystem, patent-NFT store is expected to be the largest marketplace to trade digital patents in the world.
                 </p>
                 {/*                <p>*/}
-                {/*                Users pay ETH to access DeAPI. DeAINet will periodically generate certain amount of new $DEAI tokens and half of them will reward to the most active users. Another half tokens distrbute to a random Ethereum address as an airdrop to maximize the token distribution. After 4 years, no more DEAI is generated.*/}
+                {/*                Users pay SAAS to access DeAPI. dRuntime will periodically generate certain amount of new $SAAS tokens and half of them will reward to the most active users. Another half tokens distrbute to a random Ethereum address as an airdrop to maximize the token distribution. After 4 years, no more SAAS is generated.*/}
                 {/*                </p><p>*/}
-                {/*        Miners earn 95% users’ paid ETH to execute DeAPI on their hardwares. Each miner can run all kinds of DeAPIs to satisfy any kind of DeRequest. The redundancy exactly achieves the decentralization and reliability of DeAINet.*/}
+                {/*        Miners earn 95% users’ paid SAAS to execute DeAPI on their hardwares. Each miner can run all kinds of DeAPIs to satisfy any kind of DeRequest. The redundancy exactly achieves the decentralization and reliability of dRuntime.*/}
                 {/*            </p><p>*/}
-                {/*Inventors earn 5% users’ paid $ETH as patent fee aside with miners, since they are AI researchers or developers who invent and create new DeAPIs.*/}
+                {/*Inventors earn 5% users’ paid $SAAS as patent fee aside with miners, since they are AI researchers or developers who invent and create new DeAPIs.*/}
                 {/*            </p><p>*/}
-                {/*DEAI Stakers earn a proportion of $ETH from miners’ profit by staking DEAI to miners for DPoS (Delegation PoS) consensus*/}
+                {/*SAAS Stakers earn a proportion of $SAAS from miners’ profit by staking SAAS to miners for DPoS (Delegation PoS) consensus*/}
                 {/*            </p>*/}
                 {/*<div style={{height:interval_height}} />*/}
                 </div>
