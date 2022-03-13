@@ -20,7 +20,7 @@ import icon_location from './static/icon_location.png'
 import AppHeader from './components/app_header/AppHeader';
 import { isChrome } from './utils/platform';
 
-export const white_paper_link = "https://www.saas3.io/file/Whitepaper.pdf"
+export const white_paper_link = "https://www.saas3.io/file/PitchDeck_SaaS3.pdf"
 export const pichdeck_link = "https://www.saas3.io/file/PitchDeck_SaaS3.pdf"
 const interval_height = '12rem'
 
@@ -252,8 +252,8 @@ function App() {
 
             <div className='Overview article'  style={{zIndex:3}} >
                 <div className='article_child'>
-                <h1>Our Team</h1>
-                    <img className='article-image' src={team}></img>
+                {/*<h1>Our Team</h1>*/}
+                {/*    <img className='article-image' src={team}></img>*/}
 
            {/*<footer>*/}
                 <div style={{marginTop:'5vh'}}>
