@@ -20,7 +20,7 @@ import icon_location from './static/icon_location.png'
 import AppHeader from './components/app_header/AppHeader';
 import { isChrome } from './utils/platform';
 
-export const white_paper_link = "https://www.saas3.io/file/PitchDeck_SaaS3.pdf"
+export const white_paper_link = "https://www.saas3.io/file/SaaS3Whitepaper.pdf"
 export const pichdeck_link = "https://www.saas3.io/file/PitchDeck_SaaS3.pdf"
 const interval_height = '12rem'
 
