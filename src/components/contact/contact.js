@@ -11,7 +11,7 @@ import './contact.css'
 import { Space } from 'antd'
 import {white_paper_link} from "../../App";
 export const twitter_link = "https://twitter.com/SaaS3DAO"
-export const telegram_link = "https://t.me/deainet"
+export const telegram_link = "https://t.me/SaaS3DAO"
 export const github_link = "https://github.com/SaaS3DAO"
 export const map_link = "https://goo.gl/maps/L4vicaLurYULHQ8Z6"
 
@@ -21,7 +21,7 @@ const ContactBar = ({className}) => {
 
             <div className="contact-unfold">
                 <MailOutlined className="contact-icon"/>
-                <div className="contact-unfold-text" onClick={()=>{window.open("mailto:contact@deainet.io")}}>contact@deainet.io</div>
+                <div className="contact-unfold-text" onClick={()=>{window.open("mailto:contact@saas3.io")}}>contact@saas3.io</div>
             </div>
 
             
