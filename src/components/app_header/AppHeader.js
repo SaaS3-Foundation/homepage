@@ -42,7 +42,7 @@ const AppHeader = ({setClicled, tab, setTab}) => {
         <Menu>
             <Menu.Item onClick={goToOverview}>Overview</Menu.Item>
             <Menu.Item onClick={()=>{window.open(pichdeck_link)}}>Pitch Deck</Menu.Item>
-            <Menu.Item onClick={()=>{window.open(white_paper_link)}}>White Paper</Menu.Item>
+            <Menu.Item onClick={()=>{window.alert('Please send email to contact@saas3.io')}}>White Paper</Menu.Item>
             <SubMenu title="API NFT">
                 <Menu.Item onClick={()=>{message.info("Comming Soon")}}>API NFT</Menu.Item>
                 <Menu.Item onClick={()=>{window.location.href='/non-api-nft/'}}>non-API NFT (Demo)</Menu.Item>
