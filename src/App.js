@@ -27,8 +27,8 @@ export const white_paper_link = ""
 export const pichdeck_link = ""
 const interval_height = '12rem'
 
-// const dev_mode = false;
-const dev_mode = true;
+const dev_mode = false;
+// const dev_mode = true;
 // controls whether the opening screen should show.
 
 export const goToOverview = () => {
@@ -270,7 +270,7 @@ function App() {
             </div>
             <div className='Overview article'  style={{zIndex:3}} >
                 <div className='article_child'>
-                <h1>Portrait</h1>
+                <h1>Portraits</h1>
                 <p>
                 </p>
                 <div>
