@@ -1,7 +1,7 @@
 import React from "react";
 import { Button, Dropdown, Menu, message, Steps } from 'antd';
 import logo from '../../logo.png';
-import { goToOverview, pichdeck_link, white_paper_link } from "../../App";
+import { goToOverview, goToDemo, pichdeck_link, white_paper_link } from "../../App";
 import './AppHeader.css'
 import { isMobile } from "../../utils/platform";
 import { MenuOutlined } from '@ant-design/icons'
@@ -16,7 +16,10 @@ const AppHeader = ({setClicled, tab, setTab}) => {
                 className={`App-menu-item${tab==="overview"?"__selected":""}`}
                 onClick={goToOverview}
             >Overview</button>
-
+            <button
+                className='App-menu-item'
+                onClick={goToDemo}
+            >Usecase/Demo</button>
             <button className="App-menu-item" onClick={()=>{window.open(pichdeck_link)}}>Pitch Deck</button>
             <button className="App-menu-item" onClick={()=>{window.open(white_paper_link)}}>White Paper</button>
             <Dropdown
@@ -28,7 +31,7 @@ const AppHeader = ({setClicled, tab, setTab}) => {
                 }
                 
             >
-                <button className="App-menu-item">pNFT</button>
+                <button className="App-menu-item">iNFT</button>
             </Dropdown>
             <button className="App-menu-item" onClick={()=>{message.info("Comming Soon")}}>Document</button>
             
@@ -41,7 +44,6 @@ const AppHeader = ({setClicled, tab, setTab}) => {
     const mobile_menu = (
         <Menu>
             <Menu.Item onClick={goToOverview}>Overview</Menu.Item>
-            <Menu.Item onClick={()=>{window.open(pichdeck_link)}}>Pitch Deck</Menu.Item>
             <Menu.Item onClick={()=>{window.alert('Please send email to contact@saas3.io')}}>White Paper</Menu.Item>
             <SubMenu title="API NFT">
                 <Menu.Item onClick={()=>{message.info("Comming Soon")}}>API NFT</Menu.Item>

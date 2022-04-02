@@ -1,9 +1,14 @@
 @import '~antd/dist/antd.css';
+@import url("https://fonts.googleapis.com/css?family=Cardo:400i|Rubik:400,700&display=swap");
 
 :root{
   --header-height: 3rem;
   --app-background: #212534;
   --app-background-dark: #161922;
+  --d: 700ms;
+  --e: cubic-bezier(0.19, 1, 0.22, 1);
+  --font-sans: "Rubik", sans-serif;
+  --font-serif: "Cardo", serif;
 }
 
 @font-face {
@@ -22,6 +27,7 @@
   font-weight: 400;
   src: local('thicccboi'), url(./static/fonts/Webfont/THICCCBOI-SemiBold.woff2) format('woff2');
 }
+
 
 .App {
   text-align: center;
@@ -110,13 +116,11 @@ body {
   justify-content: stretch;
   width: 800px;
   max-width: calc(100% - 20px);
-  overflow: hidden;
   margin-top: 2rem;
 }
 
 .images > img{
   flex: 1;
-  height: 30vh;
   width: calc(33% - 20px);
   border: 3px solid ;
   border-image: linear-gradient(var(--rotate), #5ddcff, #3c67e3 43%, #4e00c2) 1;

@@ -1,5 +1,6 @@
 import logo from './logo.png';
 import './App.css';
+import './utils/usecase.css'
 import PipClock from './components/pip_clock/pip_clock';
 import ContactBar from './components/contact/contact';
 import React from 'react';
@@ -10,12 +11,14 @@ import { message, Steps } from 'antd';
 import NetworkGraph from './components/network/network';
 import {  } from '@ant-design/icons'
 
-import problemimg1 from './static/intro1.png'
-import problemimg2 from './static/intro2.png'
-import problemimg3 from './static/intro3.png'
+import problemimg1 from './static/bg.png'
+import tri from './static/tri.png'
 import partner from './static/partner.png'
-import team from './static/team.png'
+import ss3 from './static/ss3.png'
+import lx from './static/lx.png'
+import dapi from './static/dAPI.png'
 import roles from './static/roles.png'
+import portait from './static/portait.png'
 import icon_location from './static/icon_location.png'
 import AppHeader from './components/app_header/AppHeader';
 import { isChrome } from './utils/platform';
@@ -24,8 +27,8 @@ export const white_paper_link = ""
 export const pichdeck_link = ""
 const interval_height = '12rem'
 
-const dev_mode = false;
-// const dev_mode = true;
+// const dev_mode = false;
+const dev_mode = true;
 // controls whether the opening screen should show.
 
 export const goToOverview = () => {
@@ -35,6 +38,12 @@ export const goToOverview = () => {
     }
 }
 
+export const goToDemo = () => {
+    let el = document.getElementById('demo');
+    if(el) {
+        el.scrollIntoView({behavior: 'smooth', block: 'center'})
+    }
+}
 
 function App() {
 
@@ -76,7 +85,7 @@ function App() {
         <div className={`App container y mandatory-scroll-snapping ${!is_chrome?'safari':''}`}>
             <div hidden={welcome_hidden} className={clicked?"App-opening__clicked":"App-opening"}>
                 <div className="App-opening-center">
-                    <div class={`${clicked?"card__clicked":"card"}`} onClick={()=>setClicled(true)}>
+                    <div className={`${clicked?"card__clicked":"card"}`} onClick={()=>setClicled(true)}>
                         <div className="card-content App-card">
                         <img
                             src={logo}
@@ -87,8 +96,8 @@ function App() {
                     </div>
 
                     <div hidden={clicked} className="App-link" href="https://mythrillfiction.com/" target="_blank">
-                        <h1 className="graph-title-shadow"style={{zIndex:-1,bottom:'auto'}}> Delivers a Web3.0 SaaS Solution </h1>
-                        <h1 className="graph-title" style={{zIndex:2}}> Delivers a Web3.0 SaaS Solution </h1>
+                        <h1 className="graph-title-shadow"style={{zIndex:-1,bottom:'auto'}}> Software as a Service in Web3 </h1>
+                        <h1 className="graph-title" style={{zIndex:2}}> Software as a Service in Web3 </h1>
                     </div>
                 </div>
 
@@ -133,28 +142,17 @@ function App() {
                 
                 {/* id is used only for jummping, do not use on next <h1> if not needed */}
                 <div className='article_child'>
-                <h1 id='overview'>Background</h1>
+                <h1 id='overview'>Web3 vs Web2</h1>
                 <div>
                 <p>
-                    Artificial Intelligence (AI) blooms in recent years and has achieved milestone techniques eg, identity recognition, driverless car, robotics. So artificial intelligence APIs are essential for those products.
-                    However, almost everything is powered by centralized institutes, BAD THINGS HAPPEN!
-                    Several issues are raised such as malicious single node, AI security and privacy leakage.
+                    Few Web3 Dapps regardless of rich abundant SaaS in Web2. For decentralized applications to acquire full-fledged functionalities, Web3 calls for an entirely different development stack than employed in web2. Existing blockchain layer2 virtual machines lack effective computational capabilities, making it a financial and technical challenge to deliver rich computation services. The layer2 scaling for not only high-priced Gas fees but the technical development stack is urgent.
                 </p></div>
                 <div className='images'>
+                    <div>
                     <img
                         className="article-img"
                         src={problemimg1}
-                    />
-                    <div></div>
-                    <img
-                        className="article-img"
-                        src={problemimg2}
-                    />
-                    <div></div>
-                    <img
-                        className="article-img"
-                        src={problemimg3}
-                    />
+                    /></div>
                 </div>
                 </div>
                 {/*<div style={{height:interval_height}} />*/}
@@ -162,110 +160,146 @@ function App() {
 
             <div className='Overview article'  style={{zIndex:3}} >
                 <div className='article_child'>
-                <h1>SaaS3 Passion & Goal</h1>
+                <h1>Layer2 Trilemma</h1>
+                    <p>Decentralization, Scalability and Partition tolerance. SaaS3 approaches the trilemma with layerX protocol and delivers a solution for the next generation Dapps. </p>
+                    <br></br>
+                     <img
+                        className="article-img"
+                        src={tri}
+                        style={{width:'500px'}}
+                    />
+                </div>
+            </div>
+            <div className='Overview article'  style={{zIndex:3}} >
+                <div className='article_child'>
+                <h1>Software as a Service in Web3</h1>
                 <p>
-                   Using blockchain technology to construct a decentralized network to provide AaaS
-                    (AI as a Service) for App/Dapp developers to replace centralized API providers such
-                    as <a href="https://docs.microsoft.com/en-us/rest/api/azureml/" target='_blank'>
-                    Microsoft Azure</a> and <a href="https://cloud.google.com/products/ai" target='_blank'>
-                    Google AI</a>.
-                    The core team members are top Ph.Ds in computer science who are technical and
-                    experienced. We devote to build a decentralized SaaS platform to combine millions
-                    of users, computational power providers with API inventors in such a harmony way for
-                    offering extremely low costing and privacy preserving services in Web3.0 era. SaaS3 aims to
-                    become the world largest decentralized SaaS platform to provide high-quality API
-                    services with extremely cheap prices.
+                    SaaS3 establishes a platform for the next generation of Dapps, or ‘Dapp2.0’, to expand and deliver. SaaS3 revolutionizes the traditional Dapp development architecture with layerX / dAPIs, which goes beyond the established blockchain layer2. It employs the decentralized docker runtime (dRuntime) to address the poor compatibility for WASM / EVM. Traditional Dapp has three parts, whereas Dapp2 architecture has four components, namely Layer2, Frontend, LayerX, and Oracles.
                 </p>
-                {/*<div style={{height:interval_height}} />*/}
+                    <br></br>
+                     <img
+                        className="article-img"
+                        src={ss3}
+                        style={{width:'800px'}}
+                    />
                 </div>
             </div>
             <div className='Overview article'  style={{zIndex:3}} >
                 <div className='article_child'>
-                <h1>Who are SaaS3 Users</h1>
+                <h1>LayerX</h1>
+                    <p>LayerX allows developers to monetize abundant Web2 APIs as decentralized Web3 ‘dAPIs’ in only 10 minutes with docker containers. On LayerX, all Web2 APIs could be dockerized in containers and rapidly deployed in a decentralized miner network, or decentralized docker runtime (dRuntime). By minting income-NFTs (iNFT) with their created dAPIs, API developers claim full entitlements to API-derived income earned in tokens. Holders of iNFTs and providers of computing resources (Miners) share profits from users’ payments, making ‘middleman’ a thing of the past.
+</p>
+                    <br></br>
+                             <img
+                        className="article-img"
+                        src={lx}
+                        style={{width:'900px'}}
+                    />
+                </div>
+            </div>
+             <div className='Overview article'  style={{zIndex:3}} >
+                <div className='article_child'>
+                <h1 id='demo'>dAPI, dRuntime, and Usecase</h1>
+                    <p style={{textAlign:'center'}}>dRuntime is the decentralized environment to run dAPIs on decentralized computation nodes (Miners)
+                    </p>
+                    <br></br>
+                             <img
+                        className="article-img"
+                        src={dapi}
+                        style={{width:'500px'}}
+                    />
+                 <div className='usecase'>
+                     <div className='page-content'>
+                         <div className='card2'>
+                            <div className='content'>
+                                <h2 className='title'>Digital Avatar</h2>
+                                <p className='copy'>
+                                    Avatar is your alter ego living in the decentralized world. Let us spare you the rocket knowledge to build one. We introduce dAPIs to create a metaverse image for you to meet with friends or co-workers.
+                                </p>
+                                <button className='btn' onClick={()=>{window.open('https://www.saas3.io/demo_dp', '_blank')}}>Try</button>
+                            </div>
+                         </div>
+                          <div className='card2'>
+                            <div className='content'>
+                                <h2 className='title'>Digital Avatar</h2>
+                                <p className='copy'>
+                                    Avatar is your alter ego living in the decentralized world. Let us spare you the rocket knowledge to build one. We introduce dAPIs to create a metaverse image for you to meet with friends or co-workers.
+                                </p>
+                                <button className='btn' onClick={()=>{window.open('https://www.saas3.io/demo_dp', '_blank')}}>Try</button>
+                            </div>
+                         </div>
+                          <div className='card2'>
+                            <div className='content'>
+                                <h2 className='title'>Digital Avatar</h2>
+                                <p className='copy'>
+                                    Avatar is your alter ego living in the decentralized world. Let us spare you the rocket knowledge to build one. We introduce dAPIs to create a metaverse image for you to meet with friends or co-workers.
+                                </p>
+                                <button className='btn' onClick={()=>{window.open('https://www.saas3.io/demo_dp', '_blank')}}>Try</button>
+                            </div>
+                         </div>
+                          <div className='card2'>
+                            <div className='content'>
+                                <h2 className='title'>Digital Avatar</h2>
+                                <p className='copy'>
+                                    Avatar is your alter ego living in the decentralized world. Let us spare you the rocket knowledge to build one. We introduce dAPIs to create a metaverse image for you to meet with friends or co-workers.
+                                </p>
+                                <button className='btn' onClick={()=>{window.open('https://www.saas3.io/demo_dp', '_blank')}}>Try</button>
+                            </div>
+                         </div>
+
+
+                     </div>
+                 </div>
+                </div>
+            </div>
+            <div className='Overview article'  style={{zIndex:3}} >
+                <div className='article_child'>
+                <h1>Tokenomics</h1>
                 <p>
-                SaaS3 users are the developers who require AI services for their products. In SaaS3, we define decentralized API (DeAPI) to replace centralized API. All DeAPIs are deployed on dRuntime in a distributed way to provide decentralized AI services. user can send a decentralized request (DeRequest) to a DeAPI to get a decentralized response (DeResponse). The reliable miners in dRuntime execute all DeAPIs in 7x24 with DPoS consensus.
-                </p>
-                </div>
-            </div>
-                {/*<div style={{height:interval_height}} />*/}
-            <div className='Overview article'  style={{zIndex:3}} >
-                <div className='article_child'>
-                <h1>dRuntime has Following Rich Properties</h1>
-                    {/*<div style={{'display'}}>*/}
-                <div className='list_positioner'>
-                    <div className='list'>
-                        
-                        <div><div>1</div>Protect the privacy for users by executing encryption protocol transparently.</div>
-                        <div><div>2</div>Improve the security for system by miners consensus.</div>
-                        <div><div>3</div>Strengthen robustness for services by DeAPI runtime redundancy of miners.</div>
-                        <div><div>4</div>Save energy and reduce the service cost by making use of spare resource to mine.</div>
-                        <div><div>5</div>Protect intellectual properties by patent-NFTs.</div>
-                    </div>
-                </div>
-                {/*<div style={{height:interval_height}} />*/}
-                </div>
-            </div>
-            <div className='Overview article'  style={{zIndex:3}} >
-                <div className='article_child'>
-                <h1>SaaS3 Protocol</h1>
-                <p>
-                  dRuntime is Constructed by SaaS3 Protocol with  Token SAAS for Governance. The Protocol is Applied on Four Roles:
+                    SA3 is the utility token in SaaS3 with the following use cases. API creators earn SA3 as royalty fees by creating a docker container and deploying it on the dRuntime. When deploying the dAPI, its creator may mint a unique tradable income-NFT (iNFT). The iNFT entitles its owner to a share of usage fee paid by dAPI user. dAPI users / Dapp developers pay $SA3 to API creators and miners as both usage fee and Gas fee. Miners (Computation nodes) earn Gas fees in executing the dAPI and maintaining dRuntime on their hardware. A miner can deploy any docker images. The mechanism of dAPI service offering redundancy delivers dRuntime to fully decentralize computation for SaaS3. Miner stakes and receives tasks based on zero-knowledge proof. LPoS and zk-proof guarantee the dRuntime consistency and security.
+                    Token Stakers profit from dAPI income by staking SA3 to high-quality dAPIs with DPoS (Delegated Poof-of-Stake).
                 </p>
                 <div>
                 <img
                     className="article-img"
                     src={roles}
+                    style={{width:'600px'}}
                 /></div>
                 {/*<div style={{height:interval_height}} />*/}
                 </div>
             </div>
             <div className='Overview article'  style={{zIndex:3}} >
                 <div className='article_child'>
-                <h1>Algorithm NFT & Marketplace</h1>
+                <h1>Portrait</h1>
                 <p>
-                Once a DeAPI is accepted to deploy, a unique tradeable patent-NFT is minted and sent to the inventor address as a digital patent. Whenever users pay SAAS to access this DeAPI, 5% SAAS is paid as patent fee to the patent-NFT holder while another 95% to miners. So inventors earn patent fee by holding the NFT or selling it on the marketplace to earn SAAS.
-                    Algorithm NFT can be either a practical DeAPI or a famous piece of code e.g.,
-                    <div className="code">
-                        >> print ("Hello World")
-                    </div>
-                    Based on such an ecosystem, patent-NFT store is expected to be the largest marketplace to trade digital patents in the world.
                 </p>
-                {/*                <p>*/}
-                {/*                Users pay SAAS to access DeAPI. dRuntime will periodically generate certain amount of new $SAAS tokens and half of them will reward to the most active users. Another half tokens distrbute to a random Ethereum address as an airdrop to maximize the token distribution. After 4 years, no more SAAS is generated.*/}
-                {/*                </p><p>*/}
-                {/*        Miners earn 95% users’ paid SAAS to execute DeAPI on their hardwares. Each miner can run all kinds of DeAPIs to satisfy any kind of DeRequest. The redundancy exactly achieves the decentralization and reliability of dRuntime.*/}
-                {/*            </p><p>*/}
-                {/*Inventors earn 5% users’ paid $SAAS as patent fee aside with miners, since they are AI researchers or developers who invent and create new DeAPIs.*/}
-                {/*            </p><p>*/}
-                {/*SAAS Stakers earn a proportion of $SAAS from miners’ profit by staking SAAS to miners for DPoS (Delegation PoS) consensus*/}
-                {/*            </p>*/}
+                <div>
+                <img
+                    className="article-img"
+                    src={portait}
+                    style={{width:'1000px'}}
+                /></div>
                 {/*<div style={{height:interval_height}} />*/}
                 </div>
             </div>
+
+
             <div className='Overview article'  style={{zIndex:3}} >
                 <div className='article_child'>
                 <h1>Partners</h1>
                     <img className={'article-image'} src={partner}></img>
                 {/*<div style={{height:interval_height}} />*/}
-                </div>
-            </div>
 
-            <div className='Overview article'  style={{zIndex:3}} >
-                <div className='article_child'>
-                {/*<h1>Our Team</h1>*/}
-                {/*    <img className='article-image' src={team}></img>*/}
-
-           {/*<footer>*/}
-                <div style={{marginTop:'5vh'}}>
+           <footer>
+                <div style={{position:'absolute', bottom:'10vh', width:'calc(100% - 96px)'}}>
                 <ContactBar/>
                 <a href="https://goo.gl/maps/L4vicaLurYULHQ8Z6" target={'_blank'}>
                     <img style={{width:'1rem', marginLeft:'1em'}} src={icon_location}/>
                     71 Nanyang Dr, NTU Innovation Center, Singapore 638075
                 </a>
                 </div>
-
+            </footer>
                 </div>
-            {/*</footer>*/}
             </div>
 
         </div>

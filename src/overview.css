@@ -92,6 +92,7 @@
     flex: 1;
     width: 900px;
     max-width: calc(100vw - 20px);
+    margin-top: 2vh;
 }
 .article_child{
     display: table-cell;
@@ -123,6 +124,7 @@ img {
 }
 .article h1{
     font-size: calc(3vw + 1rem);
+    margin-bottom: 10vh;
 }
 .article h2{
     font-size: calc(1rem + 1vw);
@@ -138,3 +140,4 @@ img {
     text-align: left;
     list-style: upper-roman;
 }
+

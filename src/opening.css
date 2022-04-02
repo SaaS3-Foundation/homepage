@@ -241,9 +241,9 @@
 }
 
 .App-logo, .App-logo__clicked{
-    width: calc(var(--card-width) * 0.4);
+    width: calc(var(--card-width) * 0.8);
     position: fixed;
-    left: calc(50vw - var(--card-width) * 0.2);
+    /*left: calc(50vw - var(--card-width) * 0.2);*/
     top: calc(50vh - (5rem + var(--card-height) + var(--card-margin-bottom)) / 2 - 2 *  var(--card-border) + 0.2 * var(--card-height));
 }
 
