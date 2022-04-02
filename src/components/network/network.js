@@ -4,10 +4,11 @@ import { UnrealBloomPass } from 'three/examples/jsm/postprocessing/UnrealBloomPa
 import ForceGraph3D from 'react-force-graph-3d';
 
 import './network.css'
-import { goToOverview, white_paper_link } from "../../App";
+import {goToDemo, goToOverview, white_paper_link} from "../../App";
 import { isChrome } from "../../utils/platform";
 
-import safari_bg from '../../static/safari_bg.jpg'
+import safari_bg from '../../static/safari_bg.jpg';
+import logo from '../../logo.png'
 
 
 
@@ -91,7 +92,7 @@ const NetworkGraph = ({style, className, height}) => {
     //     Graph.refresh();
     // });
 
-    const title = "Patent and Monetize Web2 Projects to Web3 Services"
+    const title = "Constructing the Next Generation Dapp"
 
 
     return (
@@ -125,12 +126,17 @@ const NetworkGraph = ({style, className, height}) => {
                 />}
             </div>
             <div className="graph-title-container">
-
+                <img src={logo} style={{width:'30vw',marginBottom:'5%'}}/>
                 <div className="relative-container" style={{marginBottom: 'calc(4vw + 20px)'}}>
                     <h1 className="graph-title-shadow"> {title} </h1>
                     <h1 className="graph-title" style={{zIndex:2}}> {title} </h1>
                 </div>
-                <p className="graph-text">SaaS3 is Decentralized Software as a Service. Click <a onClick={goToOverview}> Overview </a>to Learn More</p>
+                <p className="graph-text">SaaS3 is Decentralized Software as a Service. Click <a onClick={goToOverview}> Overview </a>to Learn More
+                <br/>
+                <a
+                onClick={goToDemo}
+            >Usecase / Demo</a>
+                </p>
             </div>
         </div>
     )

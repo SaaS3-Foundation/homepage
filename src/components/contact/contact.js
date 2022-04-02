@@ -27,12 +27,12 @@ const ContactBar = ({className}) => {
             
             <div className="contact-unfold contact-unfold-short">
                 <TwitterOutlined className="contact-icon"/>
-                <div className="contact-unfold-text" onClick={()=>{window.open(twitter_link)}}>@SaaS3Official</div>
+                <div className="contact-unfold-text" onClick={()=>{window.open(twitter_link)}}>@SaaS3DAO</div>
             </div>
 
             <div className="contact-unfold contact-unfold-short">
                 <SendOutlined className="contact-icon" style={{fontSize:24,paddingTop:2}}/>
-                <div className="contact-unfold-text" onClick={()=>{window.open(telegram_link)}}>https://t.me/deainet</div>
+                <div className="contact-unfold-text" onClick={()=>{window.open(telegram_link)}}>SaaS3DAO</div>
             </div>
 
             <div className="contact-unfold">
