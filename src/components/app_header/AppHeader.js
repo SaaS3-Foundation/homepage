@@ -20,7 +20,6 @@ const AppHeader = ({setClicled, tab, setTab}) => {
                 className='App-menu-item'
                 onClick={goToDemo}
             >Usecase/Demo</button>
-            <button className="App-menu-item" onClick={()=>{window.open(pichdeck_link)}}>Pitch Deck</button>
             <button className="App-menu-item" onClick={()=>{window.open(white_paper_link)}}>White Paper</button>
             <Dropdown
                 overlay={
@@ -37,7 +36,7 @@ const AppHeader = ({setClicled, tab, setTab}) => {
             
             <button className="App-menu-item" onClick={()=>{message.info("Comming Soon")}}>Miners</button>
             <button className="App-menu-item" onClick={()=>{message.info("Comming Soon")}}>Creators</button>
-            <button className="App-menu-item" onClick={()=>{message.info("Comming Soon")}}>AI Users</button>
+            <button className="App-menu-item" onClick={()=>{message.info("Comming Soon")}}>dAPI Users</button>
         </>
     )
 

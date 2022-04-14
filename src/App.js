@@ -23,12 +23,12 @@ import icon_location from './static/icon_location.png'
 import AppHeader from './components/app_header/AppHeader';
 import { isChrome } from './utils/platform';
 
-export const white_paper_link = ""
+export const white_paper_link = "/file/SaaS3Whitepaper.pdf"
 export const pichdeck_link = ""
 const interval_height = '12rem'
 
-const dev_mode = false;
-// const dev_mode = true;
+// const dev_mode = false;
+const dev_mode = true;
 // controls whether the opening screen should show.
 
 export const goToOverview = () => {
@@ -96,8 +96,8 @@ function App() {
                     </div>
 
                     <div hidden={clicked} className="App-link" href="https://mythrillfiction.com/" target="_blank">
-                        <h1 className="graph-title-shadow"style={{zIndex:-1,bottom:'auto'}}> Software as a Service in Web3 </h1>
-                        <h1 className="graph-title" style={{zIndex:2}}> Software as a Service in Web3 </h1>
+                        <h1 className="graph-title-shadow"style={{zIndex:-1,bottom:'auto'}}> oracle network in Web3 </h1>
+                        <h1 className="graph-title" style={{zIndex:2}}> oracle network in Web3 </h1>
                     </div>
                 </div>
 
@@ -142,18 +142,16 @@ function App() {
                 
                 {/* id is used only for jummping, do not use on next <h1> if not needed */}
                 <div className='article_child'>
-                <h1 id='overview'>Web3 vs Web2</h1>
+                <h1 id='overview'>Blockchain Oracles are Unsafe</h1>
                 <div>
                 <p>
-                    Few Web3 Dapps regardless of rich abundant SaaS in Web2. For decentralized applications to acquire full-fledged functionalities, Web3 calls for an entirely different development stack than employed in web2. Existing blockchain layer2 virtual machines lack effective computational capabilities, making it a financial and technical challenge to deliver rich computation services. The layer2 scaling for not only high-priced Gas fees but the technical development stack is urgent.
+                    If the source (such as sensors) directly submits the data to the tamper-proof distributed ledger without going through multiple intermediaries, the possibility of data manipulation will be greatly reduced. However, the Off-Chain computations are centralized on AWS-like servers.
                 </p></div>
-                <div className='images'>
-                    <div>
                     <img
                         className="article-img"
                         src={problemimg1}
-                    /></div>
-                </div>
+                        style={{width:'600px'}}
+                    />
                 </div>
                 {/*<div style={{height:interval_height}} />*/}
             </div>
@@ -161,7 +159,7 @@ function App() {
             <div className='Overview article'  style={{zIndex:3}} >
                 <div className='article_child'>
                 <h1>Layer2 Trilemma</h1>
-                    <p>Decentralization, Scalability and Partition tolerance. SaaS3 approaches the trilemma with layerX protocol and delivers a solution for the next generation Dapps. </p>
+                    <p>Decentralization, Scalability and Partition tolerance. SaaS3 approaches the trilemma with SaaS3 protocol and delivers a solution for the next generation Dapps. </p>
                     <br></br>
                      <img
                         className="article-img"
@@ -172,23 +170,21 @@ function App() {
             </div>
             <div className='Overview article'  style={{zIndex:3}} >
                 <div className='article_child'>
-                <h1>Software as a Service in Web3</h1>
+                <h1>Secure oracle as a Service</h1>
                 <p>
-                    SaaS3 establishes a platform for the next generation of Dapps, or ‘Dapp2.0’, to expand and deliver. SaaS3 revolutionizes the traditional Dapp development architecture with layerX / dAPIs, which goes beyond the established blockchain layer2. It employs the decentralized docker runtime (dRuntime) to address the poor compatibility for WASM / EVM. Traditional Dapp has three parts, whereas Dapp2 architecture has four components, namely Layer2, Frontend, LayerX, and Oracles.
+                    Web2 API providers could deploy their serverless APIs on decentralized runtime (dRuntime). Each miner could run all the serverless Web2 APIs.
                 </p>
                     <br></br>
                      <img
                         className="article-img"
                         src={ss3}
-                        style={{width:'800px'}}
+                        style={{width:'500px'}}
                     />
                 </div>
             </div>
             <div className='Overview article'  style={{zIndex:3}} >
                 <div className='article_child'>
-                <h1>LayerX</h1>
-                    <p>LayerX allows developers to monetize abundant Web2 APIs as decentralized Web3 ‘dAPIs’ in only 10 minutes with docker containers. On LayerX, all Web2 APIs could be dockerized in containers and rapidly deployed in a decentralized miner network, or decentralized docker runtime (dRuntime). By minting income-NFTs (iNFT) with their created dAPIs, API developers claim full entitlements to API-derived income earned in tokens. Holders of iNFTs and providers of computing resources (Miners) share profits from users’ payments, making ‘middleman’ a thing of the past.
-</p>
+                <h1>Trustful APIs</h1>
                     <br></br>
                              <img
                         className="article-img"
@@ -199,15 +195,16 @@ function App() {
             </div>
              <div className='Overview article'  style={{zIndex:3}} >
                 <div className='article_child'>
-                <h1 id='demo'>dAPI, dRuntime, and Usecase</h1>
-                    <p style={{textAlign:'center'}}>dRuntime is the decentralized environment to run dAPIs on decentralized computation nodes (Miners)
-                    </p>
-                    <br></br>
-                             <img
-                        className="article-img"
-                        src={dapi}
-                        style={{width:'500px'}}
-                    />
+                <h1 id='demo' name='demo'>Usecase</h1>
+                    {/*<p style={{textAlign:'center'}}>dRuntime is the decentralized environment to run dAPIs on decentralized computation nodes (Miners).*/}
+                    {/*</p>*/}
+                    {/*<br/>*/}
+                    {/*         <img*/}
+                    {/*    className="article-img"*/}
+                    {/*    src={dapi}*/}
+                    {/*    style={{width:'500px'}}*/}
+                    {/*/><br/>*/}
+                 <p style={{textAlign:'center', marginTop:'5vh'}}>Blockchain oracles with trustful off-chain computation are the future of Web3 to involve rich functionalities.</p>
                  <div className='usecase'>
                      <div className='page-content'>
                          <div className='card2'>
@@ -221,33 +218,40 @@ function App() {
                          </div>
                           <div className='card2'>
                             <div className='content'>
-                                <h2 className='title'>Digital Avatar</h2>
+                                <h2 className='title'>Game Bot</h2>
                                 <p className='copy'>
-                                    Avatar is your alter ego living in the decentralized world. Let us spare you the rocket knowledge to build one. We introduce dAPIs to create a metaverse image for you to meet with friends or co-workers.
+                                    Thanks to reinforcement learning, our dAPIs equip developers with ever-brainier bots. Familiarize bots with game mechanisms and economic regimes to enrich the gaming experience. Build best GameFi experiences.
                                 </p>
-                                <button className='btn' onClick={()=>{window.open('https://www.saas3.io/demo_dp', '_blank')}}>Try</button>
+                                <button className='btn' onClick={()=>{window.open('https://www.saas3.io/demo_pve', '_blank')}}>Try</button>
                             </div>
                          </div>
                           <div className='card2'>
                             <div className='content'>
-                                <h2 className='title'>Digital Avatar</h2>
+                                <h2 className='title'>NFT Generation</h2>
                                 <p className='copy'>
-                                    Avatar is your alter ego living in the decentralized world. Let us spare you the rocket knowledge to build one. We introduce dAPIs to create a metaverse image for you to meet with friends or co-workers.
+                                    Our dAPIs help you demystify engineering a fleet of NFTs.  Developers can grab a handy API to kick-start and fast-track their work. Create, customize, and assemble your digital collectibles.
                                 </p>
-                                <button className='btn' onClick={()=>{window.open('https://www.saas3.io/demo_dp', '_blank')}}>Try</button>
+                                <button className='btn' onClick={()=>{window.open('https://www.saas3.io/demo_ainft', '_blank')}}>Try</button>
                             </div>
                          </div>
                           <div className='card2'>
                             <div className='content'>
-                                <h2 className='title'>Digital Avatar</h2>
+                                <h2 className='title'>dQuant for DeFi</h2>
                                 <p className='copy'>
-                                    Avatar is your alter ego living in the decentralized world. Let us spare you the rocket knowledge to build one. We introduce dAPIs to create a metaverse image for you to meet with friends or co-workers.
+                                    Navigate quantitative trading with ease. Harness the latest algorithms developed by AI whizzes. Enabled by deep learning, our dAPIs are your go-to cash cow.
                                 </p>
-                                <button className='btn' onClick={()=>{window.open('https://www.saas3.io/demo_dp', '_blank')}}>Try</button>
+                                <button className='btn' onClick={()=>{window.open('https://www.saas3.io/demo_defi', '_blank')}}>Try</button>
                             </div>
                          </div>
-
-
+                         <div className='card2'>
+                            <div className='content'>
+                                <h2 className='title'>NFT Crossverse</h2>
+                                <p className='copy'>
+                                    Crossverse: Topple down boundaries between metaverse realms. Give every NFT a ready-made character in all virtual worlds. Use dAPI to switch between your decentralized identities seamlessly.
+                                </p>
+                                {/*<button className='btn' onClick={()=>{window.open('https://www.saas3.io/demo_defi', '_blank')}}>Try</button>*/}
+                            </div>
+                         </div>
                      </div>
                  </div>
                 </div>
@@ -256,33 +260,21 @@ function App() {
                 <div className='article_child'>
                 <h1>Tokenomics</h1>
                 <p>
-                    SA3 is the utility token in SaaS3 with the following use cases. API creators earn SA3 as royalty fees by creating a docker container and deploying it on the dRuntime. When deploying the dAPI, its creator may mint a unique tradable income-NFT (iNFT). The iNFT entitles its owner to a share of usage fee paid by dAPI user. dAPI users / Dapp developers pay $SA3 to API creators and miners as both usage fee and Gas fee. Miners (Computation nodes) earn Gas fees in executing the dAPI and maintaining dRuntime on their hardware. A miner can deploy any docker images. The mechanism of dAPI service offering redundancy delivers dRuntime to fully decentralize computation for SaaS3. Miner stakes and receives tasks based on zero-knowledge proof. LPoS and zk-proof guarantee the dRuntime consistency and security.
-                    Token Stakers profit from dAPI income by staking SA3 to high-quality dAPIs with DPoS (Delegated Poof-of-Stake).
+                SAAS is the utility token for governance and value store.
+Web2 API creators earn royalty fees by deploy a serverless API on the dRuntime to serve Dapps.
+Dapps (Smart Contracts) pay royalty fees and Gas fees to access APIs.
+Miners (Computation nodes) earn Gas fees in executing the APIs.
+Token Stakers profit from APIs royalty fees by staking to APIs to back their quality security (DPoS).
                 </p>
                 <div>
                 <img
                     className="article-img"
                     src={roles}
-                    style={{width:'600px'}}
+                    style={{width:'500px'}}
                 /></div>
                 {/*<div style={{height:interval_height}} />*/}
                 </div>
             </div>
-            <div className='Overview article'  style={{zIndex:3}} >
-                <div className='article_child'>
-                <h1>Portraits</h1>
-                <p>
-                </p>
-                <div>
-                <img
-                    className="article-img"
-                    src={portait}
-                    style={{width:'1000px'}}
-                /></div>
-                {/*<div style={{height:interval_height}} />*/}
-                </div>
-            </div>
-
 
             <div className='Overview article'  style={{zIndex:3}} >
                 <div className='article_child'>
