@@ -8,7 +8,7 @@ import {goToDemo, goToOverview, white_paper_link} from "../../App";
 import { isChrome } from "../../utils/platform";
 
 import safari_bg from '../../static/safari_bg.jpg';
-import logo from '../../logo.png'
+import title_png from '../../logo.png'
 
 
 
@@ -92,7 +92,7 @@ const NetworkGraph = ({style, className, height}) => {
     //     Graph.refresh();
     // });
 
-    const title = "Constructing the Next Generation Dapp"
+    const title = "Secure Off-Chain with Trustful APIs"
 
 
     return (
@@ -122,16 +122,16 @@ const NetworkGraph = ({style, className, height}) => {
                     enableNodeDrag={false}
                     enableNavigationControls={false}
                     enablePointerInteraction={false}
-                    showNavInfo={false}
+                    showNavInfo={false  }
                 />}
             </div>
             <div className="graph-title-container">
-                <img src={logo} style={{width:'30vw',marginBottom:'5%'}}/>
+                <img src={title_png} style={{width:'30vw',marginBottom:'5%'}}/>
                 <div className="relative-container" style={{marginBottom: 'calc(4vw + 20px)'}}>
                     <h1 className="graph-title-shadow"> {title} </h1>
                     <h1 className="graph-title" style={{zIndex:2}}> {title} </h1>
                 </div>
-                <p className="graph-text">SaaS3 is Decentralized Software as a Service. Click <a onClick={goToOverview}> Overview </a>to Learn More
+                <p className="graph-text">SaaS3 is Secure oracle as a Service in Web3. Click <a onClick={goToOverview}> Overview </a>to Learn More
                 <br/>
                 <a
                 onClick={goToDemo}
