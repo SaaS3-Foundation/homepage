@@ -1,0 +1,18 @@
+.demo_code{
+    top:10rem;
+    background-color: #3c67e3;
+    width:80%;
+    margin-left:10%;
+    height:50vh;
+    overflow-y: scroll;
+    color:white;
+    text-align: left;
+}
+
+.article{
+    height:100vh;
+}
+.article h1 {
+    font-size: calc(2vw + 0.7rem) !important;
+  }
+
