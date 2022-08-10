@@ -45,6 +45,7 @@ export const goToDemo = () => {
     }
 }
 
+
 function App() {
 
     const is_chrome = isChrome();

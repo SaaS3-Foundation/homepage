@@ -21,7 +21,7 @@ const AppHeader = ({setClicled, tab, setTab}) => {
                 onClick={goToDemo}
             >Usecase/Demo</button>
             <button className="App-menu-item" onClick={()=>{window.open(white_paper_link)}}>White Paper</button>
-            <Dropdown
+            {/* <Dropdown
                 overlay={
                     <div className="App-menu-dropdown">
                         <button className="App-menu-item" onClick={()=>{message.info("Comming Soon")}}>API NFT</button>
@@ -36,7 +36,10 @@ const AppHeader = ({setClicled, tab, setTab}) => {
             
             <button className="App-menu-item" onClick={()=>{message.info("Comming Soon")}}>Miners</button>
             <button className="App-menu-item" onClick={()=>{message.info("Comming Soon")}}>Creators</button>
-            <button className="App-menu-item" onClick={()=>{message.info("Comming Soon")}}>dAPI Users</button>
+            <button className="App-menu-item" onClick={()=>{message.info("Comming Soon")}}>dAPI Users</button> */}
+            <button className="App-menu-item" onClick={()=>{window.location.href='/marketplace'}}>Marketplace</button>
+            <button className="App-menu-item" onClick={()=>{window.location.href=''}}>Submit dAPI</button>
+            <button className="App-menu-item" onClick={()=>{window.location.href=''}}>dAPI docs</button> 
         </>
     )
 
