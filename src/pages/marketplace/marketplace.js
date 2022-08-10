@@ -132,7 +132,10 @@ function Marketplace() {
                            <h2>{card.title}</h2>
                            <h3>{card.description}</h3>
                            <h3>{card.creator}</h3>
-                           <h3>{card.tags}</h3>
+                           <h3>{card.tags.map((tag, tag_index)=>{
+                            return <p>{tag}</p>
+                           })
+                           }</h3>
                            <button onClick={()=>{window.location.href=target_url}}
                            >
                             Learn More</button>
