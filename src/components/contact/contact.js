@@ -12,7 +12,7 @@ import { Space } from 'antd'
 import {white_paper_link} from "../../App";
 export const twitter_link = "https://twitter.com/SaaS3Lab"
 export const telegram_link = "https://t.me/layerXnetwork"
-export const github_link = "https://github.com/SaaS3Lab"
+export const github_link = "https://github.com/SaaS3-Foundation"
 export const map_link = "https://goo.gl/maps/L4vicaLurYULHQ8Z6"
 
 const ContactBar = ({className}) => {
@@ -37,7 +37,7 @@ const ContactBar = ({className}) => {
 
             <div className="contact-unfold">
                 <GithubOutlined className="contact-icon" style={{fontSize:24,paddingTop:2}}/>
-                <div className="contact-unfold-text" onClick={()=>{window.open(github_link)}}>https://github.com/SaaS3Lab</div>
+                <div className="contact-unfold-text" onClick={()=>{window.open(github_link)}}>https://github.com/SaaS3-Foundation</div>
             </div>
             <div className="contact-unfold">
                 <HomeOutlined className="contact-icon" style={{fontSize:24,paddingTop:2}}/>
