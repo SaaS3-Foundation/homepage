@@ -1,13 +1,22 @@
 .demo_code{
-    top:10rem;
+    margin-top: 2rem;
     background-color: #3c67e3;
     width:80%;
-    margin-left:10%;
+    margin-inline:10%;
     height:50vh;
-    overflow-y: scroll;
+    overflow-y: visible;
     color:white;
+    text-align: center;
+}
+.demo_code h2{
+    padding: 1rem;
     text-align: left;
 }
+.demo_code p{
+    padding: 1rem;
+    text-align: left;
+}
+
 
 .article{
     height:100vh;
@@ -16,3 +25,23 @@
     font-size: calc(2vw + 0.7rem) !important;
   }
 
+
+  .App-header-logo{
+    height: 6rem;
+    cursor: pointer;
+    padding: 1rem;
+}
+
+.Overview{
+    margin-top: 2rem;
+    display: block;
+    text-align: center;
+    background-color: #3c67e3;
+    width: 80%;
+    margin-inline: 10%;
+}
+
+.Overview h2{
+    padding: 1rem;
+    text-align: left;
+}
