@@ -8,6 +8,8 @@ import './api_info.css';
 import logo from '../../SaaS3Logo.png';
 import { useState } from 'react';
 import config from '../../config.json';
+import Highlight  from 'react-highlight';
+import "highlight.js/styles/ocean.css";
 // const dev_mode = false;
 const dev_mode = true;
 
@@ -91,9 +93,9 @@ function ApiInfo() {
                 </div>
                 <div className='demo_code'>
                 <h2>DEMO Code</h2>
-                <p>
+                <Highlight>
                 {data.data.demo}
-                </p>
+                </Highlight>
                 
                 </div>
 
