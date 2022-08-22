@@ -1,233 +1,40 @@
 @import '~antd/dist/antd.css';
-@import url("https://fonts.googleapis.com/css?family=Cardo:400i|Rubik:400,700&display=swap");
 
-:root{
-  --header-height: 3rem;
-  --app-background: #212534;
-  --app-background-dark: #161922;
-  --d: 700ms;
-  --e: cubic-bezier(0.19, 1, 0.22, 1);
-  --font-sans: "Rubik", sans-serif;
-  --font-serif: "Cardo", serif;
-}
-
-@font-face {
-  font-family: 'thicccboi';
-  src: local('thicccboi'), url(./static/fonts/Webfont/THICCCBOI-Regular.woff2) format('woff2');
-}
-
-@font-face {
-  font-family: 'thicccboi';
-  font-weight: 500;
-  src: local('thicccboi'), url(./static/fonts/Webfont/THICCCBOI-Bold.woff2) format('woff2');
-}
-
-@font-face {
-  font-family: 'thicccboi';
-  font-weight: 400;
-  src: local('thicccboi'), url(./static/fonts/Webfont/THICCCBOI-SemiBold.woff2) format('woff2');
-}
-
-
-.App {
+/* .App {
   text-align: center;
-  color: white;
-  font-family: 'thicccboi', sans-serif;
-  width: 100%;
+} */
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
 }
 
-.App > footer {
-  padding: 1em;
-  padding-top: 2em;
-  background-color: var(--app-background);
-  border-top: 3px solid;
-  border-image: linear-gradient(var(--rotate), #5ddcff, #3c67e3 43%, #4e00c2) 1;
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
 }
 
-.safari .App footer {
-  border-image: linear-gradient( #5ddcff, #3c67e3 43%, #4e00c2) 1;
-}
-
-
-body {
+.App-header {
+  background-color: #282c34;
   min-height: 100vh;
-  width: 100%;
-  background: var(--app-background-dark);
-  display: flex;
-  align-items: stretch;
-  flex-direction: column;
-  /* padding-top: 2rem; */
-  /* padding-bottom: 2rem; */
-  box-sizing: border-box;
-}
-
-
-
-.App-contact-card-positioner{
-  position: relative;
-  width: 100%;
-  height: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.App-contact-card{
-  z-index: 99;
-  position: absolute;
-  bottom: 10vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 10px 50px 0px 50px;
-  border: 3px solid;
-  border-image: linear-gradient(var(--rotate), #5ddcff, #3c67e3 43%, #4e00c2) 1;
-  border-radius: 7px;
-  background-color: #1a1d28;
-  transition: all 1s;
+  font-size: calc(10px + 2vmin);
+  color: white;
 }
 
-.safari .App-contact-card {
-  border-image: linear-gradient(#5ddcff, #3c67e3 43%, #4e00c2 ) 1;
+.App-link {
+  color: #61dafb;
 }
 
-.App-contact-card > h2{
-  font-weight: normal;
-  font-size: 1rem;
-  line-height: 1rem;
-  color: var(--contact-color);
-  padding-bottom: 5px;
-}
-
-.relative-container{
-  height: 0px;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
-}
-
-.images {
-  display: inline-flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: stretch;
-  width: 800px;
-  max-width: calc(100% - 20px);
-  margin-top: 2rem;
-}
-
-.images > img{
-  flex: 1;
-  width: calc(33% - 20px);
-  border: 3px solid ;
-  border-image: linear-gradient(var(--rotate), #5ddcff, #3c67e3 43%, #4e00c2) 1;
-  /* filter: sepia(40%) ;  */
-  display: inline-flex;
-}
-
-.safari .images > img {
-  border-image: linear-gradient( #5ddcff, #3c67e3 43%, #4e00c2) 1;
-}
-
-.images > div{
-  width: 20px;
-}
-
-.code{
-  padding:1em;
-  background: #ffffff22;
-  color: cornflowerblue;
-  margin-top: 1em;
-}
-
-
-.container {
-  display: flex;
-  overflow-y: auto;
-  /* overflow-x: hidden; */
-  outline: 1px dashed lightgray;
-  flex: none;
-}
-
-.container.y {
-  width: 100vw;
-  height: 100vh;
-  flex-flow: column nowrap;
-}
-/* scroll-snap */
-
-.y.mandatory-scroll-snapping {
-  scroll-snap-type: y mandatory;
-}
-
-.y.proximity-scroll-snapping {
-  scroll-snap-type: y proximity;
-}
-
-.container > div {
-  text-align: center;
-  scroll-snap-align: center;
-  flex: none;
-}
-
-.y.container > div {
-  width: 100%;
-  height: 100%;
-}
-/* appearance fixes */
-.y.container > div:first-child {
-  line-height: 1.3;
-  font-size: 64px;
-}
-
-.article-image {
-  max-width: calc(100% - 10vw);
-}
-
-.article h1 {
-  font-size: calc(2vw + 0.7rem) !important;
-}
-
-
-.list_positioner {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.list {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  width: 800px;
-  max-width: calc(100vw - 20px);
-}
-
-.list > div {
-  width: 100%;
-  height: 7vh;
-  margin-top: 2vh;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
-  background-color: #3c67e322;
-  font-size: calc(1vmin + 0.7em);
-  text-align: left;
-}
-
-.list > div > div {
-  width: 5vh;
-  min-width: 5vh;
-  height: 5vh;
-  /* border-radius: 4vh; */
-  background-color: #3c67e377;
-  margin-left: 1vh;
-  margin-right: 2em;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }

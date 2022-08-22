@@ -1,24 +1,14 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
-import Marketplace from './pages/marketplace';
-import ApiInfo from './pages/api_info';
 import reportWebVitals from './reportWebVitals';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 
-ReactDOM.render(
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
   <React.StrictMode>
-    <Router>
-      <Routes>
-      <Route exact path='/' element={<App/>} />
-      <Route exact path='/marketplace' element={<Marketplace/>} >
-      </Route>
-      <Route exact path='/api_info/:id' element={<ApiInfo/>} />
-      </Routes>
-    </Router>
-  </React.StrictMode>,
-  document.getElementById('root')
+    <App />
+  </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function
