@@ -108,6 +108,17 @@ const  WriteInput = (props) => {
   );
 };
 
+const OnRead = (props) => {
+  
+  return (
+    <div>
+      {props.outputs.map((output, index) => {
+        return (<p key={index}>{output.type}</p>)
+        })}
+    </div>
+  )
+}
+
 const onChange = (e) => {
   // console.log(e);
 };
@@ -121,9 +132,7 @@ const onShow = (e, contract) => {
   // console.log(s,"????")
 };
 
-const onRead = (item) => {
-  console.log(item, "???");
-}
+
 
 async function readCode(setCode, setAbi) {
   const resp = await fetch("http://150.109.145.144:3000/saas3/dapi/detail?id=qz1BUkH3yK", {
@@ -167,11 +176,10 @@ function App() {
 
   const contract = new ethers.Contract("0x83aE10CF14ECd2e02b11Fe12Ef1e1809da5f9D1d", abi);
 
-  // const data = new FormData();
-  // data.append('transaction', "www");
-  // var headers = data.getHeaders();
+  
   useEffect(() => {
     readCode(setCode, setAbi)
+    
   }, [])
   
   
@@ -188,7 +196,7 @@ function App() {
           <Collapse onChange={onChange}>
             {abi.map((item, index) =>{
               return (item.stateMutability == "view" ? <Panel header={item.name} key={index} >
-                <p>{item.name}</p>
+                <OnRead outputs={item.outputs} />
               </Panel> : "")
               
             })}
