@@ -1,60 +1,35 @@
 import React from "react";
 import { Button, Dropdown, Menu, message, Steps } from 'antd';
-import logo from '../../logo.png';
+import logo from '../../SaaS3Logo.png';
 import { goToOverview, goToDemo, pichdeck_link, white_paper_link } from "../../App";
 import './AppHeader.css'
 import { isMobile } from "../../utils/platform";
 import { MenuOutlined } from '@ant-design/icons'
 
 const { SubMenu } = Menu;
+export const Launchpad='https://app.saas3.io';
 
 const AppHeader = ({setClicled, tab, setTab}) => {
 
     const _menu = (
         <>
-            <button
-                className={`App-menu-item${tab==="overview"?"__selected":""}`}
-                onClick={goToOverview}
-            >Overview</button>
-            <button
-                className='App-menu-item'
-                onClick={goToDemo}
-            >Usecase/Demo</button>
-            <button className="App-menu-item" onClick={()=>{window.open(white_paper_link)}}>White Paper</button>
-            {/* <Dropdown
-                overlay={
-                    <div className="App-menu-dropdown">
-                        <button className="App-menu-item" onClick={()=>{message.info("Comming Soon")}}>API NFT</button>
-                        <button className="App-menu-item" onClick={()=>{window.location.href='/non-api-nft/'}}>non-API NFT (Demo)</button>
-                    </div>
-                }
-                
-            >
-                <button className="App-menu-item">iNFT</button>
-            </Dropdown>
-            <button className="App-menu-item" onClick={()=>{message.info("Comming Soon")}}>Document</button>
-            
-            <button className="App-menu-item" onClick={()=>{message.info("Comming Soon")}}>Miners</button>
-            <button className="App-menu-item" onClick={()=>{message.info("Comming Soon")}}>Creators</button>
-            <button className="App-menu-item" onClick={()=>{message.info("Comming Soon")}}>dAPI Users</button> */}
-            <button className="App-menu-item" onClick={()=>{window.location.href='/marketplace'}}>Marketplace</button>
-            <button className="App-menu-item" onClick={()=>{window.location.href=''}}>Submit dAPI</button>
-            <button className="App-menu-item" onClick={()=>{window.location.href=''}}>dAPI docs</button> 
+            <button className={`App-menu-item${tab=="overview"?"__selected":""}`} onClick={()=>{window.location.href='/';}}>Overview</button>
+            <button className="App-menu-item" onClick={()=>{window.open(white_paper_link, '_blank');}}>Whitepaper</button>
+            <button className={`App-menu-item${tab=="marketplace"?"__selected":""}`} onClick={()=>{window.location.href='/marketplace';}}>Marketplace</button>
+            <button className="App-menu-item" onClick={()=>{window.open(Launchpad, '_blank')}}>Oracle Launchpad</button>
+            <button className="App-menu-item" onClick={()=>{window.open('https://airdrop.saas3.io', '_blank')}}>Airdrop</button>
+            <button className="App-menu-item" onClick={()=>{window.open('https://docs.saas3.io', '_blank')}}>Documents</button> 
         </>
     )
 
     const mobile_menu = (
         <Menu>
-            <Menu.Item onClick={goToOverview}>Overview</Menu.Item>
-            <Menu.Item onClick={()=>{window.alert('Please send email to contact@saas3.io')}}>White Paper</Menu.Item>
-            <SubMenu title="API NFT">
-                <Menu.Item onClick={()=>{message.info("Comming Soon")}}>API NFT</Menu.Item>
-                <Menu.Item onClick={()=>{window.location.href='/non-api-nft/'}}>non-API NFT (Demo)</Menu.Item>
-            </SubMenu>
-            <Menu.Item onClick={()=>{message.info("Comming Soon")}}>Document</Menu.Item>
-            <Menu.Item onClick={()=>{message.info("Comming Soon")}}>Miners</Menu.Item>
-            <Menu.Item onClick={()=>{message.info("Comming Soon")}}>Creators</Menu.Item>
-            <Menu.Item onClick={()=>{message.info("Comming Soon")}}>Users</Menu.Item>
+            <Menu.Item onClick={()=>{window.location.href='/';}}>Overview</Menu.Item>
+            <Menu.Item onClick={()=>{window.open(white_paper_link, '_blank');}}>Whitepaper</Menu.Item>
+            <Menu.Item onClick={()=>{window.location.href='/marketplace';}}>Marketplace</Menu.Item>
+            <Menu.Item onClick={()=>{window.open(Launchpad, '_blank')}}>Oracle Launchpad</Menu.Item>
+            <Menu.Item onClick={()=>{window.open('https://airdrop.saas3.io', '_blank')}}>Airdrop</Menu.Item>
+            <Menu.Item onClick={()=>{window.open('https://docs.saas3.io', '_blank')}}>Documents</Menu.Item>
         </Menu>
     )
 

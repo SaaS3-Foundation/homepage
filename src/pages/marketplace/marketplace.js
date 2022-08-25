@@ -35,17 +35,20 @@ function Marketplace() {
 
     const [ clicked, setClicled ] = React.useState(dev_mode);
 
-    const [ tab, setTab ] = React.useState("overview");
+    const [ tab, setTab ] = React.useState("marketplace");
 
-    axios.get(config.marketplace_address.concat('/saas3/dapi/list?page=1&size=20'))
-    .then(function (response) {
-      setData(response['data']);
-      return response;
-    })
-    .catch(function (error) {
-      console.log(error);
-      return error;
-    });
+    React.useEffect(()=>{
+    
+        console.log('kk');
+        axios.get(config.marketplace_address.concat('/saas3/dapi/list?page=1&size=20'))
+        .then(function (response) {
+        setData(response['data']);
+        return response;
+        })
+        .catch(function (error) {
+        console.log(error);
+        return error;
+    })}, []);
 
     
     let data_list = [];
@@ -72,7 +75,7 @@ function Marketplace() {
             />
 
             {/* <Carousel autoPlay interval="5000" transitionTime="5000" infiniteLoop> */}
-            <div  className='App-contact-card-positioner' style={{width:'80%',  marginLeft: '10%', padding:'3rem'}}>
+            <div  className='api-card-positioner' style={{width:'80%',  marginLeft: '10%', padding:'3rem'}}>
             <Carousel
                 showArrows={true} //是否展示左右箭头
                 showStatus={false} //是否展示右上角状态
@@ -96,7 +99,7 @@ function Marketplace() {
                         let target_url = '/api_info/'.concat(card.id);
                         return <div>
                         <div  key={index1} 
-                        className="full border App-contact-card" 
+                        className="full border api-card" 
                         >
                            <h1>{card.title}</h1>
                            <h2>{card.description}</h2>

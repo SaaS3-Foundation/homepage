@@ -18,21 +18,14 @@
 }
 
 
-.article{
+.apiinfor .article{
     height:100vh;
 }
-.article h1 {
+ .apiinfor .article h1 {
     font-size: calc(2vw + 0.7rem) !important;
   }
 
-
-  .App-header-logo{
-    height: 6rem;
-    cursor: pointer;
-    padding: 1rem;
-}
-
-.Overview{
+ .apiinfor .Overview{
     margin-top: 2rem;
     display: block;
     text-align: center;
@@ -41,7 +34,7 @@
     margin-inline: 10%;
 }
 
-.Overview h2{
+ .apiinfor h2{
     padding: 1rem;
     text-align: left;
 }

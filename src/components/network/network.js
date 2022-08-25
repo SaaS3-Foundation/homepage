@@ -92,7 +92,7 @@ const NetworkGraph = ({style, className, height}) => {
     //     Graph.refresh();
     // });
 
-    const title = "Secure Off-Chain with Trustful APIs"
+    const title = "The Next-Gen Software as a Service"
 
 
     return (
@@ -131,11 +131,11 @@ const NetworkGraph = ({style, className, height}) => {
                     <h1 className="graph-title-shadow"> {title} </h1>
                     <h1 className="graph-title" style={{zIndex:2}}> {title} </h1>
                 </div>
-                <p className="graph-text">SaaS3 is Secure oracle as a Service in Web3. Click <a onClick={goToOverview}> Overview </a>to Learn More
+                <p className="graph-text">Implemented by a Permissionless Oracle Network. Click <a onClick={()=>{window.open(white_paper_link, '_blank')}}> Whitepaper </a>to Learn More.
                 <br/>
-                <a
+                {/* <a
                 onClick={goToDemo}
-            >Usecase / Demo</a>
+            >Usecase / Demo</a> */}
                 </p>
             </div>
         </div>

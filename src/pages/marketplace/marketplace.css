@@ -6,7 +6,7 @@
   align-items: center;
 }
 
-.App-contact-card-positioner{
+.api-card-positioner{
     position: relative;
     width: 80%;
     height: 0;
@@ -15,7 +15,7 @@
     align-items: center;
   }
   
-  .App-contact-card{
+  .api-card{
     z-index: 99;
     position: absolute;
     bottom: 10vh;
@@ -30,15 +30,15 @@
     background-color: #1a1d28;
     width: 16vw;
   }
-  .App-contact-card h3{
+  .api-card h3{
     color: white;
     font-size: 2px;
   }
-  .App-contact-card h1{
+  .api-card h1{
     color: white;
     font-size: 1rem;
   }
-.App-contact-card button{
+.api-card button{
     cursor: pointer;
     margin-top: 1.5rem;
     padding: 0.75rem 1.5rem;

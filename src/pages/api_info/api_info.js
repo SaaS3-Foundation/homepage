@@ -44,10 +44,10 @@ function ApiInfo() {
 
     const [ clicked, setClicled ] = React.useState(dev_mode);
 
-    const [ tab, setTab ] = React.useState("overview");
+    const [ tab, setTab ] = React.useState("marketplace");
 
     return (
-        <div className={`App container y mandatory-scroll-snapping ${!is_chrome?'safari':''}`}>
+        <div className={`apiinfo App container y mandatory-scroll-snapping ${!is_chrome?'safari':''}`}>
 
             <AppHeader
                 setClicled={setClicled}

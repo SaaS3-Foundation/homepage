@@ -143,18 +143,18 @@ function App() {
                 
                 {/* id is used only for jummping, do not use on next <h1> if not needed */}
                 <div className='article_child'>
-                <h1 id='overview'>Blockchain Oracles are Unsafe</h1>
-                <div>
-                <p>
+                <h1 id='overview'>Explain SaaS3 in 5 MINS</h1>
+
+                <iframe width="900" height="500" src="https://www.youtube.com/embed/Yc6tish3Px4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                {/* <p>
                     If the source (such as sensors) directly submits the data to the tamper-proof distributed ledger without going through multiple intermediaries, the possibility of data manipulation will be greatly reduced. However, the Off-Chain computations are centralized on AWS-like servers.
                 </p></div>
                     <img
                         className="article-img"
                         src={problemimg1}
                         style={{width:'600px'}}
-                    />
-                </div>
-                {/*<div style={{height:interval_height}} />*/}
+                    /> */}
             </div>
 
             <div className='Overview article'  style={{zIndex:3}} >
@@ -242,15 +242,6 @@ function App() {
                                     Navigate quantitative trading with ease. Harness the latest algorithms developed by AI whizzes. Enabled by deep learning, our dAPIs are your go-to cash cow.
                                 </p>
                                 <button className='btn' onClick={()=>{window.open('https://www.saas3.io/demo_defi', '_blank')}}>Try</button>
-                            </div>
-                         </div>
-                         <div className='card2'>
-                            <div className='content'>
-                                <h2 className='title'>NFT Crossverse</h2>
-                                <p className='copy'>
-                                    Crossverse: Topple down boundaries between metaverse realms. Give every NFT a ready-made character in all virtual worlds. Use dAPI to switch between your decentralized identities seamlessly.
-                                </p>
-                                {/*<button className='btn' onClick={()=>{window.open('https://www.saas3.io/demo_defi', '_blank')}}>Try</button>*/}
                             </div>
                          </div>
                      </div>
