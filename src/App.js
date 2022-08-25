@@ -11,7 +11,6 @@ import { codeBlock } from 'common-tags';
 const { TabPane } = Tabs;
 const { Panel } = Collapse;
 
-
 const onClickConnect = (setCurrentAccount, setProvider) => {
   //client side code
   if(!window.ethereum) {
@@ -27,7 +26,7 @@ const onClickConnect = (setCurrentAccount, setProvider) => {
     return
   }
   
-  const provider = new ethers.providers.Web3Provider(window.ethereum, "rinkeby")
+  const provider = new ethers.providers.Web3Provider(window.ethereum, "http://150.109.145.144:9101")
   
   // MetaMask requires requesting permission to connect users accounts
   provider.send("eth_requestAccounts", [])
@@ -39,23 +38,20 @@ const onClickConnect = (setCurrentAccount, setProvider) => {
   setProvider(provider);
 }
 
-const Write = () => {
-  const data = new FormData();
-  data.append('transaction', "www");
-  var headers = data.getHeaders();
-  const resp = fetch("", {
-    method: 'POST',
-    headers: headers,
-    // @ts-ignore
-    body: data,
-  });
-}
-
-
 
 const  WriteInput = (props) => {
+  const fname = props.fname;
+  const contract = props.contract;
+  const inputs = props.inputs;
+  const  args = new Array();
+  
   const onFinish = (values) => {
-    console.log('Success:', values);
+    onClickConnect(props.setCurrentAccount, props.setProvider);
+    for (let i = 0; i < inputs.length; i++) {
+      args.push(values[inputs[i].name])
+    }
+    
+    contract[fname](...args);
   };
 
   const onFinishFailed = (errorInfo) => {
@@ -109,29 +105,95 @@ const  WriteInput = (props) => {
 };
 
 const OnRead = (props) => {
-  
-  return (
-    <div>
-      {props.outputs.map((output, index) => {
-        return (<p key={index}>{output.type}</p>)
-        })}
+  const inputs = props.inputs;
+  const contract = props.contract;
+  const outputs = props.outputs;
+  const fname = props.fname;
+  const  args = new Array();
+  const onFinish = (values) => {
+    for (let i = 0; i < inputs.length; i++) {
+      args.push(values[inputs[i].name])
+    }
+    
+    contract[fname](...args);
+  };
+
+  const onFinishFailed = (errorInfo) => {
+    console.log('Failed:', errorInfo);
+  };
+
+  if (inputs.length > 0) {
+    return (
+      <div>
+       <Form
+    name="basic"
+    labelCol={{
+      span: 8,
+    }}
+    wrapperCol={{
+      span: 16,
+    }}
+    initialValues={{
+      remember: true,
+    }}
+    onFinish={onFinish}
+    onFinishFailed={onFinishFailed}
+    autoComplete="off"
+  >
+    {props.inputs.map((input, index) => (
+      <Form.Item
+      label={input.name ? input.name : input.type}
+      name={input.name ? input.name : input.type}
+      key= {index}
+      rules={[
+        {
+          required: true,
+        },
+      ]}
+    >
+      <Input placeholder={input.type} />
+    </Form.Item>
+    ))}
+
+    <Form.Item
+      wrapperCol={{
+        offset: 8,
+        span: 16,
+      }}
+    >
+        <Button type="primary" htmlType="submit">
+          Write
+        </Button>
+      </Form.Item>
+    </Form>
     </div>
-  )
+    )
+  } else {
+    return (
+      <div>
+        <p>{contract[fname]()} </p>
+          {props.outputs.map((output, index) => {
+          return (<p key={index}>{output.type}</p>)
+          })}
+      </div>
+    )   
+  }
+      
+    
+
 }
 
 const onChange = (e) => {
-  // console.log(e);
+  console.log(e);
+  
 };
+
 
 const onShow = (e, contract) => {
   let index = e.pop();
   console.log(index, contract)
-  // let name = abi[index].name
   
-  // let s = contract.name
-  // console.log(s,"????")
 };
-
 
 
 async function readCode(setCode, setAbi) {
@@ -160,13 +222,14 @@ function App() {
   const [provider, setProvider] = useState()
   const [code, setCode] = useState()
   const [abi, setAbi] = useState([])
+  const [value, setValue] = useState()
 
   useEffect(() => {
     if(!currentAccount || !ethers.utils.isAddress(currentAccount)) return
     //client side code
     if(!window.ethereum) return
     const provider = new ethers.providers.Web3Provider(window.ethereum)
-   
+    setProvider(provider)
     provider.getNetwork().then((result)=>{
       setChainId(result.chainId)
       setChainName(result.name)
@@ -174,14 +237,21 @@ function App() {
 
   },[currentAccount, chainId])
 
-  const contract = new ethers.Contract("0x83aE10CF14ECd2e02b11Fe12Ef1e1809da5f9D1d", abi);
+  const contract = new ethers.Contract("0x1e0C35B60Bc1371a0eEc137E57adD679E99BeFbB", abi1);
 
-  
   useEffect(() => {
     readCode(setCode, setAbi)
     
   }, [])
   
+  const readValue = (e) => {
+    console.log(e);
+    let index = e.at(-1);
+    console.log(index);
+    
+    console.log(abi[index], "?**!")
+    setValue()
+  };
   
   return (
     <div className="App">
@@ -193,10 +263,10 @@ function App() {
         </Highlight>
         </TabPane>
         <TabPane tab="Read Contract" key="2">
-          <Collapse onChange={onChange}>
+          <Collapse onChange={readValue}>
             {abi.map((item, index) =>{
               return (item.stateMutability == "view" ? <Panel header={item.name} key={index} >
-                <OnRead outputs={item.outputs} />
+                <OnRead outputs={item.outputs} fname = {item.name} inputs={item.inputs} contract={contract} />
               </Panel> : "")
               
             })}
@@ -213,7 +283,7 @@ function App() {
           <Collapse defaultActiveKey={['1']} onChange={onChange}>
             {abi.map((item, index) =>{
               return (item.stateMutability != "view" && item.type == "function" && item.inputs.length != 0 ? <Panel header={item.name} key={index}>
-                <WriteInput inputs = {item.inputs} />
+                <WriteInput inputs = {item.inputs} fname = {item.name} contract = {contract} setCurrentAccount={setCurrentAccount} setProvider={setProvider}/>
               </Panel> : "")
             })}
           </Collapse>
