@@ -237,7 +237,7 @@ function App() {
 
   },[currentAccount, chainId])
 
-  const contract = new ethers.Contract("0x1e0C35B60Bc1371a0eEc137E57adD679E99BeFbB", abi1);
+  const contract = new ethers.Contract("0x1e0C35B60Bc1371a0eEc137E57adD679E99BeFbB", abi);
 
   useEffect(() => {
     readCode(setCode, setAbi)
