@@ -13,12 +13,13 @@ const AppHeader = ({setClicled, tab, setTab}) => {
 
     const _menu = (
         <>
-            <button className={`App-menu-item${tab=="overview"?"__selected":""}`} onClick={()=>{window.location.href='/';}}>Overview</button>
+            <button className={`App-menu-item${tab==="overview"?"__selected":""}`} onClick={()=>{window.location.href='/';}}>Overview</button>
             <button className="App-menu-item" onClick={()=>{window.open(white_paper_link, '_blank');}}>Whitepaper</button>
-            <button className={`App-menu-item${tab=="marketplace"?"__selected":""}`} onClick={()=>{window.location.href='/marketplace';}}>Marketplace</button>
+            <button className={`App-menu-item${tab==="marketplace"?"__selected":""}`} onClick={()=>{window.location.href='/marketplace';}}>Marketplace</button>
             <button className="App-menu-item" onClick={()=>{window.open(Launchpad, '_blank')}}>Oracle Launchpad</button>
             <button className="App-menu-item" onClick={()=>{window.open('https://airdrop.saas3.io', '_blank')}}>Airdrop</button>
             <button className="App-menu-item" onClick={()=>{window.open('https://docs.saas3.io', '_blank')}}>Documents</button> 
+            <button className={`App-menu-item${tab==="faucet"?"__selected":""}`} onClick={()=>{window.location.href='/faucet';}}>Faucet</button> 
         </>
     )
 
@@ -30,6 +31,7 @@ const AppHeader = ({setClicled, tab, setTab}) => {
             <Menu.Item onClick={()=>{window.open(Launchpad, '_blank')}}>Oracle Launchpad</Menu.Item>
             <Menu.Item onClick={()=>{window.open('https://airdrop.saas3.io', '_blank')}}>Airdrop</Menu.Item>
             <Menu.Item onClick={()=>{window.open('https://docs.saas3.io', '_blank')}}>Documents</Menu.Item>
+            <Menu.Item onClick={()=>{window.location.href='/faucet';}}>Faucet</Menu.Item>
         </Menu>
     )
 

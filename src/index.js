@@ -6,6 +6,7 @@ import Marketplace from './pages/marketplace';
 import ApiInfo from './pages/api_info';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import Faucet from './pages/faucet/Faucet';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -15,6 +16,7 @@ ReactDOM.render(
       <Route exact path='/marketplace' element={<Marketplace/>} >
       </Route>
       <Route exact path='/api_info/:id' element={<ApiInfo/>} />
+      <Route exact path='/faucet' element={<Faucet/>} />
       </Routes>
     </Router>
   </React.StrictMode>,
