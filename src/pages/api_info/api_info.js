@@ -2,6 +2,8 @@ import React from 'react';
 import AppHeader from '../../components/app_header/AppHeader';
 import { isChrome } from '../../utils/platform';
 import { useParams } from 'react-router-dom';
+import ContactBar from '../../components/contact/contact';
+import icon_location from '../../static/icon_location.png'
 import axios from 'axios';
 // controls whether the opening screen should show.
 import './api_info.css';
@@ -28,17 +30,20 @@ function ApiInfo() {
           "requester": "requester contract code"
         }
       });
+    
     let url = config.marketplace_address.concat('/saas3/dapi/detail?id=').concat(params['id']);
-    axios.get(url)
-    .then(function (response) {
-      response['data']['data']['triggers'] = JSON.parse(response['data']['data']['triggers']);
-      setData(response['data']);
-      return response;
-    })
-    .catch(function (error) {
-      console.log(error);
-      return error;
-    });
+    React.useEffect(()=>{
+      axios.get(url)
+      .then(function (response) {
+        response['data']['data']['triggers'] = JSON.parse(response['data']['data']['triggers']);
+        setData(response['data']);
+        return response;
+      })
+      .catch(function (error) {
+        console.log(error);
+        return error;
+      })}
+    ,[]);
 
     const is_chrome = isChrome();
 
@@ -47,27 +52,26 @@ function ApiInfo() {
     const [ tab, setTab ] = React.useState("marketplace");
 
     return (
-        <div className={`apiinfo App container y mandatory-scroll-snapping ${!is_chrome?'safari':''}`}>
-
+        <div>
             <AppHeader
                 setClicled={setClicled}
                 tab={tab}
                 setTab={setTab}
             />
-            
+            <div className={'apiinfo'} style={{"display":"grid"}}>
             <div className='article'  style={{zIndex:3}} >
                 
 
                 <div className='article_child'>
 
-                <div>
-                    <h1 >                
-                        <img
+                <div className='titlediv'>
+                    <h1>                
+                        {/* <img
                         src={logo}
                         className="App-header-logo"
-                        /> 
+                        />  */}
                     {data.data.title}</h1>
-                    <p style={{textAlign: 'right'}}> Created By <span style={{color: '#eb2f96'}}>{data.data.creator}</span></p>
+                    <p style={{textAlign: 'center'}}> Created By <span style={{color: '#eb2f96'}}>{data.data.creator}</span></p>
                 </div>
 
                 <div className='Overview'>
@@ -96,13 +100,22 @@ function ApiInfo() {
                 <Highlight>
                 {data.data.demo}
                 </Highlight>
-                
                 </div>
-
-
                 </div>
             </div>
+            </div>
 
+            <div className='Overview article'  style={{zIndex:3, "display":"flex"}} >
+            <footer>
+                <div>
+                <ContactBar/>
+                <a href="https://goo.gl/maps/L4vicaLurYULHQ8Z6" target={'_blank'}>
+                    <img style={{width:'1rem', marginLeft:'1em'}} src={icon_location}/>
+                    71 Nanyang Dr, NTU Innovation Center, Singapore 638075
+                </a>
+                </div>
+            </footer>
+            </div>
         </div>
     );
 }

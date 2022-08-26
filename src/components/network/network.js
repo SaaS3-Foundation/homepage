@@ -68,20 +68,20 @@ const NetworkGraph = ({style, className, height}) => {
     const [ angle, setAngle ] = React.useState(0)
 
     
-    React.useEffect(()=>{
-        // setTimeout(()=>{
-            // setAngle(angle + 180);
-            if(graph.current){
-                // console.log("try to rotate")
-                graph.current.cameraPosition({
-                    x: distance * Math.sin(deg2rad(angle)),
-                    z: distance * Math.cos(deg2rad(angle)),
-                },{x:0,y:0,z:0},1000)
-                // dconsole.log(angle, distance * Math.sin(deg2rad(angle)), distance * Math.cos(deg2rad(angle)),)
-                // console.log(graph.current.cameraPosition() )
-            }
-        // },100)
-    },[angle])
+    // React.useEffect(()=>{
+    //     // setTimeout(()=>{
+    //         // setAngle(angle + 180);
+    //         if(graph.current){
+    //             // console.log("try to rotate")
+    //             graph.current.cameraPosition({
+    //                 x: distance * Math.sin(deg2rad(angle)),
+    //                 z: distance * Math.cos(deg2rad(angle)),
+    //             },{x:0,y:0,z:0},1000)
+    //             // dconsole.log(angle, distance * Math.sin(deg2rad(angle)), distance * Math.cos(deg2rad(angle)),)
+    //             // console.log(graph.current.cameraPosition() )
+    //         }
+    //     // },100)
+    // },[angle])
 
     // window.addEventListener('resize', e => {
     //     let width = window.innerWidth;

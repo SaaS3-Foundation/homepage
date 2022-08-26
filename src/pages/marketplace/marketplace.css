@@ -12,7 +12,7 @@
   min-height: 50px;
   height: max-content;
   border-radius: 6px;
-  box-shadow: 1px 1px 2px 1px rgb(192 134 239);
+  box-shadow: 1px 1px 1px 2px rgb(115 126 229);
   padding: 10px 10px 10px 10px;
 }
 
@@ -22,23 +22,26 @@
   color: white !important;
   /* font-size: 1.1rem; */
   font-weight: 400;
-  border-bottom: #688cf755 2px solid;
+  /* border-bottom: #688cf755 2px solid; */
   cursor: pointer;
 }
 
   .api-card h3{
     color: white;
     font-size: 2px;
+    -webkit-line-clamp: 1;
   }
 
   .api-card h2{
     font-family:sans-serif;
     color:#fff;
     font-size: 1rem;
+    -webkit-line-clamp: 3;
   }
   .api-card h1{
     color: white;
     font-size: 2rem;
+    -webkit-line-clamp: 1;
   }
 .api-card button{
     cursor: pointer;
@@ -51,6 +54,12 @@
     color: white;
     background-color: #eb2f96;
     border: none;
+  }
+  .api-card-positioner h1, .api-card-positioner h2, .api-card-positioner h3,p{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
   }
 
 
