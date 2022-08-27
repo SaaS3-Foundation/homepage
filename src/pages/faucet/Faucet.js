@@ -17,7 +17,7 @@ export default function Faucet(params) {
     const GithubLogin = () =>{
         const authorize_uri = 'https://github.com/login/oauth/authorize'
         const client_id = '72a17290c572de6117e4'
-        const redirect_url = 'http://150.109.145.144:3000/faucet'
+        const redirect_url = 'https://rpc.saas3.io:3000/faucet'
         window.location.href = `${authorize_uri}?client_id=${client_id}&redirect_url=${redirect_url}`
     }
 
@@ -26,7 +26,7 @@ export default function Faucet(params) {
             message.error('please input your address');
             return;
         }
-        fetch(`http://150.109.145.144:3101/saas3/airdrop/faucet?address=${address}`,{method:"GET"})
+        fetch(`https://rpc.saas3.io:3101/saas3/airdrop/faucet?address=${address}`,{method:"GET"})
         .then(response=>{
             if(response.status===200){
                 message.success("100 test tokens will be sent to your address");
