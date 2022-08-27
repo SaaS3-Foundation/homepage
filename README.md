@@ -13,4 +13,4 @@ cd to this project (include package.json in this directory)
 
 Enter yarn install on the command line to download and install dependencies
 
-yarn start starts the development preview service, it will automatically open the browser to browse localhost:3000
+yarn start starts the development preview service, it will automatically open the browser to browse rpc.saas3.io:3000
