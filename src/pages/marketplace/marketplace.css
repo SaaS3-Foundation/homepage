@@ -63,3 +63,13 @@
   }
 
 
+
+  .tw-icon{
+    font-size: 20px;
+    color: white;
+    margin-left: auto;
+    transition: .3s color;
+  }
+  .tw-icon:hover{
+    color:#1d9bf0;
+  }

@@ -26,7 +26,6 @@ import { isChrome } from './utils/platform';
 export const white_paper_link = "/file/SaaS3Whitepaper.pdf"
 export const pichdeck_link = ""
 const interval_height = '12rem'
-
 // const dev_mode = false;
 const dev_mode = true;
 // controls whether the opening screen should show.
@@ -277,7 +276,7 @@ Token Stakers profit from APIs royalty fees by staking to APIs to back their qua
            <footer>
                 <div style={{position:'absolute', bottom:'10vh', width:'calc(100% - 96px)'}}>
                 <ContactBar/>
-                <a href="https://goo.gl/maps/L4vicaLurYULHQ8Z6" target={'_blank'}>
+                <a href="https://goo.gl/maps/L4vicaLurYULHQ8Z6" target={'_blank'} rel="noreferrer">
                     <img style={{width:'1rem', marginLeft:'1em'}} src={icon_location}/>
                     71 Nanyang Dr, NTU Innovation Center, Singapore 638075
                 </a>

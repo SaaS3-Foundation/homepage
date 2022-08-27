@@ -3,11 +3,9 @@
     background-color: #3c67e3;
     width:80%;
     margin-inline:10%;
-    height:50vh;
     overflow-y: visible;
     color:white;
     text-align: center;
-    margin-bottom: 3vh;
 }
 .demo_code h2{
     padding: 1rem;
@@ -17,7 +15,10 @@
     padding: 1rem;
     text-align: left;
 }
-
+.apiinfo{
+    overflow: hidden auto;
+    padding-bottom: 32px;
+}
 .apiinfo .article h1 {
     font-size: calc(2vw + 0.7rem) !important;
   }
