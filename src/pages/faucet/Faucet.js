@@ -2,6 +2,7 @@ import { Button, Input, message} from "antd";
 import React from "react";
 import { useLocation, useParams } from "react-router-dom";
 import AppHeader from "../../components/app_header/AppHeader";
+import {BgColorsOutlined} from "@ant-design/icons"; 
 import './Faucet.css'
 const dev_mode = false;
 
@@ -50,8 +51,8 @@ export default function Faucet(params) {
                 tab={tab}
                 setTab={setTab}
             />
-
-            <div className="faucet-main">
+            <div className="faucet-main" style={{"text-align":"center"}}>
+            <BgColorsOutlined style={{"font-size": "20vh", "color": "white", "margin-bottom":"2vh"}}/>
                 <div style={{"display":"flex","flexDirection":"column","justifyContent":"space-between","height":"15vmin"}}>
                     <Input 
                         placeholder={loginStatus?"Paste Your Polkadot Address":"Please Click GitHub Login Button"}

@@ -43,7 +43,7 @@ const AppHeader = ({setClicled, tab, setTab}) => {
             <img
                 src={logo}
                 className="App-header-logo"
-                onClick={()=>{if(setClicled)setClicled(false)}}
+                onClick={()=>{window.location.href='/'}}
             />
             <div className="App-menu">
                 {isMobile()?(
