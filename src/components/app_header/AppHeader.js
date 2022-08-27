@@ -7,7 +7,7 @@ import { isMobile } from "../../utils/platform";
 import { MenuOutlined } from '@ant-design/icons'
 
 const { SubMenu } = Menu;
-export const Launchpad='https://app.saas3.io';
+export const Launchpad='https://launchpad.saas3.io';
 
 const AppHeader = ({setClicled, tab, setTab}) => {
 
@@ -16,7 +16,7 @@ const AppHeader = ({setClicled, tab, setTab}) => {
             <button className={`App-menu-item${tab==="overview"?"__selected":""}`} onClick={()=>{window.location.href='/';}}>Overview</button>
             <button className="App-menu-item" onClick={()=>{window.open(white_paper_link, '_blank');}}>Whitepaper</button>
             <button className={`App-menu-item${tab==="marketplace"?"__selected":""}`} onClick={()=>{window.location.href='/marketplace';}}>Marketplace</button>
-            <button className="App-menu-item" onClick={()=>{window.open(Launchpad, '_blank')}}>Oracle Launchpad</button>
+            <button className="App-menu-item" onClick={()=>{window.open(Launchpad, '_blank')}}>Launchpad</button>
             <button className="App-menu-item" onClick={()=>{window.open('https://airdrop.saas3.io', '_blank')}}>Airdrop</button>
             <button className="App-menu-item" onClick={()=>{window.open('https://docs.saas3.io', '_blank')}}>Documents</button> 
             <button className={`App-menu-item${tab==="faucet"?"__selected":""}`} onClick={()=>{window.location.href='/faucet';}}>Faucet</button> 

@@ -3,7 +3,7 @@ import React from "react";
 import { useLocation, useParams } from "react-router-dom";
 import AppHeader from "../../components/app_header/AppHeader";
 import './Faucet.css'
-const dev_mode = true;
+const dev_mode = false;
 
 export default function Faucet(params) {
 
@@ -16,18 +16,17 @@ export default function Faucet(params) {
 
     const GithubLogin = () =>{
         const authorize_uri = 'https://github.com/login/oauth/authorize'
-        const client_id = '085179e8fee46b886215'
-        const redirect_url = 'http://rpc.saas3.io:3000/faucet'
+        const client_id = '72a17290c572de6117e4'
+        const redirect_url = 'http://150.109.145.144:3000/faucet'
         window.location.href = `${authorize_uri}?client_id=${client_id}&redirect_url=${redirect_url}`
     }
 
     const Submit = () =>{
-
         if (address.length==0){
             message.error('please input your address');
             return;
         }
-        fetch(`http://rpc.saas3.io:3101/saas3/airdrop/faucet?address=${address}`,{method:"GET"})
+        fetch(`http://150.109.145.144:3101/saas3/airdrop/faucet?address=${address}`,{method:"GET"})
         .then(response=>{
             if(response.status===200){
                 message.success("100 test tokens will be sent to your address");
@@ -39,10 +38,10 @@ export default function Faucet(params) {
     }
 
     React.useEffect(()=>{
-        if(search!==undefined){
+        if(search.length!=0){
             setLoginStatus(true)
         }
-    },[search])
+    },[])
 
     return(
         <div>
@@ -55,7 +54,7 @@ export default function Faucet(params) {
             <div className="faucet-main">
                 <div style={{"display":"flex","flexDirection":"column","justifyContent":"space-between","height":"15vmin"}}>
                     <Input 
-                        placeholder={loginStatus?"Paste Your Polkadot Address":"You need a GitHub account to get your test coin"}
+                        placeholder={loginStatus?"Paste Your Polkadot Address":"Please Click GitHub Login Button"}
                         value={address}
                         onChange={(e)=>{setAddress(e.target.value)}}
                         disabled={!loginStatus}
