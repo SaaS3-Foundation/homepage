@@ -8,5 +8,5 @@ export function getMarketplaceList (params) {
 
 
 export function missionAction (data) {
-  return axios.post('https://50.109.145.144:3101/saas3/airdrop/mission/action', data);
+  return axios.post('https://rpc.saas3.io:3101/saas3/airdrop/mission/action', data);
 }
