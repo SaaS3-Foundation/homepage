@@ -14,7 +14,7 @@ axios.interceptors.request.use(
 
 axios.interceptors.response.use(
   (response) => {
-    if (response.status === 200) {
+    if ([200,201].includes(response.status)) {
       if (response.data.code === 200) {
         return response.data;
       } else {
