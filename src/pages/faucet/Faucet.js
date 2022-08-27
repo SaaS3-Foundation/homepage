@@ -1,4 +1,4 @@
-import { Button, Input } from "antd";
+import { Button, Input, message} from "antd";
 import React from "react";
 import { useLocation, useParams } from "react-router-dom";
 import AppHeader from "../../components/app_header/AppHeader";
@@ -12,26 +12,31 @@ export default function Faucet(params) {
     const [ tab, setTab ] = React.useState("faucet");
     const [ clicked, setClicled ] = React.useState(dev_mode);
     const [ loginStatus, setLoginStatus] = React.useState(false)
-    const [ address, setAddress] = React.useState()
+    const [ address, setAddress] = React.useState('')
 
     const GithubLogin = () =>{
         const authorize_uri = 'https://github.com/login/oauth/authorize'
         const client_id = '085179e8fee46b886215'
-        const redirect_url = 'http://localhost:3000/faucet'
+        const redirect_url = 'http://rpc.saas3.io:3000/faucet'
         window.location.href = `${authorize_uri}?client_id=${client_id}&redirect_url=${redirect_url}`
     }
 
     const Submit = () =>{
-        fetch(`http://localhost:3101/saas3/airdrop/faucet?address=${address}`,{method:"GET"})
+
+        if (address.length==0){
+            message.error('please input your address');
+            return;
+        }
+        fetch(`http://rpc.saas3.io:3101/saas3/airdrop/faucet?address=${address}`,{method:"GET"})
         .then(response=>{
             if(response.status===200){
-                console.log("success")
+                message.success("100 test tokens will be sent to your address");
                 return response.json()
+            } else{
+                message.error("pending, please wait.");
             }
-        })
+        });    
     }
-
-    console.log(search)
 
     React.useEffect(()=>{
         if(search!==undefined){
@@ -50,7 +55,7 @@ export default function Faucet(params) {
             <div className="faucet-main">
                 <div style={{"display":"flex","flexDirection":"column","justifyContent":"space-between","height":"15vmin"}}>
                     <Input 
-                        placeholder={loginStatus?"Enter Your ETH Address":"You need a GitHub account to get your AGIX"}
+                        placeholder={loginStatus?"Paste Your Polkadot Address":"You need a GitHub account to get your test coin"}
                         value={address}
                         onChange={(e)=>{setAddress(e.target.value)}}
                         disabled={!loginStatus}
