@@ -72,7 +72,7 @@ export default function Faucet(params) {
                         disabled={!loginStatus}
                         size='large'
                     ></Input>
-                    <p className='error-text'>{validAddressText}</p>
+                    {loginStatus && <p className='error-text'>{validAddressText}</p>}
                     <Button
                         className='submit-button'
                         type='primary'
