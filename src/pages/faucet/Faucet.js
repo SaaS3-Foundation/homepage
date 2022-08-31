@@ -5,7 +5,7 @@ import AppHeader from '../../components/app_header/AppHeader';
 import { BgColorsOutlined } from '@ant-design/icons';
 import { isValidPolkadotAddress } from '../../utils/check';
 
-import './Faucet.css';
+import './Faucet.scss';
 const dev_mode = false;
 
 export default function Faucet(params) {

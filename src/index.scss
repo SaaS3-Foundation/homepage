@@ -1,0 +1,85 @@
+@import '~antd/dist/antd.css';
+@import url("https://fonts.googleapis.com/css?family=Cardo:400i|Rubik:400,700&display=swap");
+
+@font-face {
+  font-family: 'thicccboi';
+  src: local('thicccboi'), url(./static/fonts/Webfont/THICCCBOI-Regular.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'thicccboi';
+  font-weight: 500;
+  src: local('thicccboi'), url(./static/fonts/Webfont/THICCCBOI-Bold.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'thicccboi';
+  font-weight: 400;
+  src: local('thicccboi'), url(./static/fonts/Webfont/THICCCBOI-SemiBold.woff2) format('woff2');
+}
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti, "Microsoft Yahei", Tahoma, Simsun, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  outline: 0;
+  border: 0;
+  background: none;
+}
+
+:root {
+  --header-height: 3rem;
+  --app-background: #212534;
+  --app-background-dark: #161922;
+  --d: 700ms;
+  --e: cubic-bezier(0.19, 1, 0.22, 1);
+  --font-sans: "Rubik", sans-serif;
+  --font-serif: "Cardo", serif;
+  --contact-color: #4076fe;
+  --contact-color-t: #4076fe11;
+}
+
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 1130px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}

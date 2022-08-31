@@ -2,13 +2,10 @@ import React from 'react';
 import AppHeader from '../../components/app_header/AppHeader';
 import { isChrome } from '../../utils/platform';
 import './marketplace.css';
-import '../../App.css';
+import '../../App.scss';
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-import { Carousel } from 'react-responsive-carousel';
-import axios from 'axios';
 import { useState } from 'react';
-import config from '../../config.json';
-import api_logo from '../../SaaS3Logo.png';
+import api_logo from '../../static/img/logo/SaaS3Logo.png';
 import {
     TwitterOutlined,
 } from '@ant-design/icons'
