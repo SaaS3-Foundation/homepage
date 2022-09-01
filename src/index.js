@@ -2,10 +2,10 @@ import React from 'react';
 import './index.scss';
 import App from './App';
 import Marketplace from './pages/marketplace';
-import ApiInfo from './pages/api_info';
+import ApiInfo from './pages/appInfo';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Faucet from './pages/faucet/Faucet';
+import Faucet from './pages/faucet';
 import { createRoot } from 'react-dom/client';
 
 const root = createRoot(document.getElementById('root'));

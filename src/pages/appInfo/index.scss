@@ -1,50 +1,60 @@
-.demo_code{
-    margin-top: 2rem;
-    background-color: #3c67e3;
-    width:80%;
-    margin-inline:10%;
-    overflow-y: visible;
-    color:white;
-    text-align: center;
-}
-.demo_code h2{
-    padding: 1rem;
-    text-align: left;
-}
-.demo_code p{
-    padding: 1rem;
-    text-align: left;
-}
-.apiinfo{
-    overflow: hidden auto;
-    padding-bottom: 32px;
-}
-.apiinfo .article h1 {
-    font-size: calc(2vw + 0.7rem) !important;
-  }
-
-.apiinfo h1{
-    margin: 0;
-}
-.apiinfo .titlediv{
-    margin:10vh;
+.app-info {
+    background-color: var(--app-background-dark);
 }
 
- .apiinfo .Overview{
+.demo_code {
     margin-top: 2rem;
-    display: block;
-    text-align: center;
     background-color: #3c67e3;
     width: 80%;
     margin-inline: 10%;
+    overflow-y: visible;
+    color: white;
+    text-align: center;
 }
 
- .apiinfo h2{
+.demo_code h2 {
     padding: 1rem;
     text-align: left;
 }
 
-.gauss{
+.demo_code p {
+    padding: 1rem;
+    text-align: left;
+}
+
+.apiinfo {
+    overflow: hidden auto;
+    padding-bottom: 32px;
+}
+
+.apiinfo .article h1 {
+    font-size: calc(2vw + 0.7rem) !important;
+}
+
+.apiinfo h1 {
+    margin: 0;
+}
+
+.apiinfo .titlediv {
+    margin: 10vh;
+}
+
+.apiinfo .Overview {
+    padding: 12px;
+    text-align: center;
+    background-color: #3c67e3;
+    color: white;
+    font-size: 20px;
+    width: 80%;
+    margin: 32px auto 0;
+}
+
+.apiinfo h2 {
+    padding: 1rem;
+    text-align: left;
+}
+
+.gauss {
     /* background-color: #3c67e3 !important; */
     text-align: justify;
     padding-left: 10% !important;

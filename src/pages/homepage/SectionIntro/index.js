@@ -1,3 +1,4 @@
+import img from '../../../static/img/homepage/2.png'
 import './index.scss';
 
 function SectionIntro() {
@@ -15,10 +16,10 @@ function SectionIntro() {
             codebase and industry-leading multichain infrastructure as Kusama’s cousin, Polkadot.
           </p>
         </div>
-        <div className='box py-36 md:py-20'>
+        <div className='box py-36 md:py-20 w-4/5 mx-auto'>
           <img
             className='mx-auto'
-            src='https://kusama.network/assets/img/home-vortexs.svg'
+            src={img}
             alt='box vortexs'
           />
         </div>

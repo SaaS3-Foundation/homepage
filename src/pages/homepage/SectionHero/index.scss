@@ -29,7 +29,8 @@
     width: 100%;
   }
 
-  button {
+  .custom-button {
+    position: absolute;
     bottom: 4rem;
     left: 50%;
     transform: translateX(-50%);
@@ -39,7 +40,7 @@
 @media (max-width: 1023px) {
   .section-hero {
 
-    button {
+    .custom-button {
       bottom: -10rem;
     }
   }

@@ -1,6 +1,5 @@
-.section-launch {
+.section-project {
   padding-top: 20rem;
-
 
   .bg-container {
     top: 320px;
@@ -9,14 +8,14 @@
   .features.wrap {
     padding-top: 40vh;
     padding-bottom: 60vh;
-    z-index: 3;
+    z-index: 2;
 
     >.wrap-content {
       max-width: 560px;
 
       h3 {
         width: 100%;
-        color: white;
+        margin-bottom: 20px;
       }
 
       p {
@@ -37,7 +36,7 @@
 
 @media (max-width: 1023px) {
 
-  .section-launch {
+  .section-project {
     padding-top: 10rem;
 
     .bg-container {
@@ -45,8 +44,9 @@
     }
 
     .features.wrap {
-      padding-top: 0;
+      padding-top: 32px;
       padding-bottom: 0;
+      z-index: 2;
 
       >.wrap-content {
 

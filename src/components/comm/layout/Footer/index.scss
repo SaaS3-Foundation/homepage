@@ -1,0 +1,15 @@
+.footer-wrap {
+  border-top: 1px solid rgba($color: #ddd, $alpha: .5);
+  color: white;
+  padding: 48px 0 48px;
+
+  .contact-wrap {}
+
+  .address-wrap {
+    margin-top: 32px;
+
+    >a {
+      font-size: 16px;
+    }
+  }
+}

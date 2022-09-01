@@ -1,0 +1,42 @@
+.contact-unfold {
+    color: var(--contact-color-t);
+    // width: 24px;
+    max-width: 24px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    overflow: hidden;
+    transition: max-width .5s ease;
+    cursor: pointer;
+    color: white;
+    white-space: nowrap;
+
+    >span {
+        font-size: 24px;
+        vertical-align: middle;
+    }
+
+    &:not(:last-of-type) {
+        margin-right: 24px;
+    }
+
+}
+
+.contact-unfold-text {
+    margin-left: 12px;
+    font-size: 16px;
+}
+
+.contact-unfold-short:hover {
+    width: 12rem;
+    color: var(--contact-color);
+}
+
+@media (min-width: 1024px) {
+    .contact-unfold {
+        &:hover {
+            max-width: 15rem;
+            color: var(--contact-color);
+        }
+    }
+}

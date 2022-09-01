@@ -1,0 +1,29 @@
+@import '../../../static/style/mixins.scss';
+
+.custom-button {
+  padding: 8px 16px;
+  font-size: 16px;
+  line-height: 1.4;
+
+  @include TitleFont;
+
+  &-info {
+    border: 1px solid white;
+    color: white;
+
+    &:hover {
+      border-color: var(--contact-color);
+      color: var(--contact-color);
+    }
+  }
+
+  &-primary {
+    border: 1px solid var(--contact-color);
+    color: var(--contact-color);
+
+    &:hover {
+      border-color: var(--hover-primary);
+      color: var(--hover-primary);
+    }
+  }
+}
