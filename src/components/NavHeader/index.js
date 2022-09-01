@@ -2,6 +2,7 @@ import Logo from '../../static/img/logo/title-logo.png';
 import NavToggler from '../../static/img/header/nav-toggler.svg';
 import './index.scss';
 import { useEffect, useRef, useState } from 'react';
+import Button from '../comm/Button';
 
 function NavHeader() {
   const navs = [
@@ -28,11 +29,11 @@ function NavHeader() {
       href: 'https://airdrop.saas3.io/',
       blank: true
     },
-    {
-      title: 'Documents',
-      href: 'https://docs.saas3.io/',
-      blank: true
-    },
+    // {
+    //   title: 'Documents',
+    //   href: 'https://docs.saas3.io/',
+    //   blank: true
+    // },
     {
       title: 'Faucet',
       href: '/faucet'
@@ -50,12 +51,12 @@ function NavHeader() {
       <nav className='py-16px'>
         <div className='container flex items-center px-3 flex-wrap'>
           <a href='/' className='shrink-0'>
-            <img src={Logo} alt='Logo' className='logo h-9 w-auto' />
+            <img src={Logo} alt='Logo' className='logo w-auto' />
           </a>
           <button className='navbar-toggler ml-auto p-1 rounded hidden md:block' onClick={toggleNavList}>
             <span className='navbar-toggler-icon block w-7 h-7'></span>
           </button>
-          <div className={`navbar-collapse ml-auto md:max-h-0 lg:block w-full lg:w-auto ${visible ? 'show' : ''}`} ref={navBar}>
+          <div className={`navbar-collapse ml-auto md:max-h-0 md:text-center lg:flex w-full lg:w-auto ${visible ? 'show' : ''}`} ref={navBar}>
             <ul className='navbar-navs block lg:flex items-center'>
               {navs.map((nav) => {
                 return (
@@ -71,6 +72,7 @@ function NavHeader() {
                 );
               })}
             </ul>
+            <Button type="primary" href="https://docs.saas3.io/" blank>Start to Build</Button>
           </div>
         </div>
       </nav>

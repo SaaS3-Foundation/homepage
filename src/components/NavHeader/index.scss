@@ -11,6 +11,9 @@
     border-bottom: 1px rgb(255, 255, 255, 0.25) solid;
 
     >.container {
+      .logo {
+        height: 50px;
+      }
 
       .navbar-collapse {
         transition: max-height .5s ease;
@@ -45,12 +48,15 @@
   }
 }
 
-// @media (max-width: 750px) {
-//   .nav-header {
-//     >nav {
-//       >.container {
-//         padding: 0 .2rem;
-//       }
-//     }
-//   }
-// }
+@media (max-width: 1023px) {
+
+  .nav-header {
+    >nav {
+      >.container {
+        .logo {
+          height: 40px;
+        }
+      }
+    }
+  }
+}
