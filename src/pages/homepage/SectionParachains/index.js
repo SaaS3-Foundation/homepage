@@ -6,7 +6,7 @@ function SectionParachains() {
       <div className='container'>
         <div className='wrap flex md:flex-wrap'>
           <div className='wrap-left'>
-            <h3 className='inline-block'>The data categories</h3>
+            <h3 className='inline-block'>The Data Categories</h3>
           </div>
           <div className='wrap-right'>
             <p>ETF price</p>
@@ -15,6 +15,7 @@ function SectionParachains() {
             <p>Election</p>
             <p>Land price</p>
             <p>Competation</p>
+            <p>...</p>
           </div>
         </div>
       </div>

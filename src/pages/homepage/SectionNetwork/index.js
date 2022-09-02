@@ -1,4 +1,4 @@
-import img from '../../../static/img/homepage/4.png';
+import img from '../../../static/img/homepage/layout-2.png';
 import './index.scss';
 
 function SectionNetwork() {

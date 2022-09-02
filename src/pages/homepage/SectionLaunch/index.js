@@ -1,4 +1,4 @@
-import img from '../../../static/img/homepage/5.png';
+import img from '../../../static/img/homepage/workflow.png';
 import './index.scss';
 
 function SectionLaunch() {
@@ -16,12 +16,12 @@ function SectionLaunch() {
     {
       title: 'Decentralization',
       content:
-        'The developer does not need to offer any centralized hardware to run the smart contract.  Current blockchain oracles, such as the famous chainlink and API3, require permission to deploy and are centralized on single-point servers. Whereas in SaaS3, we believe an oracle should be deployed permissionlessly and executed with decentralization, just like a smart contract. '
+        'Current blockchain oracles, such as the famous chainlink and API3, require permission to deploy and are centralized on single-point servers. Whereas in SaaS3, we believe an oracle should be deployed permissionlessly and executed with decentralization, just like a smart contract. '
     },
     {
       title: 'dRuntime & dAPI',
       content:
-        'SaaS3 builds a decentralized serverless runtime, namely dRuntime. Any web2 API can be one-click deployed by oracle operators on SaaS3 dRuntime to become decentralized API. Once a non-chain request comes, SaaS3 miners automatically excute the dAPIs.'
+        'SaaS3 builds a decentralized serverless runtime, namely dRuntime. Any web2 API can be one-click deployed by oracle operators on SaaS3 dRuntime to become decentralized API. Once a non-chain request comes, SaaS3 miners automatically execute the dAPIs.'
     }
   ];
 
@@ -44,9 +44,7 @@ function SectionLaunch() {
             <img className='inline-block opacity-50' src={img} alt='bg' />
           </div>
           <h2 className='absolute'>
-            <span>Introduction to SaaS3</span>
-            <br/>
-            <span>in Detail</span>
+            <span>SaaS3 Keywords</span>
           </h2>
         </div>
 

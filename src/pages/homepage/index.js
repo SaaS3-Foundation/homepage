@@ -11,6 +11,7 @@ import SectionUtilization from './SectionUtilization/index.js';
 import SectionSubstrate from './SectionSubstrate/index.js';
 import SectionFlight from './SectionFlight/index.js';
 import Footer from '../../components/comm/layout/Footer/index.js';
+import SectionYoutube from './SectionYoutube/index.js';
 
 function HomePage() {
   return (
@@ -18,6 +19,7 @@ function HomePage() {
       <NavHeader></NavHeader>
       <SectionHero></SectionHero>
       <section className='relative homepage-container'>
+        <SectionYoutube></SectionYoutube>
         <SectionIntro></SectionIntro>
         <SectionLaunch></SectionLaunch>
         {/* <section className='text-center relative z-10 pt-0'>

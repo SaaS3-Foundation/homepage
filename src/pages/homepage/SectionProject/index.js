@@ -1,4 +1,4 @@
-import img from '../../../static/img/homepage/6.png';
+import img from '../../../static/img/homepage/dapi.png';
 import './index.scss';
 
 function SectionProject() {

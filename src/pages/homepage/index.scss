@@ -5,6 +5,10 @@
   width: 100%;
   background-color: var(--app-background-dark);
   min-height: 100vh;
+  ::selection{
+    background-color: #00ffe1;
+    color: var(--contact-color);
+  }
 
   >.homepage-container {
 
@@ -52,6 +56,7 @@
   h3 {
     font-size: 28px;
     color: #eee;
+    font-weight: bold;
     @include TitleFont;
   }
 
@@ -103,6 +108,9 @@
 
   img {
     max-width: 80%;
+    pointer-events: none;
+    -webkit-user-drag: none;
+    user-select: none;
   }
 
 }
