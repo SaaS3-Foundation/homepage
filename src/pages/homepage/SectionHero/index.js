@@ -24,6 +24,13 @@ function SectionHero() {
     };
   });
 
+  function handerMore(event) {
+    window.scrollTo({
+      top: window.outerHeight - 200
+    });
+    // document.querySelector('#root').scrollTop = window.outerHeight;
+  }
+
   return (
     <section className={`section-hero pt-40 md:pt-72 h-screen`}>
       <div className={`container relative  ${zoom ? 'zoom' : ''}`}>
@@ -31,9 +38,14 @@ function SectionHero() {
           <img src={gif} alt='homepage img' className=' mx-auto' />
         </div>
         <div className='sec-content absolute'>
-          <h1 className='text-white text-4xl md:text-xl font-bold'>The Next-Gen Software as a Service</h1>
+          <h1 className='text-white text-4xl md:text-xl font-bold'>
+            The Next-Gen Software as a Service
+          </h1>
         </div>
-        <Button type="info" blank href={process.env.REACT_APP_WHITE_PAPER_LINK}>Learn more</Button>
+        {/* <Button type="info" blank href={process.env.REACT_APP_WHITE_PAPER_LINK}>Learn more</Button> */}
+        <Button type='info' onClick={handerMore}>
+          Learn more
+        </Button>
       </div>
     </section>
   );
