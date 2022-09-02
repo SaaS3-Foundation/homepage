@@ -31,12 +31,9 @@ function SectionHero() {
           <img src={gif} alt='homepage img' className=' mx-auto' />
         </div>
         <div className='sec-content absolute'>
-          <h1 className='text-white text-4xl md:text-xl font-bold'>PARACHAINS ARE HERE</h1>
+          <h1 className='text-white text-4xl md:text-xl font-bold'>The Next-Gen Software as a Service</h1>
         </div>
-        {/* <button className='text-primary absolute border border-primary border-solid py-2 px-4 md:p-2 text-lg'>
-          Learn more
-        </button> */}
-        <Button type="info">Learn more</Button>
+        <Button type="info" blank href={process.env.REACT_APP_WHITE_PAPER_LINK}>Learn more</Button>
       </div>
     </section>
   );

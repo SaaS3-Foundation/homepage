@@ -1,27 +1,32 @@
-import img from '../../../static/img/homepage/3.png';
+import img from '../../../static/img/homepage/6.png';
 import './index.scss';
 
 function SectionProject() {
   const features = [
     {
-      title: 'Innovation',
-      content:
-        'Kusama is built by the same teams as Polkadot, using nearly the same code and tools. The network places the latest tech from Parity Technologies and Web3 Foundation in the hands of developers, even before those features make it to Polkadot.'
+      title: 'Creator Stake',
+      content: 'To create a dAPI, creator should stake $SAAS tokens.'
     },
     {
-      title: 'Scalability',
-      content:
-        'Kusama’s sharded blockchains and open governance provide a scalable and future-proof infrastructure for businesses, marketplaces and applications to deploy and mature.'
+      title: 'Miner Stake',
+      content: 'To become miners in the network, they have to stake $SAAS tokens.'
     },
     {
-      title: 'Interoperability',
+      title: 'Retailer Stake',
       content:
-        'Kusama brings multiple blockchains together into one sharded network, freeing developers from the siloes created by legacy blockchain networks.'
+        'Retailer holders stake $SAAS token to dAPIs and Miners as the collateral to get incentive rewards.'
     },
     {
-      title: 'Customization',
-      content:
-        'With Substrate, developers can build their own app-specific blockchain and connect it to Kusama.'
+      title: 'API Usage Fee',
+      content: 'Users request SaaS3 oracle and pay with the $SAAS token.'
+    },
+    {
+      title: 'GAS Fee',
+      content: '$SAAS token is paid by the API requesters to the miners to execute the dAPI.'
+    },
+    {
+      title: 'Community Governance',
+      content: '$SAAS token is used for Governance behaviour in the SaaS3 DAO and community.'
     }
   ];
 
@@ -39,13 +44,11 @@ function SectionProject() {
     <section className='section-project'>
       <div className='container relative'>
         <div className='bg-container pc:sticky'>
-          <div className='text-center opacity-0'>
+          <div className='text-center'>
             <img className='inline-block opacity-50' src={img} alt='bg' />
           </div>
           <h2 className='absolute'>
-            <span>Bring</span>
-            <br />
-            <span>to your project</span>
+            <span>Utilities of $SAAS token</span>
           </h2>
         </div>
 

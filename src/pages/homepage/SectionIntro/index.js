@@ -1,4 +1,4 @@
-import img from '../../../static/img/homepage/2.png'
+import img from '../../../static/img/homepage/3.png';
 import './index.scss';
 
 function SectionIntro() {
@@ -6,48 +6,47 @@ function SectionIntro() {
     <section className='section-intro'>
       <div className='container'>
         <div className='wrap'>
-          <h2>The Scalable, Multichain Network for Radical Innovation.</h2>
+          <h2>SaaS for Those Who Develop Fully Decentralized Apps</h2>
         </div>
 
         <div className='wrap flex md:pt-4'>
           <p className='ml-auto'>
-            Unprecedented interoperability and scalability for blockchain developers who want to
-            quickly push the limits of what’s possible. Built using Substrate with nearly the same
-            codebase and industry-leading multichain infrastructure as Kusama’s cousin, Polkadot.
+            Farewell to the era in which DApps need permission to be deployed on centralized
+            servers. SaaS3 makes a decentralized, permissionless oracle network available on
+            multiple public chains. Develop a real decentralized app using our permissionless
+            oracles, or be a SaaS3 miner by one-click launching your own oracle.
           </p>
         </div>
         <div className='box py-36 md:py-20 w-4/5 mx-auto'>
-          <img
-            className='mx-auto'
-            src={img}
-            alt='box vortexs'
-          />
+          <img className='mx-auto' src={img} alt='box vortexs' />
         </div>
 
         <div className='wrap'>
-          <h2>Origin of Kusama</h2>
+          <h2>Development of SaaS</h2>
           <p>
-            The relationship between society and technology has deteriorated to the point where
-            large entities routinely stretch and overstep their authority.
+            SaaS3 is the next generation software-as-a-Service after SaaS 1.0 and 2.0. The first
+            generation SaaS is web-based software on the browser (chrome, safari, Firefox) click to
+            use and without download. However, no interactions among different software. Therefore,
+            SaaS2 solves the problem by integrating isolated software to be an all-in-one SaaS
+            platform (google docs, etc).
           </p>
           <p>
-            Kusama is a network built as a risk-taking, fast-moving ‘canary in the coal mine’ for
-            its cousin Polkadot. It's a living platform built for change agents to take back
-            control, spark innovation and disrupt the status quo.
+            SaaS3 integrates the computation resources of the miners and provides services to web3
+            developers, empowering them with permissionless oracles which are highly customizable .
           </p>
         </div>
         <div className='wrap flex pt-20 md:pt-10'>
           <div className='box-outlines ml-auto w-1/2 md:w-full'>
-            <h2>What is Kusama?</h2>
+            <h2>Mechanism of SaaS3</h2>
             <p>
-              Kusama is a scalable network of specialized blockchains built using Substrate and
-              nearly the same codebase as Polkadot. The network is an experimental development
-              environment for teams who want to move fast and innovate on Kusama, or prepare for
-              deployment on Polkadot.
+              Based on a decentralized, permissionless oracle network, SaaS3 can upload off-chain
+              data feeds of any data category to the on-chain, and offers trustful off-chain
+              computation services.
             </p>
             <p>
-              Kusama was founded in 2019 by Gavin Wood, founder of Polkadot and co-founder and
-              former CTO of Ethereum.
+              Centralized servers are no longer needed with SaaS3 miners providing computation
+              resources. Developers can easily set their customized oracles, and deploy any web2
+              API.
             </p>
           </div>
         </div>

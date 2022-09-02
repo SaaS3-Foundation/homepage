@@ -1,37 +1,27 @@
-import img from '../../../static/img/homepage/3.png';
+import img from '../../../static/img/homepage/5.png';
 import './index.scss';
 
 function SectionLaunch() {
   const features = [
     {
-      title: 'Fast Iteration',
+      title: 'Oracle',
       content:
-        'Move fast and ship your product. Kusama’s risk-taking and nimble mentality allows developers to move swiftly through the governance and upgrade process, enabling rapid progress and growth.'
+        'The real world is disconnected from the blockchain. Web2 data is not available to the on-chain smart contracts. Blockchain oracle comes to connect the real world and blockchain with zero trust.'
     },
     {
-      title: 'Low Economic Barriers',
+      title: 'Permissionless',
       content:
-        'Launch your custom blockchain (parachain) project with low barriers to entry. Ideal for lean startups looking to move fast and iterate.'
+        'The developer can directly write the smart contract and deploy it on the blockchain without any permission. '
     },
     {
-      title: 'Advanced Technology',
+      title: 'Decentralization',
       content:
-        'Build on a next-generation, sharded, multichain network, while employing the newest features before they are deployed on Polkadot.'
+        'The developer does not need to offer any centralized hardware to run the smart contract.  Current blockchain oracles, such as the famous chainlink and API3, require permission to deploy and are centralized on single-point servers. Whereas in SaaS3, we believe an oracle should be deployed permissionlessly and executed with decentralization, just like a smart contract. '
     },
     {
-      title: 'Open Governance',
+      title: 'dRuntime & dAPI',
       content:
-        'Kusama is owned and governed by a community of network participants who vote on and control the evolution of the network. Have a voice and make your mark in the evolution of the network.'
-    },
-    {
-      title: 'Engaged Community',
-      content:
-        'Leverage Polkadot’s global brand and developer community for your parachain, parathread or dApp.'
-    },
-    {
-      title: 'Valuable Experience',
-      content:
-        'For teams looking to move to Polkadot after fine-tuning on Kusama, begin building your community and brand on Kusama before deployment.'
+        'SaaS3 builds a decentralized serverless runtime, namely dRuntime. Any web2 API can be one-click deployed by oracle operators on SaaS3 dRuntime to become decentralized API. Once a non-chain request comes, SaaS3 miners automatically excute the dAPIs.'
     }
   ];
 
@@ -54,9 +44,9 @@ function SectionLaunch() {
             <img className='inline-block opacity-50' src={img} alt='bg' />
           </div>
           <h2 className='absolute'>
-            <span>Launch your</span>
-            <br />
-            <span>custom blockchain</span>
+            <span>Introduction to SaaS3</span>
+            <br/>
+            <span>in Detail</span>
           </h2>
         </div>
 

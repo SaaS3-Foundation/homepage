@@ -6,16 +6,15 @@ function SectionParachains() {
       <div className='container'>
         <div className='wrap flex md:flex-wrap'>
           <div className='wrap-left'>
-            <h3 className='inline-block'>Parachains and Applications</h3>
+            <h3 className='inline-block'>The data categories</h3>
           </div>
           <div className='wrap-right'>
-            <p>Gaming and eSports</p>
-            <p>Messaging</p>
-            <p>DAO</p>
-            <p>Marketplaces</p>
-            <p>Oracles</p>
-            <p>Music</p>
-            <p>Social Networking</p>
+            <p>ETF price</p>
+            <p>Sports</p>
+            <p>Housing price</p>
+            <p>Election</p>
+            <p>Land price</p>
+            <p>Competation</p>
           </div>
         </div>
       </div>

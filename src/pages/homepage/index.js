@@ -20,20 +20,20 @@ function HomePage() {
       <section className='relative homepage-container'>
         <SectionIntro></SectionIntro>
         <SectionLaunch></SectionLaunch>
-        <section className='text-center relative z-10 pt-0'>
+        {/* <section className='text-center relative z-10 pt-0'>
           <Button type='primary'>Ready to Start? Contact Our Team.</Button>
-        </section>
-        <SectionProject></SectionProject>
-        <SectionNetwork></SectionNetwork>
+        </section> */}
         <SectionParachains></SectionParachains>
+        <SectionNetwork></SectionNetwork>
+        <SectionProject></SectionProject>
 
-        <section className='text-center relative z-10 pt-0'>
+        {/* <section className='text-center relative z-10 pt-0'>
           <Button type='primary'>Why Build a Parachain</Button>
-        </section>
-        <SectionUtilization></SectionUtilization>
+        </section> */}
+        {/* <SectionUtilization></SectionUtilization>
         <SectionSubstrate></SectionSubstrate>
-        <SectionFlight></SectionFlight>
-        <section className='text-light'>
+        <SectionFlight></SectionFlight> */}
+        {/* <section className='text-light'>
           <div className='container text-center'>
             <h2>Stay in the loop</h2>
             <p>Subscribe to the newsletter to hear about Kusama updates and events.</p>
@@ -42,7 +42,7 @@ function HomePage() {
               To see how we use your information please see our privacy policy.
             </p>
           </div>
-        </section>
+        </section> */}
         <Footer></Footer>
       </section>
     </div>

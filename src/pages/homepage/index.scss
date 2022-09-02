@@ -96,6 +96,9 @@
     position: absolute;
     top: 48px;
     z-index: 2;
+    >span {
+      white-space: initial;
+    }
   }
 
   img {
