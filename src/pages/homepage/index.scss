@@ -5,7 +5,8 @@
   width: 100%;
   background-color: var(--app-background-dark);
   min-height: 100vh;
-  ::selection{
+
+  ::selection {
     background-color: #00ffe1;
     color: var(--contact-color);
   }
@@ -41,6 +42,8 @@
     color: #eee;
     font-weight: bold;
     @include TitleFont;
+    word-break: break-all;
+
     >span {
       white-space: nowrap;
     }
@@ -51,6 +54,7 @@
     color: #ddd;
     @include TextFont;
     line-height: 1.8;
+    word-break: break-all;
   }
 
   h3 {
@@ -58,6 +62,7 @@
     color: #eee;
     font-weight: bold;
     @include TitleFont;
+    word-break: break-all;
   }
 
 
@@ -101,6 +106,7 @@
     position: absolute;
     top: 48px;
     z-index: 2;
+
     >span {
       white-space: initial;
     }
