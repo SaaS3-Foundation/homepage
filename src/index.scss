@@ -42,12 +42,12 @@
 :root {
   --header-height: 3rem;
   --app-background: #212534;
-  --app-background-dark: #161922;
+  --app-background-dark: rgba(0, 0, 0, .95);
   --d: 700ms;
   --e: cubic-bezier(0.19, 1, 0.22, 1);
   --font-sans: "Rubik", sans-serif;
   --font-serif: "Cardo", serif;
-  --contact-color: #4076fe;
+  --contact-color: #8c74f9;
   --hover-primary: #6F9CFE;
   --contact-color-t: #4076fe11;
 }

@@ -9,7 +9,7 @@ module.exports = {
         '16px': '16px'
       },
       colors: {
-        primary: '#4076fe'
+        primary: '#8c74f9'
       },
       screens: {
         ...defaultTheme.screens,

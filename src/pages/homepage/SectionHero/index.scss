@@ -35,7 +35,9 @@
   h1 {
     text-align: center;
     width: 100%;
+    font-size: 60px;
     @include TitleFont;
+    line-height: 1.6;
   }
 
   .custom-button {
@@ -51,6 +53,10 @@
 
     .custom-button {
       bottom: -10rem;
+    }
+
+    h1 {
+      font-size: 16px;
     }
   }
 }
