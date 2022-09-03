@@ -6,7 +6,7 @@ function SectionIntro() {
     <section className='section-intro'>
       <div className='container'>
         <div className='wrap'>
-          <h2>Next-Gen SaaS for Those Who Develop Fully Decentralized Apps</h2>
+          <h2>Next-Gen SaaS for Fully Decentralized Apps</h2>
         </div>
 
         <div className='wrap flex md:pt-4'>
@@ -37,14 +37,10 @@ function SectionIntro() {
           <div className='box-outlines ml-auto w-1/2 md:w-full'>
             <h2>What is SaaS3</h2>
             <p>
-              SaaS3 is the next generation software-as-a-Service after SaaS 1.0 and 2.0. The first
-              generation SaaS is web-based software on the browser (chrome, safari, Firefox) click
-              to use with no interactions among different software. SaaS2 solves the problem by
-              integrating isolated software into an all-in-one SaaS platform (google docs, etc.),
-              but it's still controlled and authorized by centralized institutions.
+              SaaS3 is the next generation software-as-a-Service after SaaS 1.0 and 2.0. Nowadays, SaaS2.0 is still controlled and authorized by centralized institutions.
             </p>
             <p>
-              SaaS3 = SaaS2+Decentralization+Permissionless. It provides services to web3
+              Thus, SaaS3 = SaaS2+Decentralization+Permissionless. It provides services to web3
               developers, empowering them with highly customizable oracles by integrating the
               computation resources of the miners.
             </p>

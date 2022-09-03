@@ -35,7 +35,7 @@ function SectionHero() {
     <section className={`section-hero pt-40 md:pt-72 h-screen`}>
       <div className={`container relative  ${zoom ? 'zoom' : ''}`}>
         <div className='img-wrap'>
-          <img src={gif} alt='homepage img' className='mx-auto pc:w-3/5' />
+          <img src={gif} alt='homepage img' className='mx-auto pc:h-1/5' />
         </div>
         <div className='sec-content absolute'>
           <h1 className='text-white text-4xl md:text-xl font-bold'>

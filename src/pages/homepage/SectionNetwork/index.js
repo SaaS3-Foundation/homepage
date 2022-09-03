@@ -14,8 +14,7 @@ function SectionNetwork() {
           </h2>
           <div className='wrap flex mt-10'>
             <p className='wrap-text md:relative ml-auto'>
-              Different from traditional oracles such as Chainlink and API3, which only have
-              one-layer aggregation, SaaS3 applies two-layer aggregation to improve data fidelity.
+              SaaS3 applies two-layer aggregation to improve data fidelity.
               The first layer aggregates the multiple miner’s outputs to be one particular API’s
               response, and the second layer aggregates the different API responses to finalize the
               output and return it to on-chain protocols.
