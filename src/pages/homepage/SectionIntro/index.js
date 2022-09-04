@@ -40,7 +40,7 @@ function SectionIntro() {
               SaaS3 is the next generation software-as-a-Service after SaaS 1.0 and 2.0. Nowadays, SaaS2.0 is still controlled and authorized by centralized institutions.
             </p>
             <p>
-              Thus, SaaS3 = SaaS2+Decentralization+Permissionless. It provides services to web3
+              Thus, SaaS3 = SaaS2 + Decentralization + Permissionless. It provides services to web3
               developers, empowering them with highly customizable oracles by integrating the
               computation resources of the miners.
             </p>

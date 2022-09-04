@@ -42,7 +42,6 @@
     color: #eee;
     font-weight: bold;
     @include TitleFont;
-    word-break: break-all;
 
     >span {
       white-space: nowrap;
@@ -55,7 +54,6 @@
     color: #ddd;
     @include TextFont;
     line-height: 1.8;
-    word-break: break-all;
   }
 
   h3 {
@@ -63,7 +61,6 @@
     color: #eee;
     font-weight: bold;
     @include TitleFont;
-    word-break: break-all;
   }
 
 
