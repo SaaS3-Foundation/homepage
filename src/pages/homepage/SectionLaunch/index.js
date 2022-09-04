@@ -41,7 +41,7 @@ function SectionLaunch() {
       <div className='container relative'>
         <div className='bg-container pc:sticky'>
           <div className='text-center'>
-            <img className='inline-block' src={img} alt='bg' />
+            <img className='inline-block opacity-50' src={img} alt='bg' />
           </div>
           <h2 className='absolute'>
             <span>SaaS3 Keywords</span>
