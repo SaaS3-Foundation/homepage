@@ -6,6 +6,7 @@
   overflow: hidden;
 
   .container {
+    padding-top: 10rem;
     transform: scale(1);
     opacity: 1;
     transition: .5s ease;
@@ -18,9 +19,16 @@
     }
 
     .img-wrap {
+      width: 100%;
       pointer-events: none;
       -webkit-user-drag: none;
       user-select: none;
+      @include PositionCenter;
+
+      >img {
+        height: 600px;
+        object-fit: contain;
+      }
     }
   }
 
@@ -42,7 +50,7 @@
 
   .custom-button {
     position: absolute;
-    bottom: 4rem;
+    bottom: 6rem;
     left: 50%;
     transform: translateX(-50%);
   }
@@ -51,8 +59,25 @@
 @media (max-width: 1023px) {
   .section-hero {
 
+
+    .container {
+      padding-top: 8rem;
+
+      .img-wrap {
+
+        >img {
+          width: 80%;
+          height: initial;
+        }
+      }
+
+      h1 {
+        font-size: 22px;
+      }
+    }
+
     .custom-button {
-      bottom: -10rem;
+      bottom: 6rem;
     }
 
     h1 {

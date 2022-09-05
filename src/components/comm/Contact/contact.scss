@@ -1,5 +1,4 @@
 .contact-unfold {
-    color: var(--contact-color-t);
     // width: 24px;
     max-width: 24px;
     display: flex;
@@ -9,6 +8,7 @@
     transition: max-width .5s ease;
     cursor: pointer;
     color: white;
+    fill: white;
     white-space: nowrap;
 
     >span {
@@ -20,6 +20,19 @@
         margin-right: 24px;
     }
 
+
+    >svg {
+        fill: inherit;
+    }
+
+    &.discord {
+        max-width: initial;
+
+        >svg {
+            height: 24px;
+            width: auto;
+        }
+    }
 }
 
 .contact-unfold-text {
@@ -27,16 +40,12 @@
     font-size: 16px;
 }
 
-.contact-unfold-short:hover {
-    width: 12rem;
-    color: var(--contact-color);
-}
-
 @media (min-width: 1024px) {
     .contact-unfold {
         &:hover {
             max-width: 15rem;
             color: var(--contact-color);
+            fill: var(--contact-color);
         }
     }
 }
