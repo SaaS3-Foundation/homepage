@@ -39,7 +39,7 @@ const ContactBar = ({ className }) => {
       <a className='contact-unfold discord' href={discord_link} target='_blank' rel='noreferrer'>
         <svg
           t='1662348174451'
-          class='icon'
+          className='icon'
           viewBox='0 0 1280 1024'
           version='1.1'
           xmlns='http://www.w3.org/2000/svg'

@@ -1,23 +1,17 @@
-import NavHeader from '../../components/NavHeader/index.js';
 import SectionHero from './SectionHero/index.js';
 import './index.scss';
 import SectionIntro from './SectionIntro/index.js';
 import SectionLaunch from './SectionLaunch/index.js';
 import SectionProject from './SectionProject/index.js';
-import Button from '../../components/comm/Button/index.js';
 import SectionNetwork from './SectionNetwork/index.js';
 import SectionParachains from './SectionParachains/index.js';
-import SectionUtilization from './SectionUtilization/index.js';
-import SectionSubstrate from './SectionSubstrate/index.js';
-import SectionFlight from './SectionFlight/index.js';
-import Footer from '../../components/comm/layout/Footer/index.js';
 import SectionYoutube from './SectionYoutube/index.js';
 import Partners from '../../components/comm/Partners/index.js';
+import BaseLayout from '../../components/comm/layout/BaseLayout/index.js';
 
 function HomePage() {
   return (
-    <div className='homepage'>
-      <NavHeader></NavHeader>
+    <BaseLayout className={'homepage'}>
       <SectionHero></SectionHero>
       <section className='relative homepage-container'>
         <SectionYoutube></SectionYoutube>
@@ -47,9 +41,8 @@ function HomePage() {
           </div>
         </section> */}
         <Partners></Partners>
-        <Footer></Footer>
       </section>
-    </div>
+    </BaseLayout>
   );
 }
 

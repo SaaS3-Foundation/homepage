@@ -5,14 +5,16 @@
   width: 100%;
   background-color: var(--app-background-dark);
   min-height: 100vh;
+  >.main-wrap{
+    padding-top: 0 !important;
+  }
 
   ::selection {
     background-color: #00ffe1;
     color: var(--contact-color);
   }
 
-  >.homepage-container {
-
+  .homepage-container {
     >section {
       padding: 64px 0;
 
@@ -121,6 +123,19 @@
 
 @media (max-width: 1023px) {
   .homepage {
+
+    h2 {
+      font-size: 34px;
+    }
+
+    h3 {
+      font-size: 24px;
+    }
+
+    .box-outlines {
+      padding: 56px 42px
+    }
+
     >.homepage-container {
       >section {
         padding: 48px 0;
@@ -140,19 +155,6 @@
     }
   }
 
-  .homepage {
-    h2 {
-      font-size: 34px;
-    }
-
-    h3 {
-      font-size: 24px;
-    }
-
-    .box-outlines {
-      padding: 56px 42px
-    }
-  }
 
 
 }

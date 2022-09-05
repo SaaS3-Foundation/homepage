@@ -1,8 +1,7 @@
-import Logo from '../../static/img/logo/title-logo.png';
-import NavToggler from '../../static/img/header/nav-toggler.svg';
+import Logo from '../../../../static/img/logo/title-logo.png';
 import './index.scss';
-import { useEffect, useRef, useState } from 'react';
-import Button from '../comm/Button';
+import { useRef, useState } from 'react';
+import Button from '../../Button';
 
 function NavHeader() {
   const navs = [

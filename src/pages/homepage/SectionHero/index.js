@@ -32,7 +32,7 @@ function SectionHero() {
   }
 
   return (
-    <section className={`section-hero h-screen`}>
+    <section className={`section-hero`}>
       <div className={`container relative h-full pt-40 ${zoom ? 'zoom' : ''}`}>
         <div className='img-wrap'>
           <img src={gif} alt='homepage img' className='mx-auto opacity-80' />

@@ -1,8 +1,17 @@
+import classnames from 'classnames';
 import './index.scss';
 
 function Button(props) {
   const _class = 'custom-button';
-  const { type, href, onClick, blank } = props;
+  const { type, href, onClick, blank, className } = props;
+  const classes = classnames(
+    {
+      [_class]: true,
+      [`${_class}-${type || 'info'}`]: true
+    },
+    className
+  );
+
   function handerClick() {
     if (href) {
       if (blank) {
@@ -14,10 +23,7 @@ function Button(props) {
     onClick && onClick();
   }
   return (
-    <button
-      className={`${_class} ${_class}-${type || 'info'}`}
-      onClick={(event) => handerClick(event)}
-    >
+    <button className={classes} onClick={(event) => handerClick(event)}>
       {props.children}
     </button>
   );

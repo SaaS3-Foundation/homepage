@@ -1,0 +1,23 @@
+.base-layout {
+  .main-wrap {
+    padding-top: 83px;
+
+    >.main-container {
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  .footer-wrap {
+    margin-top: 48px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .base-layout {
+    .main-wrap {
+      padding-top: 73px;
+    }
+  }
+
+}

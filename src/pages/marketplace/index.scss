@@ -1,8 +1,8 @@
-.market-place {
-  padding: 100px 0 0;
+.marketplace {
   background-color: var(--app-background-dark);
   min-height: 100vh;
-}
-footer{
-  margin-top: 48px;
+
+  .market-container {
+    margin-top: 24px;
+  }
 }

@@ -1,0 +1,13 @@
+.demo-code {
+  background-color: black;
+  border-radius: 16px;
+  padding: 32px;
+
+  .code-wrap {
+    margin-top: 24px;
+
+    .hljs {
+      background-color: transparent;
+    }
+  }
+}
