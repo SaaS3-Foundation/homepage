@@ -12,7 +12,8 @@ function WriteContract(props) {
       return -1;
     }
     return contract.methods[item.name](...Object.values(data)).send({
-      from: account
+      from: account,
+      gas: 1000000
     });
   };
 

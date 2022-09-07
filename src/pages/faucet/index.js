@@ -2,9 +2,9 @@ import { Button, Input, message } from 'antd';
 import React, { useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import { BgColorsOutlined } from '@ant-design/icons';
-import { isValidPolkadotAddress } from '../../utils/check';
+import { isValidETHAddress } from '@/utils/check';
 import './index.scss';
-import BaseLayout from '../../components/comm/layout/BaseLayout';
+import BaseLayout from '@/components/comm/layout/BaseLayout';
 
 export default function Faucet(params) {
   const search = decodeURI(new URLSearchParams(useLocation().search).get('code') || '');
@@ -39,7 +39,7 @@ export default function Faucet(params) {
     if (!address) {
       return setValidaAddress('Please input your address');
     }
-    const valid = isValidPolkadotAddress(address);
+    const valid = isValidETHAddress(address);
     setValidaAddress(!valid ? 'Address verification failed' : '');
   };
 
@@ -58,7 +58,7 @@ export default function Faucet(params) {
         <div>
           <Input
             placeholder={
-              loginStatus ? 'Paste Your Polkadot Address' : 'Please Click GitHub Login Button'
+              loginStatus ? 'Paste Your ERC20 Address' : 'Please Click GitHub Login Button'
             }
             value={address}
             onChange={(e) => {

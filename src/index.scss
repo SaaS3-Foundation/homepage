@@ -119,9 +119,12 @@ code {
   border-color: var(--contact-color);
   color: var(--contact-color);
 
-  &:hover {
+  &:hover,
+  &:focus,
+  &:active {
     background-color: var(--contact-color);
     border-color: var(--contact-color);
     color: white;
   }
+
 }

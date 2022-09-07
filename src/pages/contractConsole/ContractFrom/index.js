@@ -9,12 +9,14 @@ function ContractFrom(props) {
   const submit = async (values) => {
     if (onSubmit) {
       try {
-        setLoading(true);
-        const ret = await onSubmit(item, values);
-        if (ret === -1) {
+        const submitRet = onSubmit(item, values);
+        console.log(submitRet);
+        if (submitRet === -1) {
           message.error('Place Connect wallet.');
           return;
         }
+        setLoading(true);
+        const ret = await submitRet;
         setResult(ret.toString());
       } catch (error) {
         console.log(error);

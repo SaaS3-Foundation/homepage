@@ -1,6 +1,6 @@
-
 import { decodeAddress, encodeAddress } from '@polkadot/keyring';
 import { hexToU8a, isHex } from '@polkadot/util';
+import { ethers } from 'ethers';
 // const { decodeAddress, encodeAddress } = require('@polkadot/keyring');
 // const { hexToU8a, isHex } = require('@polkadot/util');
 
@@ -9,7 +9,11 @@ export const isValidPolkadotAddress = (address) => {
   try {
     const valid = encodeAddress(isHex(address) ? hexToU8a(address) : decodeAddress(address));
     return valid;
-  } catch (error) {
-  }
+  } catch (error) {}
   return false;
+};
+
+// check erc20 address
+export const isValidETHAddress = (address) => {
+  return ethers.utils.isAddress(address);
 };

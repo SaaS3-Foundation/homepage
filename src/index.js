@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './index.scss';
 import App from './App';
 import Marketplace from './pages/marketplace';
@@ -9,6 +9,7 @@ import Faucet from './pages/faucet';
 import ContractConsole from './pages/contractConsole';
 import { createRoot } from 'react-dom/client';
 import Web3Provider from './provider/web3';
+import CookieModal from './components/comm/CookieModal';
 
 const root = createRoot(document.getElementById('root'));
 
@@ -17,12 +18,13 @@ root.render(
     <Router>
       <Routes>
         <Route exact path='/' element={<App />} />
-        <Route exact path='/marketplace' element={<Marketplace />}></Route>
+        <Route exact path='/marketplace' element={<Marketplace />} />
         <Route exact path='/api_info/:id' element={<ApiInfo />} />
         <Route exact path='/faucet' element={<Faucet />} />
         <Route exact path='/contractConsole/:id' element={<ContractConsole />} />
       </Routes>
     </Router>
+    <CookieModal />
   </Web3Provider>
 );
 
