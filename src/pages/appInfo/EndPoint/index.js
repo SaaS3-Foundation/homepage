@@ -1,4 +1,3 @@
-import { TwitterOutlined } from '@ant-design/icons';
 import './index.scss';
 
 function EndPoint(props) {

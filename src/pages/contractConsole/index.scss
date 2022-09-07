@@ -1,0 +1,30 @@
+.contract-console {
+  background-color: var(--app-background-dark);
+  background-image: url('../../static/img/marketplace/marketplace-bg.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-attachment: fixed;
+  color: white;
+  padding: 60px 0 48px;
+
+  .img-wrap {
+    width: 210px;
+  }
+
+  .ant-tabs-tab {
+    color: white;
+  }
+
+  code.hljs {
+    background-color: transparent;
+  }
+
+  .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+    color: var(--contact-color);
+  }
+
+  .ant-tabs-ink-bar {
+    background-color: var(--contact-color);
+  }
+}

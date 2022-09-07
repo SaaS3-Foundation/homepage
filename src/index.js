@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './index.scss';
 import App from './App';
 import Marketplace from './pages/marketplace';
@@ -6,18 +6,24 @@ import ApiInfo from './pages/appInfo';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Faucet from './pages/faucet';
+import ContractConsole from './pages/contractConsole';
 import { createRoot } from 'react-dom/client';
+import Web3Provider from './provider/web3';
 
 const root = createRoot(document.getElementById('root'));
+
 root.render(
-  <Router>
-    <Routes>
-      <Route exact path='/' element={<App />} />
-      <Route exact path='/marketplace' element={<Marketplace />}></Route>
-      <Route exact path='/api_info/:id' element={<ApiInfo />} />
-      <Route exact path='/faucet' element={<Faucet />} />
-    </Routes>
-  </Router>
+  <Web3Provider>
+    <Router>
+      <Routes>
+        <Route exact path='/' element={<App />} />
+        <Route exact path='/marketplace' element={<Marketplace />}></Route>
+        <Route exact path='/api_info/:id' element={<ApiInfo />} />
+        <Route exact path='/faucet' element={<Faucet />} />
+        <Route exact path='/contractConsole/:id' element={<ContractConsole />} />
+      </Routes>
+    </Router>
+  </Web3Provider>
 );
 
 // calc rem fontsize

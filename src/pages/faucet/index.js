@@ -4,8 +4,6 @@ import { useLocation } from 'react-router-dom';
 import { BgColorsOutlined } from '@ant-design/icons';
 import { isValidPolkadotAddress } from '../../utils/check';
 import './index.scss';
-import NavHeader from '../../components/comm/layout/NavHeader';
-import Footer from '../../components/comm/layout/Footer';
 import BaseLayout from '../../components/comm/layout/BaseLayout';
 
 export default function Faucet(params) {

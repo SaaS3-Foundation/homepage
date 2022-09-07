@@ -4,7 +4,6 @@
 
 @import '~antd/dist/antd.css';
 @import url("https://fonts.googleapis.com/css?family=Cardo:400i|Rubik:400,700&display=swap");
-@import './static/style/mixins.scss';
 
 @font-face {
   font-family: 'thicccboi';
@@ -48,7 +47,7 @@
   --font-sans: "Rubik", sans-serif;
   --font-serif: "Cardo", serif;
   --contact-color: #8c74f9;
-  --hover-primary: #6F9CFE;
+  --primary-40: #AA96FB;
   --contact-color-t: #4076fe11;
 }
 
@@ -113,5 +112,16 @@ code {
 @media (min-width: 1200px) {
   .container {
     max-width: 1140px;
+  }
+}
+
+.ant-btn-primary {
+  border-color: var(--contact-color);
+  color: var(--contact-color);
+
+  &:hover {
+    background-color: var(--contact-color);
+    border-color: var(--contact-color);
+    color: white;
   }
 }
