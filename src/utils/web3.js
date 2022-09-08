@@ -6,8 +6,8 @@ export const CHAIN_INFO_TEST = {
     symbol: 'DEV',
     decimals: 18
   },
-  rpcUrls: ['https://rpc.testnet.moonbeam.network'],
-  blockExplorerUrls: []
+  rpcUrls: ['https://rpc.api.moonbase.moonbeam.network'],
+  blockExplorerUrls: ['https://moonbase.moonscan.io/']
 };
 export const CHAIN_INFO = {
   chainId: '0x507',
@@ -17,8 +17,8 @@ export const CHAIN_INFO = {
     symbol: 'DEV',
     decimals: 18
   },
-  rpcUrls: ['https://rpc.testnet.moonbeam.network'],
-  blockExplorerUrls: []
+  rpcUrls: ['https://rpc.api.moonbase.moonbeam.network'],
+  blockExplorerUrls: ['https://moonbase.moonscan.io/']
 };
 // export const CHAIN_INFO = {
 //   chainId: '0x504',
@@ -32,21 +32,33 @@ export const CHAIN_INFO = {
 //   blockExplorerUrls: ['https://moonbeam.moonscan.io/']
 // };
 
-export function switchNetwork(walletProvider) {
-  const chain = process.env.NODE_ENV === 'production' ? CHAIN_INFO : CHAIN_INFO_TEST;
-  return walletProvider.request({
-    method: 'wallet_switchEthereumChain',
-    params: [{ chainId: chain.chainId }]
-  });
+export async function switchNetwork(walletProvider) {
+  const chain = getCurrChainInfo();
+  try {
+    const ret = await walletProvider.request({
+      method: 'wallet_switchEthereumChain',
+      params: [{ chainId: chain.chainId }]
+    });
+    return ret;
+  } catch (error) {
+    console.log(error, 'error');
+    if (error.code === 4902) {
+      return await addNetwork(walletProvider).then(() => switchNetwork(walletProvider));
+    }
+    throw error;
+  }
 }
 export async function addNetwork(walletProvider) {
-  const chain = process.env.NODE_ENV === 'production' ? CHAIN_INFO : CHAIN_INFO_TEST;
   try {
     return await walletProvider.request({
       method: 'wallet_addEthereumChain',
-      params: [chain]
+      params: [getCurrChainInfo()]
     });
   } catch (error) {
     throw error;
   }
 }
+
+export const getCurrChainInfo = () => {
+  return process.env.NODE_ENV === 'production' ? CHAIN_INFO : CHAIN_INFO_TEST;
+};

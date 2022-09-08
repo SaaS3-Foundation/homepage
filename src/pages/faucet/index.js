@@ -5,6 +5,7 @@ import { BgColorsOutlined } from '@ant-design/icons';
 import { isValidETHAddress } from '@/utils/check';
 import './index.scss';
 import BaseLayout from '@/components/comm/layout/BaseLayout';
+import axios from 'axios';
 
 export default function Faucet(params) {
   const search = decodeURI(new URLSearchParams(useLocation().search).get('code') || '');
@@ -51,11 +52,14 @@ export default function Faucet(params) {
 
   return (
     <BaseLayout className='faucet'>
-      <div className='text-center faucet-main'>
+      <div className='text-center faucet-main container'>
         <BgColorsOutlined
-          style={{ 'font-size': '20vh', color: 'white', 'margin-bottom': '24px' }}
+          className='text-white'
+          style={{
+            fontSize: '180px'
+          }}
         />
-        <div>
+        <div className='mt-32px'>
           <Input
             placeholder={
               loginStatus ? 'Paste Your ERC20 Address' : 'Please Click GitHub Login Button'

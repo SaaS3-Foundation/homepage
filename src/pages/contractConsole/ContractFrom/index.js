@@ -1,23 +1,29 @@
 import { Button, Form, Input, message } from 'antd';
-import { useState } from 'react';
+import { useContext, useState } from 'react';
+import { web3Context } from 'src/provider/web3';
+import { isType } from 'src/utils/check';
 
 function ContractFrom(props) {
   const { item, onSubmit, text } = props;
   const [loading, setLoading] = useState(false);
   const [result, setResult] = useState();
-
+  const { provider } = useContext(web3Context);
   const submit = async (values) => {
     if (onSubmit) {
       try {
         const submitRet = onSubmit(item, values);
-        console.log(submitRet);
-        if (submitRet === -1) {
+        if (submitRet === -1 || !provider) {
           message.error('Place Connect wallet.');
           return;
         }
         setLoading(true);
         const ret = await submitRet;
-        setResult(ret.toString());
+        console.log(ret, 'ret');
+        if (isType(ret) === 'object') {
+          setResult(JSON.stringify(ret));
+        } else {
+          setResult(String(ret));
+        }
       } catch (error) {
         console.log(error);
         message.error(error.message || 'error');
@@ -56,7 +62,7 @@ function ContractFrom(props) {
 
       <Form.Item wrapperCol={{ span: 12, offset: 5 }}>
         <span>Result : </span>
-        <span>{result}</span>
+        <span className='break-all'>{result}</span>
       </Form.Item>
     </Form>
   );

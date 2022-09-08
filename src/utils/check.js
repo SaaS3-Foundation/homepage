@@ -17,3 +17,8 @@ export const isValidPolkadotAddress = (address) => {
 export const isValidETHAddress = (address) => {
   return ethers.utils.isAddress(address);
 };
+
+
+export const isType = (data) => {
+  return Object.prototype.toString.call(data).replace(/^\[object\s|\]$/g, '').toLowerCase();
+}
