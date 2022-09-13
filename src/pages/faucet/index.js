@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import { BgColorsOutlined } from '@ant-design/icons';
 import { isValidETHAddress } from '@/utils/check';
-import './index.scss';
+import './index.less';
 import BaseLayout from '@/components/comm/layout/BaseLayout';
 import axios from 'axios';
 
@@ -52,13 +52,8 @@ export default function Faucet(params) {
 
   return (
     <BaseLayout className='faucet'>
-      <div className='text-center faucet-main container'>
-        <BgColorsOutlined
-          className='text-white'
-          style={{
-            fontSize: '180px'
-          }}
-        />
+      <div className='text-center text-white faucet-main container'>
+        <BgColorsOutlined style={{ fontSize: '180px' }} />
         <div className='mt-32px'>
           <Input
             placeholder={

@@ -1,5 +1,5 @@
 import React from 'react';
-import './index.scss';
+import './index.less';
 import App from './App';
 import Marketplace from './pages/marketplace';
 import ApiInfo from './pages/appInfo';

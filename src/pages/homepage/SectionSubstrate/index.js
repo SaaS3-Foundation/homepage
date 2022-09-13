@@ -1,4 +1,4 @@
-import './index.scss';
+import './index.less';
 import Button from '../../../components/comm/Button/index';
 
 function SectionSubstrate() {

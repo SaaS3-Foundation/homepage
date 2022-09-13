@@ -1,0 +1,27 @@
+.appinfo-desc {
+  background-color: #00000099;
+  border-radius: 16px;
+  padding: 32px;
+
+  .desc-text {
+    .TextFont();
+    font-style: italic;
+    color: #828282;
+    min-height: 80px;
+  }
+
+  .tags-wrap {
+    margin-top: 12px;
+
+    >.tag {
+      border-radius: 60px;
+      background-color: fade(@primary-color, 40%);
+      padding: 6px 14px;
+      font-size: 12px;
+
+      &+.tag {
+        margin-left: 12px;
+      }
+    }
+  }
+}

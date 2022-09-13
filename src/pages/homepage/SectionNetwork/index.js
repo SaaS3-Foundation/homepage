@@ -1,5 +1,5 @@
 import img from '../../../static/img/homepage/layout-2.png';
-import './index.scss';
+import './index.less';
 
 function SectionNetwork() {
   return (

@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { getMarketplaceList } from '../../api/marketplace';
 import { message, Row, Col } from 'antd';
 import MarketItem from './MarketItem';
-import './index.scss';
+import './index.less';
 import BaseLayout from '../../components/comm/layout/BaseLayout';
 
 function Marketplace(props) {

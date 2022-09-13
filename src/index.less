@@ -1,8 +1,15 @@
+@import '~antd/dist/antd.less';
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@primary-color: #8c74f9;
 
-@import '~antd/dist/antd.css';
+@text-color: fade(black, 65%);
+@text-color-secondary: fade(black, 45%); // 次文本色 
+@disabled-color: fade(black, 25%); // 失效色
+@heading-color: fade(black, 85%); // 标题色
+@dark-color: fade(black, 0.95%);
+
 @import url("https://fonts.googleapis.com/css?family=Cardo:400i|Rubik:400,700&display=swap");
 
 @font-face {
@@ -22,13 +29,12 @@
   src: local('thicccboi'), url(./static/fonts/Webfont/THICCCBOI-SemiBold.woff2) format('woff2');
 }
 
-
 * {
   box-sizing: border-box;
   margin: 0;
-  // @include TextFont;
-  font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti, "Microsoft Yahei", Tahoma, Simsun, sans-serif;
-  ;
+  // font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti, "Microsoft Yahei", Tahoma, Simsun, sans-serif;
+  // ;
+  .TextFont();
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   padding: 0;
@@ -37,6 +43,11 @@
   background: none;
 }
 
+ol,
+ul,
+dl {
+  margin: 0;
+}
 
 :root {
   --header-height: 3rem;
@@ -46,7 +57,7 @@
   --e: cubic-bezier(0.19, 1, 0.22, 1);
   --font-sans: "Rubik", sans-serif;
   --font-serif: "Cardo", serif;
-  --contact-color: #8c74f9;
+  --contact-color: @primary-color;
   --primary-40: #AA96FB;
   --contact-color-t: #4076fe11;
 }
@@ -69,8 +80,7 @@ body {
 
   /*定义滑块 内阴影+圆角*/
   &::-webkit-scrollbar-thumb {
-    // border-radius: 0;
-    background-color: var(--contact-color);
+    background-color: @primary-color;
   }
 }
 
@@ -78,6 +88,10 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+
+  * {
+    font-family: inherit;
+  }
 }
 
 .container {
@@ -113,18 +127,4 @@ code {
   .container {
     max-width: 1140px;
   }
-}
-
-.ant-btn-primary {
-  border-color: var(--contact-color);
-  color: var(--contact-color);
-
-  &:hover,
-  &:focus,
-  &:active {
-    background-color: var(--contact-color);
-    border-color: var(--contact-color);
-    color: white;
-  }
-
 }

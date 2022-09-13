@@ -1,5 +1,5 @@
 import { ArrowRightOutlined, SwapOutlined } from '@ant-design/icons';
-import './index.scss';
+import './index.less';
 
 function SectionFlight() {
   const flights = [

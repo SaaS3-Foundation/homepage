@@ -24,7 +24,7 @@
             font-size: 20px;
             color: white;
             font-weight: bold;
-            @include TitleFont;
+            .TitleFont();
             font-style: italic;
         }
 
@@ -34,7 +34,7 @@
             color: white;
             font-weight: bold;
             display: inline-block;
-            @include TitleFont;
+            .TitleFont();
 
             &+span {
                 margin-left: 12px;
@@ -43,7 +43,7 @@
 
         .info-item {
             >span {
-                @include TextFont;
+                .TextFont();
                 font-style: italic;
                 color: #828282;
             }

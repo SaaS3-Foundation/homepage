@@ -5,7 +5,7 @@ import {
   GithubOutlined,
   HomeOutlined
 } from '@ant-design/icons';
-import './contact.scss';
+import './contact.less';
 export const email_link = 'mailto:contact@saas3.io';
 export const twitter_link = 'https://twitter.com/SaaS3Lab';
 export const telegram_link = 'https://t.me/saas3dao';
@@ -25,9 +25,15 @@ const ContactBar = ({ className }) => {
   function getContactsNode() {
     return contacts.map((con, i) => {
       return (
-        <a className='contact-unfold' href={con.href} target='_blank' rel='noreferrer' key={i}>
+        <a
+          className='contact-unfold flex items-center text-white overflow-hidden cursor-pointer whitespace-nowrap'
+          href={con.href}
+          target='_blank'
+          rel='noreferrer'
+          key={i}
+        >
           {con.icon}
-          <div className='contact-unfold-text'>{con.title}</div>
+          <div className='contact-unfold-text align-middle'>{con.title}</div>
         </a>
       );
     });
@@ -36,7 +42,7 @@ const ContactBar = ({ className }) => {
   return (
     <div className={`contact-bar flex items-center justify-center`}>
       {getContactsNode()}
-      <a className='contact-unfold discord' href={discord_link} target='_blank' rel='noreferrer'>
+      <a className='contact-unfold discord fill-white' href={discord_link} target='_blank' rel='noreferrer'>
         <svg
           t='1662348174451'
           className='icon'

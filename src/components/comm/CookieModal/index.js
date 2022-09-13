@@ -1,4 +1,4 @@
-import './index.scss';
+import './index.less';
 import { Button } from 'antd';
 import { useEffect, useRef, useState } from 'react';
 function CookieModal() {

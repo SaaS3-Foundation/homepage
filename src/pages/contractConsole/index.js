@@ -2,7 +2,7 @@ import marketPlaceTitle from '@/static/img/marketplace/marketplace-title.png';
 import BaseLayout from '@/components/comm/layout/BaseLayout';
 import { useNavigate, useParams } from 'react-router-dom';
 import Highlight from 'react-highlight';
-import './index.scss';
+import './index.less';
 import 'highlight.js/styles/ocean.css';
 import { Tabs, message, Button } from 'antd';
 import { ArrowLeftOutlined } from '@ant-design/icons';
@@ -60,7 +60,7 @@ function ContractConsole() {
             {provider ? (
               <span>{provider.selectedAddress}</span>
             ) : (
-              <Button type='primary' onClick={connectWallet}>
+              <Button type='primary' onClick={connectWallet} ghost>
                 Connect Wallet
               </Button>
             )}

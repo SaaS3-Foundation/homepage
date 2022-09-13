@@ -2,7 +2,7 @@ import { Collapse } from 'antd';
 import { useContext } from 'react';
 import { web3Context } from 'src/provider/web3';
 import ContractFrom from '../ContractFrom';
-import './index.scss';
+import './index.less';
 
 function WriteContract(props) {
   const { info, contract } = props;

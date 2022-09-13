@@ -1,7 +1,7 @@
 import classnames from 'classnames';
 import Footer from '../Footer';
 import NavHeader from '../NavHeader';
-import './index.scss';
+import './index.less';
 
 function BaseLayout(props) {
   const { children, className } = props;

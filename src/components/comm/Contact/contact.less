@@ -1,23 +1,14 @@
 .contact-unfold {
-    // width: 24px;
     max-width: 24px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    overflow: hidden;
     transition: max-width .5s ease;
-    cursor: pointer;
-    color: white;
-    fill: white;
-    white-space: nowrap;
+
+    &:not(:last-of-type) {
+        margin-right: 24px;
+    }
 
     >span {
         font-size: 24px;
         vertical-align: middle;
-    }
-
-    &:not(:last-of-type) {
-        margin-right: 24px;
     }
 
 

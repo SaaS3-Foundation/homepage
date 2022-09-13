@@ -1,5 +1,5 @@
 import img from '../../../static/img/homepage/detail.png';
-import './index.scss';
+import './index.less';
 
 function SectionIntro() {
   return (
@@ -34,7 +34,7 @@ function SectionIntro() {
           </p>
         </div>
         <div className='wrap flex pt-20 md:pt-10'>
-          <div className='box-outlines ml-auto w-1/2 md:w-full'>
+          <div className='box-outlines move ml-auto w-1/2 md:w-full'>
             <h2>What is SaaS3</h2>
             <p>
               SaaS3 is the next generation software-as-a-Service after SaaS 1.0 and 2.0. Nowadays, SaaS2.0 is still controlled and authorized by centralized institutions.

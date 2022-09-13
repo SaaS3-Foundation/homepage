@@ -5,14 +5,12 @@
   padding: 12px;
 
   &:hover {
-    // background-color: rgba($color: #161922, $alpha: .6);
-    // opacity:  .9;
-    box-shadow: 0 0 20px rgba($color: #ccc, $alpha: .4);
+    box-shadow: rgba(204, 204, 204, .4);
   }
 
 
   h1 {
-    @include TitleFont;
+    .TitleFont();
     font-size: 32px;
     color: white;
     margin-bottom: 12px;
@@ -22,14 +20,14 @@
   }
 
   h2 {
-    @include TitleFont;
+    .TitleFont();
     color: white;
     font-size: 16px;
     margin: 12px 0 8px;
   }
 
   .anthor {
-    @include TextFont;
+    .TextFont();
     font-size: 14px;
     color: white;
   }

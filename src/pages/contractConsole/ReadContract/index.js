@@ -1,6 +1,6 @@
 import { Collapse } from 'antd';
 import ContractFrom from '../ContractFrom';
-import './index.scss';
+import './index.less';
 
 function ReadContract(props) {
   const { info, contract } = props;

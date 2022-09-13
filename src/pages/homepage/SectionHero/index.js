@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
-import gif from '../../../static/img/homepage/home-gif.png';
-import Button from '../../../components/comm/Button';
-import './index.scss';
+import gif from '@/static/img/homepage/home-gif.png';
+import { Button } from 'antd';
+import './index.less';
 
 function SectionHero() {
   const docElem = document.documentElement;
@@ -42,8 +42,7 @@ function SectionHero() {
             The Next-Gen Software as a Service
           </h1>
         </div>
-        {/* <Button type="info" blank href={process.env.REACT_APP_WHITE_PAPER_LINK}>Learn more</Button> */}
-        <Button type='info' onClick={handerMore}>
+        <Button onClick={handerMore} className='absolute left-1/2 bottom-20 -translate-x-1/2' ghost>
           Learn more
         </Button>
       </div>

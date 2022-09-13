@@ -1,9 +1,8 @@
 import Highlight from 'react-highlight';
-import './index.scss';
+import './index.less';
 import 'highlight.js/styles/ocean.css';
 import { useNavigate } from 'react-router-dom';
-import Button from '../../../components/comm/Button';
-
+import { Button } from 'antd';
 function DemoCode(props) {
   const { info } = props;
   const navigate = useNavigate();
@@ -15,7 +14,7 @@ function DemoCode(props) {
     <div className='demo-code'>
       <div className='code-title flex items-center'>
         <h2 className='mr-10'>DEMO Code</h2>
-        <Button type='primary' onClick={() => tryIt()}>
+        <Button type='primary' onClick={() => tryIt()} ghost>
           Try it
         </Button>
       </div>

@@ -5,8 +5,8 @@
   right: 0;
 
   >nav {
-    background-color: var(--app-background-dark);
-    border-bottom: 1px rgb(255, 255, 255, 0.25) solid;
+    background-color: @dark-color;
+    border-bottom: 1px rgba(255, 255, 255, 0.25) solid;
 
     >.container {
       .logo {
@@ -22,10 +22,19 @@
         }
 
         a {
-          font-size: 15px;
-          color: white;
-          @include TextFont;
+          .TextFont();
         }
+        
+
+        a.ant-btn {
+          padding-top: 8px !important;
+
+          >span {
+            display: block;
+            line-height: 1.4;
+          }
+        }
+
       }
 
 

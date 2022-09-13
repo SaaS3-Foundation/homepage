@@ -1,4 +1,4 @@
-import './index.scss';
+import './index.less';
 import { Row, Col } from 'antd';
 const requireContext = require.context('../../../static/img/partners', true, /^\.\/.*\.png$/);
 const images = requireContext.keys().map(requireContext);

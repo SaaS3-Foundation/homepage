@@ -1,5 +1,5 @@
 import img from '../../../static/img/homepage/dapi.png';
-import './index.scss';
+import './index.less';
 
 function SectionProject() {
   const features = [

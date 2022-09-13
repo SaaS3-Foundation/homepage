@@ -1,4 +1,4 @@
-import './index.scss';
+import './index.less';
 
 function EndPoint(props) {
   const { info } = props;

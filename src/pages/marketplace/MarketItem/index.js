@@ -2,7 +2,7 @@ import { TwitterOutlined } from '@ant-design/icons';
 import { missionAction } from '../../../api/marketplace';
 import { toTwitterShare } from '../../../utils/share';
 import Logo from '../../../static/img/logo/SaaS3Logo.png';
-import './index.scss';
+import './index.less';
 
 function MarketItem(props) {
   const { item } = props;

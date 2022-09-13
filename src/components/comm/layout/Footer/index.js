@@ -1,6 +1,6 @@
 import { EnvironmentFilled } from '@ant-design/icons';
 import ContactBar from '../../Contact';
-import './index.scss';
+import './index.less';
 function Footer() {
   return (
     <footer className='footer-wrap'>

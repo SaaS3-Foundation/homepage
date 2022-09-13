@@ -1,14 +1,14 @@
 import { TwitterOutlined } from '@ant-design/icons';
 import { missionAction } from '../../../api/marketplace';
 import { toTwitterShare } from '../../../utils/share';
-import './index.scss';
+import './index.less';
 
 function Desc(props) {
   const { info } = props;
 
   const getTagNodes = () => {
     return info.tags?.map?.((tag, i) => {
-      return <span key={i}>{tag}</span>;
+      return <span className='tag' key={i}>{tag}</span>;
     });
   };
 
@@ -28,7 +28,10 @@ function Desc(props) {
     <div className='appinfo-desc'>
       <div className='flex justify-between'>
         <h2>{info.title}</h2>
-        <TwitterOutlined className='tw-icon' onClick={handlerTwitter}></TwitterOutlined>
+        <TwitterOutlined
+          className='cursor-pointer text-lg text-white hover:text-primary'
+          onClick={handlerTwitter}
+        ></TwitterOutlined>
       </div>
       <div className='info-item creator mt-2'>
         <h3 className='inline-block'>{info.creator}</h3>

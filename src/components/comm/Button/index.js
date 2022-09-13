@@ -1,5 +1,5 @@
 import classnames from 'classnames';
-import './index.scss';
+import './index.less';
 
 function Button(props) {
   const _class = 'custom-button';

@@ -1,5 +1,5 @@
 import img from '../../../static/img/homepage/workflow.png';
-import './index.scss';
+import './index.less';
 
 function SectionLaunch() {
   const features = [

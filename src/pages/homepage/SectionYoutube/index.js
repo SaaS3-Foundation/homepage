@@ -1,4 +1,4 @@
-import './index.scss';
+import './index.less';
 
 function SectionYoutube() {
   return (

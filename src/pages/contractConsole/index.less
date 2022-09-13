@@ -1,0 +1,38 @@
+.contract-console {
+  background-color: var(--app-background-dark);
+  background-image: url('../../static/img/marketplace/marketplace-bg.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-attachment: fixed;
+  color: white;
+  padding: 60px 0 0;
+
+  .ant-tabs {
+    color: white;
+
+    .ant-tabs-tab-active:not(:first-of-type) {
+      &::after {
+        content: '';
+        position: absolute;
+        right: -12px;
+        top: 46%;
+        transform: translateY(-50%) rotate(45deg);
+        border: 1px solid @primary-color;
+        border-left-color: transparent;
+        border-top-color: transparent;
+        width: 8px;
+        height: 8px;
+      }
+    }
+  }
+
+  .img-wrap {
+    width: 210px;
+  }
+
+  code.hljs {
+    background-color: transparent;
+  }
+
+}

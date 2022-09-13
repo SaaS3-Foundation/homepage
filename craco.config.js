@@ -1,5 +1,6 @@
 const path = require('path');
-const sassResourcesLoader = require('craco-sass-resources-loader');
+const cracoPluginStyleResourcesLoader = require('craco-plugin-style-resources-loader');
+const CracoLessPlugin = require('craco-less');
 const resolve = (dir) => path.resolve(__dirname, dir);
 module.exports = {
   webpack: {
@@ -9,10 +10,22 @@ module.exports = {
   },
   plugins: [
     {
-      plugin: sassResourcesLoader,
+      plugin: CracoLessPlugin,
       options: {
-        resources: './src/static/style/mixins.scss'
+        lessLoaderOptions: {
+          lessOptions: {
+            modifyVars: {},
+            javascriptEnabled: true
+          }
+        }
       }
     },
+    {
+      plugin: cracoPluginStyleResourcesLoader,
+      options: {
+        patterns: [resolve('./src/static/style/comm.less')],
+        styleType: 'less'
+      }
+    }
   ]
 };

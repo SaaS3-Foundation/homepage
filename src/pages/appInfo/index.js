@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { message } from 'antd';
-import './index.scss';
+import './index.less';
 import { useState } from 'react';
 import 'highlight.js/styles/ocean.css';
 import BaseLayout from '../../components/comm/layout/BaseLayout';
