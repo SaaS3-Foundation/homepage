@@ -4,7 +4,8 @@ const requireContext = require.context('../../../static/img/partners', true, /^\
 const images = requireContext.keys().map(requireContext);
 
 function Partners() {
-  function getImgsNode() {
+  function renderImgs() {
+    
     return images.map((img, index) => {
       return (
         <Col key={index} xl={6} lg={8} xs={12}>
@@ -18,7 +19,7 @@ function Partners() {
       <div className='container'>
         <h2 className='text-center'>Partners</h2>
         <Row className='imgs-wrap mt-10' gutter={[16, 24]}>
-          {getImgsNode()}
+          {renderImgs()}
         </Row>
       </div>
     </section>
