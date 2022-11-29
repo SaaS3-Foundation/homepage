@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/favicon.png" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="keywords"
+      content="SaaS3 Lab,SaaS3,dRuntime,SaaS3 Foundation,SaaS,Web3,SAAS Token"
+    />
+    <meta
+      name="description"
+      content="SAAS3 is the next generation software as a service. SaaS3=SaaS2+permissionless+decentralization, implemented 
+      by a permissionless oracle network. Make oracles just like smart contracts"
+    />
+    <meta name="google-site-verification" content="jyzNLwFqeVgbLS-7Djul5EZNUfCIf8iQwQDYcJqrcHg" />
+    <title>SaaS3</title>
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap"
+      rel="stylesheet"
+    />
+    
+    <!-- <script>
+      window.is_mobile = false;
+      var html = document.documentElement;
+      var htmlClientWidth = 0;
+      const rejustRootSize = function () {
+        const isMobile = html.getBoundingClientRect().width <= 750;
+        if (!isMobile) {
+          window.is_mobile = false;
+          html.style.fontSize = 'initial';
+          return;
+        }
+        window.is_mobile = true;
+        htmlClientWidth = isMobile ? html.getBoundingClientRect().width : 750;
+        html.style.fontSize = (htmlClientWidth / 750) * 100 + 'px';
+      };
+      rejustRootSize();
+      window.onresize = rejustRootSize;
+    </script> -->
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ENRC245WYE"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'G-ENRC245WYE');
+    </script>
+  </head>
+  <body theme-mode='dark'>
+    <script>
+      window.global = window;
+    </script>
+    <!-- <script type="module">
+      import process from 'process';
+      import { Buffer } from 'buffer';
+      import EventEmitter from 'events';
+
+      window.Buffer = Buffer;
+      window.process = process;
+      window.EventEmitter = EventEmitter;
+    </script> -->
+
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

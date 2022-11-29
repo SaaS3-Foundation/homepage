@@ -1,0 +1,140 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+@import '@/static/styles/base.css';
+
+@primary-color: #8c74f9;
+@text-color: fade(black, 65%);
+@text-color-secondary: fade(black, 45%); // 次文本色 
+@disabled-color: fade(black, 25%); // 失效色
+@heading-color: fade(black, 85%); // 标题色
+@dark-color: fade(black, 0.95%);
+
+// @import url("https://fonts.googleapis.com/css?family=Cardo:400i|Rubik:400,700&display=swap");
+
+body[theme-mode='dark'] {
+  --semi-color-primary: @primary-color;
+  --semi-color-primary-hover: fade(@primary-color, 90%);
+  --semi-color-primary-active: fade(@primary-color, 90%);
+  // --semi-color-secondary: @secondary-color;
+  --semi-color-secondary-hover: @primary-color;
+  --semi-color-secondary-active: @primary-color;
+  // --color-primary-blue: @primary-color-blue;
+}
+
+@font-face {
+  font-family: 'thicccboi';
+  src: local('thicccboi'), url(./static/fonts/Webfont/THICCCBOI-Regular.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'thicccboi';
+  font-weight: 500;
+  src: local('thicccboi'), url(./static/fonts/Webfont/THICCCBOI-Bold.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'thicccboi';
+  font-weight: 400;
+  src: local('thicccboi'), url(./static/fonts/Webfont/THICCCBOI-SemiBold.woff2) format('woff2');
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  // font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti, "Microsoft Yahei", Tahoma, Simsun, sans-serif;
+  // ;
+  .TextFont();
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  outline: 0;
+  border: 0;
+  background: none;
+}
+
+ol,
+ul,
+dl {
+  margin: 0;
+}
+
+:root {
+  --header-height: 3rem;
+  --app-background: #212534;
+  --app-background-dark: rgba(0, 0, 0, .95);
+  --d: 700ms;
+  --e: cubic-bezier(0.19, 1, 0.22, 1);
+  --font-sans: "Rubik", sans-serif;
+  --font-serif: "Cardo", serif;
+  --contact-color: @primary-color;
+  --primary-40: #AA96FB;
+  --contact-color-t: #4076fe11;
+}
+
+body {
+
+  /*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/
+  &::-webkit-scrollbar {
+    width: 16px;
+    height: 16px;
+    background-color: var(--app-background-dark);
+  }
+
+  /*定义滚动条轨道 内阴影+圆角*/
+  &::-webkit-scrollbar-track {
+    // -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    background-color: transparent;
+  }
+
+  /*定义滑块 内阴影+圆角*/
+  &::-webkit-scrollbar-thumb {
+    background-color: @primary-color;
+  }
+}
+
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+
+  * {
+    font-family: inherit;
+  }
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 12px;
+}
+
+@media (max-width: 1023px) {
+  .container {
+    padding: 0 20px;
+  }
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 1130px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}

@@ -1,0 +1,60 @@
+module.exports = {
+  env: {
+    browser: true,
+    es2021: true,
+    node: true,
+  },
+  extends: [
+    'plugin:react/recommended',
+    'airbnb',
+  ],
+  overrides: [
+  ],
+  parserOptions: {
+    ecmaVersion: 'latest',
+    sourceType: 'module',
+  },
+  plugins: [
+    'react',
+  ],
+  rules: {
+    indent: [
+      'error',
+      2,
+      { SwitchCase: 1 },
+    ],
+    'max-len': [
+      1,
+      {
+        code: 200,
+      },
+    ],
+    'react/no-unknown-property': 0,
+    'react/destructuring-assignment': 'off',
+    'no-unused-vars': 1,
+    camelcase: 'off',
+    'no-param-reassign': 'off',
+    'no-throw-literal': 'off',
+    'react/no-array-index-key': 'off',
+    'react/jsx-props-no-spreading': 'off',
+    'import/prefer-default-export': 'off',
+    'no-unused-expressions': 'off',
+    'jsx-a11y/no-static-element-interactions': 'off',
+    'jsx-a11y/interactive-supports-focus': 'off',
+    'jsx-a11y/click-events-have-key-events': 'off',
+    'no-empty': 'off',
+    'consistent-return': 'off',
+    'import/extensions': 'off',
+    'no-use-before-define': 'off',
+    'no-underscore-dangle': 'off',
+    'react/prop-types': 'off',
+    'import/no-extraneous-dependencies': 'off',
+    'import/no-import-module-exports': 'off',
+    'react/jsx-one-expression-per-line': 'off',
+    'react/react-in-jsx-scope': 'off',
+    'react/button-has-type': 'off',
+    'import/no-unresolved': 'off',
+    'linebreak-style': 'off',
+    'no-restricted-syntax': 'off',
+  },
+};

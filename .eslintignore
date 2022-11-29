@@ -1,0 +1,6 @@
+/dist/
+/build/
+/mock/
+/public/static/*
+/src/assets/*
+/node_modules/
