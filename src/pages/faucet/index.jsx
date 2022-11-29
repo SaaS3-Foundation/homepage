@@ -32,7 +32,7 @@ function Faucet() {
         return response.json();
       }
       Toast.error('pending, please wait.');
-    });
+    }).catch(() => Toast.error('pending, please wait.'));
   };
 
   const checkAddress = (_address) => {
