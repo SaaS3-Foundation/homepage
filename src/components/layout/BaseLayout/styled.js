@@ -12,7 +12,7 @@ export const StyledBaseLayout = styled.div`
       height: 100%;
       width: 100%;
       flex: 1;
-      padding-bottom: 48px;
+      /* padding-bottom: 48px; */
     }
   }
 

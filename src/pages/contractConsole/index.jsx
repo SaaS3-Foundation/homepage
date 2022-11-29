@@ -45,7 +45,7 @@ function ContractConsole() {
   }, [web3, provider, info, abiContract]);
 
   return (
-    <StyledBaseLayout className="contract-console">
+    <StyledBaseLayout className="contract-console" mainClassName="pb-10">
       <div className="container">
         <div className="title-wrap flex items-center">
           <IconArrowLeft

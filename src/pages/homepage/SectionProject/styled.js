@@ -4,7 +4,7 @@ export const Box = styled.section`
   padding-top: 20rem;
 
   .bg-container {
-    top: 320px;
+    top: 200px;
   }
 
   .features.wrap {
