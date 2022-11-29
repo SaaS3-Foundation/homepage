@@ -8,9 +8,12 @@ pnpm-debug.log*
 lerna-debug.log*
 
 node_modules
+build
 dist
 dist-ssr
 *.local
+makefile
+Makefile
 
 # Editor directories and files
 .vscode/*

@@ -6,7 +6,10 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "lint": "eslint . --ext .less,.js,.ts,.jsx,.tsx --fix src/",
+    "style:lint": "stylelint \"src/**/*.{css,less}\" --fix --custom-syntax postcss-less ",
+    "lint:staged": "lint-staged"
   },
   "dependencies": {
     "@douyinfe/semi-ui": "^2.24.1",
@@ -52,5 +55,15 @@
     "stylelint-order": "^5.0.0",
     "tailwindcss": "^3.1.8",
     "vite": "^3.2.3"
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx}": [
+      "eslint --fix",
+      "git add"
+    ],
+    "src/**/*.{css,less}": [
+      "stylelint --fix --custom-syntax postcss-less",
+      "git add"
+    ]
   }
 }
