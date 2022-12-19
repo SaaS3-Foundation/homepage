@@ -18,11 +18,14 @@ function NavHeader() {
     },
     {
       title: 'Marketplace',
-      href: '/marketplace',
+      // href: '/marketplace',
+      href: `${import.meta.env.VITE_APP_DAPP_LINK}/marketplace`,
+      blank: true,
     },
     {
-      title: 'Launchpad',
-      href: 'https://launchpad.saas3.io/',
+      title: 'Document',
+      href: import.meta.env.VITE_APP_DOCUMENT_LINK,
+      // href: 'https://launchpad.saas3.io/',
       blank: true,
     },
     {
@@ -81,7 +84,8 @@ function NavHeader() {
             </ul>
             <CustomButton
               className="text-base mt-5 lg:ml-5 lg:mt-0 py-2 px-4 h-auto !border-primary !border"
-              href="https://docs.saas3.io/"
+              // href="https://docs.saas3.io/"
+              href={`${import.meta.env.VITE_APP_DAPP_LINK}/deploy-oracles-panels`}
               blank
               theme="borderless"
             >

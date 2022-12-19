@@ -28,15 +28,3 @@ root.render(
     <CookieModal />
   </Web3Provider>,
 );
-
-// calc rem fontsize
-// let html = document.documentElement;
-// let htmlClientWidth = 0;
-// const rejustRootSize = function () {
-//   html.getBoundingClientRect().width > 750
-//     ? (htmlClientWidth = 750)
-//     : (htmlClientWidth = html.getBoundingClientRect().width);
-//   html.style.fontSize = (htmlClientWidth / 750) * 100 + 'px';
-// };
-// rejustRootSize();
-// window.onresize = rejustRootSize;
