@@ -5,9 +5,9 @@
 
 @primary-color: #8c74f9;
 @text-color: fade(black, 65%);
-@text-color-secondary: fade(black, 45%); // 次文本色 
-@disabled-color: fade(black, 25%); // 失效色
-@heading-color: fade(black, 85%); // 标题色
+@text-color-secondary: fade(black, 45%);
+@disabled-color: fade(black, 25%);
+@heading-color: fade(black, 85%);
 @dark-color: fade(black, 0.95%);
 
 // @import url("https://fonts.googleapis.com/css?family=Cardo:400i|Rubik:400,700&display=swap");
@@ -23,20 +23,20 @@ body[theme-mode='dark'] {
 }
 
 @font-face {
-  font-family: 'thicccboi';
-  src: local('thicccboi'), url(./static/fonts/Webfont/THICCCBOI-Regular.woff2) format('woff2');
+  font-family: thicccboi;
+  src: local('thicccboi'), url('./static/fonts/Webfont/THICCCBOI-Regular.woff2') format('woff2');
 }
 
 @font-face {
-  font-family: 'thicccboi';
+  font-family: thicccboi;
   font-weight: 500;
-  src: local('thicccboi'), url(./static/fonts/Webfont/THICCCBOI-Bold.woff2) format('woff2');
+  src: local('thicccboi'), url('./static/fonts/Webfont/THICCCBOI-Bold.woff2') format('woff2');
 }
 
 @font-face {
-  font-family: 'thicccboi';
+  font-family: thicccboi;
   font-weight: 400;
-  src: local('thicccboi'), url(./static/fonts/Webfont/THICCCBOI-SemiBold.woff2) format('woff2');
+  src: local('thicccboi'), url('./static/fonts/Webfont/THICCCBOI-SemiBold.woff2') format('woff2');
 }
 
 * {
@@ -45,6 +45,7 @@ body[theme-mode='dark'] {
   // font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti, "Microsoft Yahei", Tahoma, Simsun, sans-serif;
   // ;
   .TextFont();
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   padding: 0;
@@ -62,18 +63,17 @@ dl {
 :root {
   --header-height: 3rem;
   --app-background: #212534;
-  --app-background-dark: rgba(0, 0, 0, .95);
+  --app-background-dark: rgb(0 0 0 / 95%);
   --d: 700ms;
   --e: cubic-bezier(0.19, 1, 0.22, 1);
-  --font-sans: "Rubik", sans-serif;
-  --font-serif: "Cardo", serif;
+  --font-sans: 'Rubik', sans-serif;
+  --font-serif: 'Cardo', serif;
   --contact-color: @primary-color;
-  --primary-40: #AA96FB;
+  --primary-40: #aa96fb;
   --contact-color-t: #4076fe11;
 }
 
 body {
-
   &::-webkit-scrollbar {
     width: 16px;
     height: 16px;
@@ -91,9 +91,13 @@ body {
   }
 }
 
-
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family:
+    source-code-pro,
+    Menlo,
+    Monaco,
+    Consolas,
+    'Courier New',
     monospace;
 
   * {
