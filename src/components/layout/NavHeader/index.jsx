@@ -28,11 +28,11 @@ function NavHeader() {
       // href: 'https://launchpad.saas3.io/',
       blank: true,
     },
-    {
-      title: 'Airdrop',
-      href: 'https://airdrop.saas3.io/',
-      blank: true,
-    },
+    // {
+    //   title: 'Airdrop',
+    //   href: 'https://airdrop.saas3.io/',
+    //   blank: true,
+    // },
     // {
     //   title: 'Documents',
     //   href: 'https://docs.saas3.io/',
